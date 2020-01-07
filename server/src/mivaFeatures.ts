@@ -16,7 +16,8 @@ import {
 	SymbolInformation,
 	SymbolKind,
 	Location,
-	ClientCapabilities
+	ClientCapabilities,
+	CompletionItemKind
 } from 'vscode-languageserver';
 import { 
 	readJSONFile,
@@ -41,7 +42,9 @@ const htmlLanguageService = getLanguageService();
 const boundryAmount = 200;
 const merchantFunctionFiles = readJSONFile( path.resolve( __dirname, '..', 'data', 'functions-merchant.json' ) );
 const doValueCompletions: CompletionList = getDoValueCompletions( merchantFunctionFiles );
+const systemVariableCompletions: CompletionItem[] = parseCompletionFile( readJSONFile( path.resolve( __dirname, '..', 'data', 'MVT', 'system-variable-completions.json' ) ) );
 let workspaceSymbols: any[] = [];
+let workspaceGlobalVars: Map<string, CompletionItem> = new Map();
 
 export function getMVTFeatures( workspace: Workspace, clientCapabilities: ClientCapabilities ): LanguageFeatures {
 
@@ -120,9 +123,26 @@ export function getMVTFeatures( workspace: Workspace, clientCapabilities: Client
 
 			// entity completions
 			if (
-				patterns.MVT.LEFT_AFTER_AMP
+				patterns.MVT.LEFT_AFTER_AMP.test( left )
 			) {
 				return CompletionList.create( entityCompletions );
+			}
+
+			// system variable completions
+			if (
+				patterns.SHARED.LEFT_AFTER_SYSTEM_VAR.test( left )
+			) {
+				return CompletionList.create( systemVariableCompletions );
+			}
+
+			// global variable completions
+			if (
+				patterns.SHARED.LEFT_AFTER_GLOBAL_VAR.test( left )
+			) {
+
+				console.log( workspaceGlobalVars );
+
+				return CompletionList.create( Array.from( workspaceGlobalVars.values() ) );
 			}
 
 			return undefined;
@@ -191,7 +211,8 @@ function _mvFindDocumentSymbols( document: TextDocument ): SymbolInformation[] {
 								document.positionAt( scanner.getTokenOffset() + 1 ),
 								document.positionAt( scanner.getTokenOffset() + scanner.getTokenLength() - 1 )
 							)
-						)
+						),
+
 					});
 
 				}
@@ -239,6 +260,25 @@ export function getMVFeatures( workspace: Workspace, clientCapabilities: ClientC
 
 					workspaceSymbols = workspaceSymbols.concat( _mvFindDocumentSymbols( document ) );
 
+				});
+
+				workspaceSymbols.forEach(( symbol ) => {
+
+					if ( symbol.kind === SymbolKind.Variable && patterns.SHARED.IS_GLOBAL_VAR.test( symbol.name ) ) {
+						
+						let label = symbol.name.replace( patterns.SHARED.GLOBAL_VAR_PREFIX, '' );
+			
+						workspaceGlobalVars.set(
+							label,
+							{
+								label: label,
+								kind: CompletionItemKind.Variable,
+								detail: 'Global Variable'
+							}
+						);
+						
+					}
+			
 				});
 
 			}

@@ -19,5 +19,12 @@ export default {
 		RIGHT_IN_TAG: /^[^<]*?(?=>)/,
 		RIGHT_IN_ATTR: /^\s*?(\})?"/,
 
+		LEFT_AFTER_SYSTEM_VAR: /(s|system)\.$/i,
+		LEFT_AFTER_GLOBAL_VAR: /(g|global)\.$/i,
+
+		IS_GLOBAL_VAR: /^(g|global)\./i,
+
+		GLOBAL_VAR_PREFIX: /(g|global)\./i
+
 	}
 };

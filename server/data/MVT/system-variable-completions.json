@@ -1,0 +1,432 @@
+[
+	{
+		"label": "apitype",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "arg1",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "arg2",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "auth_type",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "callerid",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "callvalue",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "content_length",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "content_type",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "content_data",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "document_root",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "documenturl",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "dyn_stm_mon",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "dyn_stm_wday",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "dyn_stm_zone",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "dyn_time_remaining",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "dyn_time_t",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "dyn_tm_hour",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "dyn_tm_isdst",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "dyn_tm_mday",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "dyn_tm_min",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "dyn_tm_mon",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "dyn_tm_sec",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "dyn_tm_usec",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "dyn_tm_wday",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "dyn_tm_yday",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "dyn_tm_year",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "gateway_interface",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "globaltimeout",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "http_accept",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "http_accept_encoding",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "http_accept_language",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "http_cache_control",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "http_connection",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "http_cookie",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "http_host",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "http_if_modified_since",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "http_origin",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "http_referer",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "http_user_agent",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "http_x_accel_internal",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "http_x_real_ip",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "miva_charset",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "miva_config",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "miva_defaultdatabase",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "miva_defaultlanguage",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "miva_language",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "miva_sslavailable",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "mivaversion",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "nargs",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "path_info",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "path_translated",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "process_id",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "process_name",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "query_string",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "redirect_query_string",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "redirect_status",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "redirect_url",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "remote_addr",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "remote_port",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "remote_user",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "request_method",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "request_uri",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "script_filename",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "script_name",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "server_addr",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "server_admin",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "server_name",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "server_port",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "server_protocol",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "server_software",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "stm_mon",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "stm_wday",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "stm_zone",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "thread_id",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "time_t",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "tm_hour",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "tm_isdst",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "tm_mday",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "tm_min",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "tm_mon",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "tm_sec",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "tm_usec",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "tm_wday",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "tm_yday",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "tm_year",
+		"kind": "Variable",
+		"detail": "System Variable"
+	},
+	{
+		"label": "unique_id",
+		"kind": "Variable",
+		"detail": "System Variable"
+	}
+]
