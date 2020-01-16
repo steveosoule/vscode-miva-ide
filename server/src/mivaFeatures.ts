@@ -24,7 +24,8 @@ import {
 	tokenize,
 	getDoValueCompletions,
 	parseCompletionFile,
-	getWordAtOffset
+	getWordAtOffset,
+	variableSymbolsToCompletionMap
 } from './util/functions';
 import patterns from './util/patterns';
 import * as path from 'path';
@@ -45,6 +46,56 @@ const doValueCompletions: CompletionList = getDoValueCompletions( merchantFuncti
 const systemVariableCompletions: CompletionItem[] = parseCompletionFile( readJSONFile( path.resolve( __dirname, '..', 'data', 'MVT', 'system-variable-completions.json' ) ) );
 let workspaceSymbols: any[] = [];
 let workspaceGlobalVars: Map<string, CompletionItem> = new Map();
+
+function _mvtFindDocumentSymbols( document: TextDocument ): SymbolInformation[] {
+	
+	const results: SymbolInformation[] = [];
+
+	const scanner = htmlLanguageService.createScanner( document.getText(), 0 );
+	let token = scanner.scan();
+	let lastTagName: string | undefined = undefined;
+	let lastAttributeName: string | undefined = undefined;
+
+	while ( token !== TokenType.EOS ) {
+
+		switch ( token ) {
+
+			case TokenType.StartTag:
+				lastTagName = scanner.getTokenText().toLowerCase();
+				break;
+
+			case TokenType.AttributeName:
+				lastAttributeName = scanner.getTokenText().toLowerCase();
+				break;
+
+			case TokenType.AttributeValue:
+				if ( (lastTagName === 'mvt:assign') && lastAttributeName === 'name' ) {
+
+					results.push({
+						kind: SymbolKind.Variable,
+						name: scanner.getTokenText().replace( /"/g, '' ),
+						location: Location.create(
+							document.uri,
+							Range.create(
+								document.positionAt( scanner.getTokenOffset() + 1 ),
+								document.positionAt( scanner.getTokenOffset() + scanner.getTokenLength() - 1 )
+							)
+						),
+
+					});
+
+				}
+				break;
+
+		}
+
+		token = scanner.scan();
+
+	}			
+
+	return results;
+
+}
 
 export function getMVTFeatures( workspace: Workspace, clientCapabilities: ClientCapabilities ): LanguageFeatures {
 
@@ -140,9 +191,12 @@ export function getMVTFeatures( workspace: Workspace, clientCapabilities: Client
 				patterns.SHARED.LEFT_AFTER_GLOBAL_VAR.test( left )
 			) {
 
-				console.log( workspaceGlobalVars );
+				const symbols = _mvtFindDocumentSymbols( mvtDocuments.get( document ) );
+				const fileGlobalVars = new Map();
 
-				return CompletionList.create( Array.from( workspaceGlobalVars.values() ) );
+				variableSymbolsToCompletionMap( symbols, fileGlobalVars );
+
+				return CompletionList.create( [ ...Array.from( workspaceGlobalVars.values() ), ...Array.from( fileGlobalVars.values() ) ] );
 			}
 
 			return undefined;
@@ -170,7 +224,13 @@ export function getMVTFeatures( workspace: Workspace, clientCapabilities: Client
 
 			return null;
 
-		}
+		},
+
+		findDocumentSymbols( document: TextDocument ): SymbolInformation[] {
+			
+			return _mvtFindDocumentSymbols( mvtDocuments.get( document ) );
+
+		},
 
 	};
 
@@ -262,24 +322,7 @@ export function getMVFeatures( workspace: Workspace, clientCapabilities: ClientC
 
 				});
 
-				workspaceSymbols.forEach(( symbol ) => {
-
-					if ( symbol.kind === SymbolKind.Variable && patterns.SHARED.IS_GLOBAL_VAR.test( symbol.name ) ) {
-						
-						let label = symbol.name.replace( patterns.SHARED.GLOBAL_VAR_PREFIX, '' );
-			
-						workspaceGlobalVars.set(
-							label,
-							{
-								label: label,
-								kind: CompletionItemKind.Variable,
-								detail: 'Global Variable'
-							}
-						);
-						
-					}
-			
-				});
+				variableSymbolsToCompletionMap( workspaceSymbols, workspaceGlobalVars );
 
 			}
 		);

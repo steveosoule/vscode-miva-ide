@@ -34,16 +34,16 @@
 		}
 	},
 	{
-		"match": "(?<=<mvt:assign[^<]*?name\\s*?=\\s*?\")((g)\\.null)",
+		"match": "(?<=<mvt:assign[^<]*?name\\s*?=\\s*?\")(((g)\\.)?null)",
 		"matchIndex": 0,
 		"problem": {
 			"type": "Error",
-			"message": "NEVER assign `g.null` a value as it will overwrite the `NULL` keyword."
+			"message": "NEVER assign `g.null` or NULL a value as it will overwrite the `NULL` keyword."
 		}
 	},
 	{
-		"match": "&mvt:global",
-		"matchIndex": 0,
+		"match": "(&mvt):global",
+		"matchIndex": 1,
 		"checkSetting": "MVT.lint.showWarningForUnencodedVariables",
 		"problem": {
 			"type": "Warning",

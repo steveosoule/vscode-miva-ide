@@ -10,8 +10,10 @@ import {
 	InsertTextFormat,
 	CompletionList,
 	MarkupContent,
-	MarkupKind
+	MarkupKind,
+	SymbolKind
 } from 'vscode-languageserver';
+import patterns from './patterns';
 
 export function formatError( message: string,
 	err: any ): string {
@@ -211,5 +213,28 @@ export function getWordAtOffset( text: string, offset: number ): string | null {
 	}
 
 	return null;
+
+}
+
+export function variableSymbolsToCompletionMap( symbols, completions ) {
+
+	symbols.forEach(( symbol ) => {
+
+		if ( symbol.kind === SymbolKind.Variable && patterns.SHARED.IS_GLOBAL_VAR.test( symbol.name ) ) {
+			
+			let label = symbol.name.replace( patterns.SHARED.GLOBAL_VAR_PREFIX, '' );
+
+			completions.set(
+				label,
+				{
+					label: label,
+					kind: CompletionItemKind.Variable,
+					detail: 'Global Variable'
+				}
+			);
+			
+		}
+
+	});
 
 }
