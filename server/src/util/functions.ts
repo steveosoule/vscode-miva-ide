@@ -172,7 +172,7 @@ export function getDoValueCompletions( merchantFunctionFiles ): CompletionList {
 
 }
 
-function parseCompletion( completion ) {
+export function parseCompletion( completion ) {
 
 	completion.kind = CompletionItemKind[ completion.kind ];
 	completion.documentation = <MarkupContent>{
@@ -183,6 +183,10 @@ function parseCompletion( completion ) {
 	return completion;
 
 }
+
+export function unique( value, index, self ) {
+	return self.indexOf( value ) === index;
+};
 
 export function parseCompletionFile( completions ) {
 	return completions.map(completion => {

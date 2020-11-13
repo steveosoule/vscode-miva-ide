@@ -643,19 +643,19 @@
               "name": "punctuation.separator.key-value.mvt"
             },
             "3": {
-              "name": "punctuation.definition.string.begin.mvt"
+              "name": "attribute-value.compresswhitespace.mvt source.mvt punctuation.definition.string.begin.mvt"
             }
           },
           "end": "\"",
           "endCaptures": {
-            "1": {
-              "name": "punctuation.definition.string.end.mvt"
+            "0": {
+              "name": "attribute-value.compresswhitespace.mvt source.mvt punctuation.definition.string.end.mvt"
             }
           },
-          "contentName": "string.quoted.single.mvt",
+          "contentName": "attribute-value.compresswhitespace.mvt source.mvt",
           "patterns": [
             {
-              "match": "\\b(off|on)(?=\\s|/?>)",
+              "match": "(off|on)",
               "name": "string.quoted.single.mvt"
             },
             {
@@ -1272,19 +1272,19 @@
               "name": "punctuation.separator.key-value.mvt"
             },
             "3": {
-              "name": "punctuation.definition.string.begin.mvt"
+              "name": "attribute-value.output.mvt source.mvt punctuation.definition.string.begin.mvt"
             }
           },
           "end": "\"",
           "endCaptures": {
-            "1": {
-              "name": "punctuation.definition.string.end.mvt"
+            "0": {
+              "name": "attribute-value.output.mvt source.mvt punctuation.definition.string.end.mvt"
             }
           },
-          "contentName": "string.quoted.single.mvt",
+          "contentName": "attribute-value.output.mvt source.mvt",
           "patterns": [
             {
-              "match": "\\b(off|on)(?=\\s|/?>)",
+              "match": "(off|on)",
               "name": "string.quoted.single.mvt"
             },
             {

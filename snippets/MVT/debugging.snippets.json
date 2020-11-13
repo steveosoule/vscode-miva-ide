@@ -1,24 +1,36 @@
 {
 	"mvt:cf-debug": {
-		"prefix": "mvt:cf-debug",
+		"prefix": [
+			"mvt:cf-debug",
+			"<mvt:cf-debug"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Debug()\" />",
 		"description": "Debug",
 		"scope": "mvt"
 	},
 	"mvt:debug": {
-		"prefix": "mvt:debug",
+		"prefix": [
+			"mvt:debug",
+			"<mvt:debug"
+		],
 		"body": "<mvt:assign name=\"g.mvt_debug\" value=\"glosub( miva_array_serialize( ${1:variable} ), ',', asciichar( 10 ) )\" />\r\n${2:<!--\r\n@@${1/(l\\.(settings:?)?|g\\.|s\\.)([a-zA-Z0-9:_\\.\\[\\]]*)/$3/g}\r\n===${1/./=/g}}\r\n&mvt:global:mvt_debug;\r\n${3:-->}",
 		"description": "Debug",
 		"scope": "mvt"
 	},
 	"mvt:testuser": {
-		"prefix": "mvt:testuser",
+		"prefix": [
+			"mvt:testuser",
+			"<mvt:testuser"
+		],
 		"body": "<mvt:comment> Start Testing Conditional </mvt:comment>\n<mvt:if expr=\"g.customer:login EQ '${1:test}'\">\n\n\n\n\n${2}\n\n\n\n\n${3:<mvt:else>}\n${0}\n</mvt:if>\n<mvt:comment> / end Testing Conditional </mvt:comment>",
 		"description": "Debug",
 		"scope": "mvt"
 	},
 	"mvt:testvar": {
-		"prefix": "mvt:testvar",
+		"prefix": [
+			"mvt:testvar",
+			"<mvt:testvar"
+		],
 		"body": "<mvt:comment> Start Testing Conditional </mvt:comment>\n<mvt:if expr=\"${1:g.test EQ 1}\">\n\n\n\n\n${2}\n\n\n\n\n${3:<mvt:else>}\n${0}\n</mvt:if>\n<mvt:comment> / end Testing Conditional </mvt:comment>",
 		"description": "Debug",
 		"scope": "mvt"

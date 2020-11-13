@@ -1,120 +1,180 @@
 {
 	"mvt:assign": {
-		"prefix": "mvt:assign",
+		"prefix": [
+			"mvt:assign",
+			"<mvt:assign"
+		],
 		"body": "<mvt:assign name=\"${1:g.variable}\" value=\"${2:l.value}\" />",
 		"description": "Tag - Assign",
 		"scope": "mvt"
 	},
 	"mvt:call": {
-		"prefix": "mvt:call",
+		"prefix": [
+			"mvt:call",
+			"<mvt:call"
+		],
 		"body": "<mvt:call action=\"$1\" method=\"${2|'GET','POST','HEAD','XML','RAW','OPTIONS','PUT','DELETE','TRACE','CONNECT'|}\">\n\t${3:<mvt:eval expr=\"s.callvalue\" />}\n</mvt:call>\n${4:<!-- @@ &mvt:global:MvCALL_Error; -->}",
 		"description": "Tag - Call",
 		"scope": "mvt"
 	},
 	"mvt:callcontinue": {
-		"prefix": "mvt:callcontinue",
+		"prefix": [
+			"mvt:callcontinue",
+			"<mvt:callcontinue"
+		],
 		"body": "<mvt:callcontinue />",
 		"description": "Tag - CallContinue",
 		"scope": "mvt"
 	},
 	"mvt:callstop": {
-		"prefix": "mvt:callstop",
+		"prefix": [
+			"mvt:callstop",
+			"<mvt:callstop"
+		],
 		"body": "<mvt:callstop />",
 		"description": "Tag - CallStop",
 		"scope": "mvt"
 	},
 	"mvt:capture": {
-		"prefix": "mvt:capture",
+		"prefix": [
+			"mvt:capture",
+			"<mvt:capture"
+		],
 		"body": "<mvt:capture variable=\"${1}\">\n\t${0}\n</mvt:capture>",
 		"description": "Tag - Capture",
 		"scope": "mvt"
 	},
 	"mvt:comment": {
-		"prefix": "mvt:comment",
+		"prefix": [
+			"mvt:comment",
+			"<mvt:comment"
+		],
 		"body": "<mvt:comment>${1}</mvt:comment>",
 		"description": "Tag - Comment",
 		"scope": "mvt"
 	},
 	"mvt:do": {
-		"prefix": "mvt:do",
+		"prefix": [
+			"mvt:do",
+			"<mvt:do"
+		],
 		"body": "<mvt:do file=\"$4\" ${2:name=\"${3:l.success}\"} value=\"$1\" />",
 		"description": "Tag - Do",
 		"scope": "mvt"
 	},
 	"mvt:else": {
-		"prefix": "mvt:else",
+		"prefix": [
+			"mvt:else",
+			"<mvt:else"
+		],
 		"body": "<mvt:if expr=\"${1}\">\n\t${2}\n<mvt:else>\n\t${0}\n</mvt:if>",
 		"description": "Tag - Else",
 		"scope": "mvt"
 	},
 	"mvt:elseif": {
-		"prefix": "mvt:elseif",
+		"prefix": [
+			"mvt:elseif",
+			"<mvt:elseif"
+		],
 		"body": "<mvt:if expr=\"${1}\">\n\t${2}\n<mvt:elseif expr=\"${3}\">\n\t${0}\n</mvt:if>",
 		"description": "Tag - ElseIf",
 		"scope": "mvt"
 	},
 	"mvt:eval": {
-		"prefix": "mvt:eval",
+		"prefix": [
+			"mvt:eval",
+			"<mvt:eval"
+		],
 		"body": "<mvt:eval expr=\"${1:g.value}\" />",
 		"description": "Tag - Eval",
 		"scope": "mvt"
 	},
 	"mvt:exit": {
-		"prefix": "mvt:exit",
+		"prefix": [
+			"mvt:exit",
+			"<mvt:exit"
+		],
 		"body": "<mvt:exit />",
 		"description": "Tag - Exit",
 		"scope": "mvt"
 	},
 	"mvt:foreach": {
-		"prefix": "mvt:foreach",
+		"prefix": [
+			"mvt:foreach",
+			"<mvt:foreach"
+		],
 		"body": "<mvt:foreach iterator=\"${1}\" array=\"${2}\">\n\t${0}\n</mvt:foreach>",
 		"description": "Tag - Foreach",
 		"scope": "mvt"
 	},
 	"mvt:foreachcontinue": {
-		"prefix": "mvt:foreachcontinue",
+		"prefix": [
+			"mvt:foreachcontinue",
+			"<mvt:foreachcontinue"
+		],
 		"body": "<mvt:foreachcontinue />",
 		"description": "Tag - ForeachContinue",
 		"scope": "mvt"
 	},
 	"mvt:foreachstop": {
-		"prefix": "mvt:foreachstop",
+		"prefix": [
+			"mvt:foreachstop",
+			"<mvt:foreachstop"
+		],
 		"body": "<mvt:foreachstop />",
 		"description": "Tag - ForeachStop",
 		"scope": "mvt"
 	},
 	"mvt:if": {
-		"prefix": "mvt:if",
+		"prefix": [
+			"mvt:if",
+			"<mvt:if"
+		],
 		"body": "<mvt:if expr=\"${1}\">\n\t${0}\n</mvt:if>",
 		"description": "Tag - If",
 		"scope": "mvt"
 	},
 	"mvt:item": {
-		"prefix": "mvt:item",
+		"prefix": [
+			"mvt:item",
+			"<mvt:item"
+		],
 		"body": "<mvt:item name=\"${1}\" ${2:param=\"${3}\"} />",
 		"description": "Tag - Item",
 		"scope": "mvt"
 	},
 	"mvt:miva": {
-		"prefix": "mvt:miva",
+		"prefix": [
+			"mvt:miva",
+			"<mvt:miva"
+		],
 		"body": "<mvt:miva output=\"${1|on,off|}\" compresswhitespace=\"${2|on,off|}\" />",
 		"description": "Tag - Miva",
 		"scope": "mvt"
 	},
 	"mvt:while": {
-		"prefix": "mvt:while",
+		"prefix": [
+			"mvt:while",
+			"<mvt:while"
+		],
 		"body": "<mvt:while expr=\"${1}\">\n\t${0}\n</mvt:while>",
 		"description": "Tag - While",
 		"scope": "mvt"
 	},
 	"mvt:whilecontinue": {
-		"prefix": "mvt:whilecontinue",
+		"prefix": [
+			"mvt:whilecontinue",
+			"<mvt:whilecontinue"
+		],
 		"body": "<mvt:whilecontinue />",
 		"description": "Tag - WhileContinue",
 		"scope": "mvt"
 	},
 	"mvt:whilestop": {
-		"prefix": "mvt:whilestop",
+		"prefix": [
+			"mvt:whilestop",
+			"<mvt:whilestop"
+		],
 		"body": "<mvt:whilestop />",
 		"description": "Tag - WhileStop",
 		"scope": "mvt"

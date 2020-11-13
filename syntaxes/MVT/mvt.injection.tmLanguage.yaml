@@ -301,13 +301,13 @@ repository:
         beginCaptures:
           1: {name: entity.other.attribute-name.compresswhitespace.mvt}
           2: {name: punctuation.separator.key-value.mvt}
-          3: {name: punctuation.definition.string.begin.mvt}
+          3: {name: attribute-value.compresswhitespace.mvt source.mvt punctuation.definition.string.begin.mvt}
         end: '"'
         endCaptures:
-          1: {name: punctuation.definition.string.end.mvt}
-        contentName: string.quoted.single.mvt
+          0: {name: attribute-value.compresswhitespace.mvt source.mvt punctuation.definition.string.end.mvt}
+        contentName: attribute-value.compresswhitespace.mvt source.mvt
         patterns:
-          - match: '\b(off|on)(?=\s|/?>)'
+          - match: '(off|on)'
             name: string.quoted.single.mvt
           - match: '[^"]'
             name: invalid.illegal.identifier.mvt
@@ -587,13 +587,13 @@ repository:
         beginCaptures:
           1: {name: entity.other.attribute-name.output.mvt}
           2: {name: punctuation.separator.key-value.mvt}
-          3: {name: punctuation.definition.string.begin.mvt}
+          3: {name: attribute-value.output.mvt source.mvt punctuation.definition.string.begin.mvt}
         end: '"'
         endCaptures:
-          1: {name: punctuation.definition.string.end.mvt}
-        contentName: string.quoted.single.mvt
+          0: {name: attribute-value.output.mvt source.mvt punctuation.definition.string.end.mvt}
+        contentName: attribute-value.output.mvt source.mvt
         patterns:
-          - match: '\b(off|on)(?=\s|/?>)'
+          - match: '(off|on)'
             name: string.quoted.single.mvt
           - match: '[^"]'
             name: invalid.illegal.identifier.mvt

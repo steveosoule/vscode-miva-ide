@@ -1,96 +1,144 @@
 {
     "mvt:read_basket": {
-		"prefix": "mvt:read_basket",
+		"prefix": [
+			"mvt:read_basket",
+			"<mvt:read_basket"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Read_Basket( '${1:_CODE_}', ${2:_VALUE_} )\" />",
 		"description": "Customfield",
 		"scope": "text.mvt - source.mvt - string"
 	},
 	"mvt:write_basket": {
-		"prefix": "mvt:write_basket",
+		"prefix": [
+			"mvt:write_basket",
+			"<mvt:write_basket"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Write_Basket( '${1:_CODE_}', ${2:_VALUE_} )\" />",
 		"description": "Debug",
 		"scope": "text.mvt - source.mvt - string"
 	},
 	"mvt:read_category_code": {
-		"prefix": "mvt:read_category_code",
+		"prefix": [
+			"mvt:read_category_code",
+			"<mvt:read_category_code"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Read_Category_Code( ${1:g.Category_Code}, '${2:_CODE_}', ${4:l.settings:${3:category}:customfield_values:customfields:$2} )\" />",
 		"description": "Customfield",
 		"scope": "text.mvt - source.mvt - string"
 	},
 	"mvt:read_category_id": {
-		"prefix": "mvt:read_category_id",
+		"prefix": [
+			"mvt:read_category_id",
+			"<mvt:read_category_id"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Read_Category_ID( ${1:g.Category_ID}, '${2:_CODE_}', ${4:l.settings:${3:category}:customfield_values:customfields:$2} )\" />",
 		"description": "Customfield",
 		"scope": "text.mvt - source.mvt - string"
 	},
 	"mvt:read_customer_id": {
-		"prefix": "mvt:read_customer_id",
+		"prefix": [
+			"mvt:read_customer_id",
+			"<mvt:read_customer_id"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Read_Customer_ID( ${1:g.customer:id}, '${2:_CODE_}', ${3:l.settings:customer_customfields:$2} )\" />",
 		"description": "Customfield",
 		"scope": "text.mvt - source.mvt - string"
 	},
 	"mvt:read_customer_login": {
-		"prefix": "mvt:read_customer_login",
+		"prefix": [
+			"mvt:read_customer_login",
+			"<mvt:read_customer_login"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Read_Customer_Login( ${1:'name@example.com'}, '${2:_CODE_}', ${3:l.output} )\" />",
 		"description": "Customfield",
 		"scope": "text.mvt - source.mvt - string"
 	},
 	"mvt:read_order": {
-		"prefix": "mvt:read_order",
+		"prefix": [
+			"mvt:read_order",
+			"<mvt:read_order"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Read_Order( ${1:g.Order_ID}, '${2:_CODE_}', ${3:l.settings:customer_customfields:$2} )\" />",
 		"description": "Customfield",
 		"scope": "text.mvt - source.mvt - string"
 	},
 	"mvt:read_product_code": {
-		"prefix": "mvt:read_product_code",
+		"prefix": [
+			"mvt:read_product_code",
+			"<mvt:read_product_code"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Read_Product_Code( ${1:g.Product_Code}, '${2:_CODE_}', ${4:l.settings:${3:product}:customfield_values:customfields:$2} )\" />",
 		"description": "Customfield",
 		"scope": "text.mvt - source.mvt - string"
 	},
 	"mvt:read_product_id": {
-		"prefix": "mvt:read_product_id",
+		"prefix": [
+			"mvt:read_product_id",
+			"<mvt:read_product_id"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Read_Product_ID( ${1:g.Product_ID}, '${2:_CODE_}', ${4:l.settings:${3:product}:customfield_values:customfields:$2} )\" />",
 		"description": "Customfield",
 		"scope": "text.mvt - source.mvt - string"
 	},
 	"mvt:write_category_code": {
-		"prefix": "mvt:write_category_code",
+		"prefix": [
+			"mvt:write_category_code",
+			"<mvt:write_category_code"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Write_Category_Code( ${1:g.Category_Code}, '${2:_CODE_}', ${3:'_VALUE_'} )\" />",
 		"description": "Customfield",
 		"scope": "text.mvt - source.mvt - string"
 	},
 	"mvt:write_category_id": {
-		"prefix": "mvt:write_category_id",
+		"prefix": [
+			"mvt:write_category_id",
+			"<mvt:write_category_id"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Write_Category_ID( ${1:g.Category_ID}, '${2:_CODE_}', ${3:'_VALUE_'} )\" />",
 		"description": "Customfield",
 		"scope": "text.mvt - source.mvt - string"
 	},
 	"mvt:write_customer_id": {
-		"prefix": "mvt:write_customer_id",
+		"prefix": [
+			"mvt:write_customer_id",
+			"<mvt:write_customer_id"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Write_Customer_ID( ${1:g.customer:id}, '${2:_CODE_}', ${3:'_VALUE_'} )\" />",
 		"description": "Customfield",
 		"scope": "text.mvt - source.mvt - string"
 	},
 	"mvt:write_customer_login": {
-		"prefix": "mvt:write_customer_login",
+		"prefix": [
+			"mvt:write_customer_login",
+			"<mvt:write_customer_login"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Write_Customer_Login( ${1:g.customer:login}, '${2:_CODE_}', ${3:'_VALUE_'} )\" />",
 		"description": "Customfield",
 		"scope": "text.mvt - source.mvt - string"
 	},
 	"mvt:write_order": {
-		"prefix": "mvt:write_order",
+		"prefix": [
+			"mvt:write_order",
+			"<mvt:write_order"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Write_Order( ${1:g.Order_ID}, '${2:_CODE_}', ${3:'_VALUE_'} )\" />",
 		"description": "Customfield",
 		"scope": "text.mvt - source.mvt - string"
 	},
 	"mvt:write_product_code": {
-		"prefix": "mvt:write_product_code",
+		"prefix": [
+			"mvt:write_product_code",
+			"<mvt:write_product_code"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Write_Product_Code( ${1:'g.Product_Code'}, '${2:_CODE_}', ${3:'_VALUE_'} )\" />",
 		"description": "Customfield",
 		"scope": "text.mvt - source.mvt - string"
 	},
 	"mvt:write_product_id": {
-		"prefix": "mvt:write_product_id",
+		"prefix": [
+			"mvt:write_product_id",
+			"<mvt:write_product_id"
+		],
 		"body": "<mvt:item name=\"customfields\" param=\"Write_Product_ID( ${1:g.Product_ID}, '${2:_CODE_}', ${3:'_VALUE_'} )\" />",
 		"description": "Customfield",
 		"scope": "text.mvt - source.mvt - string"

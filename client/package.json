@@ -8,9 +8,9 @@
 		"postinstall": "vscode-install"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.41.0"
+		"@types/vscode": "^1.51.0"
 	},
 	"dependencies": {
-		"vscode-languageclient": "^6.0.0-next.9"
+		"vscode-languageclient": "^6.1.3"
 	}
 }
