@@ -45,9 +45,10 @@ const htmlLanguageService = getLanguageService();
 const boundryAmount = 200;
 const merchantFunctionFiles = readJSONFile( path.resolve( __dirname, '..', 'data', 'functions-merchant.json' ) );
 const doValueCompletions: CompletionList = getDoValueCompletions( merchantFunctionFiles );
-const systemVariableCompletions: CompletionItem[] = parseCompletionFile( readJSONFile( path.resolve( __dirname, '..', 'data', 'MVT', 'system-variable-completions.json' ) ) );
+const systemVariableCompletions: CompletionItem[] = parseCompletionFile( readJSONFile( path.resolve( __dirname, '..', 'data', 'system-variable-completions.json' ) ) );
 let workspaceSymbols: any[] = [];
 let workspaceGlobalVars: Map<string, CompletionItem> = new Map();
+let workspaceLocalVars: Map<string, CompletionItem> = new Map();
 
 function _mvtFindDocumentSymbols( document: TextDocument ): SymbolInformation[] {
 	
@@ -104,7 +105,6 @@ export function getMVTFeatures( workspace: Workspace, clientCapabilities: Client
 	const mvtDocuments = getLanguageModelCache<TextDocument>( 10, 60, document => document );
 	const validationTests: ValidationRule[] = readJSONFile( path.resolve( __dirname, '..', 'data', 'MVT', 'validation.json' ) );
 	const entityCompletions: CompletionItem[] = parseCompletionFile( readJSONFile( path.resolve( __dirname, '..', 'data', 'MVT', 'entity-completions.json' ) ) );
-	const variableSCompletions: CompletionItem[] = parseCompletionFile( readJSONFile( path.resolve( __dirname, '..', 'data', 'MVT', 'variable-s-completions.json' ) ) );
 
 	return {
 
@@ -209,7 +209,7 @@ export function getMVTFeatures( workspace: Workspace, clientCapabilities: Client
 
 				// system variables
 				if ( patterns.SHARED.LEFT_VARIABLE_S.test( left ) ) {
-					return CompletionList.create( variableSCompletions );
+					return CompletionList.create( systemVariableCompletions );
 				}
 
 				// global variables
