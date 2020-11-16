@@ -558,10 +558,20 @@ repository:
         contentName: attribute-value.name.mvt source.mvt assign.declaration.mvt
         patterns:
           - include: '#source-variables'
-          - include: '#source-string-single'
-          - include: '#source-numbers'
-          - include: '#source-brackets-no-functions'
-          - include: '#source-group-no-functions'
+  
+  variable-attribute:
+    patterns:
+      - begin: '(?i)(?<=[^=])\b(variable)\s*(=?)\s*(")'
+        beginCaptures:
+          1: {name: entity.other.attribute-name.variable.mvt}
+          2: {name: punctuation.separator.key-value.mvt}
+          3: {name: attribute-value.variable.mvt source.mvt punctuation.definition.string.begin.mvt}
+        end: '"'
+        endCaptures:
+          0: {name: attribute-value.variable.mvt source.mvt punctuation.definition.string.end.mvt}
+        contentName: attribute-value.variable.mvt source.mvt assign.declaration.mvt
+        patterns:
+          - include: '#source-variables'
 
   name-attribute:
     patterns:
