@@ -1,1312 +1,3338 @@
 {
-    "abs": {
-        "prefix": "abs",
-        "body": "abs( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "acos": {
-        "prefix": "acos",
-        "body": "acos( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "asciichar": {
-        "prefix": "asciichar",
-        "body": "asciichar( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "asciivalue": {
-        "prefix": "asciivalue",
-        "body": "asciivalue( ${1:character} )$0",
-        "scope": "mvt,mv"
-    },
-    "asin": {
-        "prefix": "asin",
-        "body": "asin( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "atan": {
-        "prefix": "atan",
-        "body": "atan( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "atan2": {
-        "prefix": "atan2",
-        "body": "atan2( ${1:x}, ${2:y} )$0",
-        "scope": "mvt,mv"
-    },
-    "bf_decrypt": {
-        "prefix": "bf_decrypt",
-        "body": "bf_decrypt( ${1:key}, ${2:encrypted}, ${3:plaintext var} )$0",
-        "scope": "mvt,mv"
-    },
-    "bf_encrypt": {
-        "prefix": "bf_encrypt",
-        "body": "bf_encrypt( ${1:key}, ${2:plaintext}, ${3:encrypted var} )$0",
-        "scope": "mvt,mv"
-    },
-    "ceil": {
-        "prefix": "ceil",
-        "body": "ceil( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "cos": {
-        "prefix": "cos",
-        "body": "cos( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "cosh": {
-        "prefix": "cosh",
-        "body": "cosh( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_base64_decode": {
-        "prefix": "crypto_base64_decode",
-        "body": "crypto_base64_decode( ${1:data} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_base64_encode": {
-        "prefix": "crypto_base64_encode",
-        "body": "crypto_base64_encode( ${1:data} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_cipher_block_size": {
-        "prefix": "crypto_cipher_block_size",
-        "body": "crypto_cipher_block_size( ${1:ciphername} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_cipher_iv_length": {
-        "prefix": "crypto_cipher_iv_length",
-        "body": "crypto_cipher_iv_length( ${1:ciphername} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_cipher_key_length": {
-        "prefix": "crypto_cipher_key_length",
-        "body": "crypto_cipher_key_length( ${1:ciphername} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_cipher_mode": {
-        "prefix": "crypto_cipher_mode",
-        "body": "crypto_cipher_mode( ${1:ciphername} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_clear_error": {
-        "prefix": "crypto_clear_error",
-        "body": "crypto_clear_error()$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_digest_block_size": {
-        "prefix": "crypto_digest_block_size",
-        "body": "crypto_digest_block_size( ${1:digestname} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_digest_size": {
-        "prefix": "crypto_digest_size",
-        "body": "crypto_digest_size( ${1:digestname} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_evp_decrypt": {
-        "prefix": "crypto_evp_decrypt",
-        "body": "crypto_evp_decrypt( ${1:ciphername}, ${2:key}, ${3:iv}, ${4:encrypted}, ${5:plaintext var} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_evp_digest": {
-        "prefix": "crypto_evp_digest",
-        "body": "crypto_evp_digest( ${1:digestname}, ${2:buffer var}, ${3:digest var} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_evp_encrypt": {
-        "prefix": "crypto_evp_encrypt",
-        "body": "crypto_evp_encrypt( ${1:ciphername}, ${2:key}, ${3:iv}, ${4:plaintext}, ${5:encrypted var} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_evp_encrypt_auth": {
-        "prefix": "crypto_evp_encrypt_auth",
-        "body": "crypto_evp_encrypt_auth( ${1:ciphername}, ${2:key}, ${3:iv}, ${4:aad}, ${5:plaintext}, ${6:encrypted var}, ${7:tag var} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_evp_hmac": {
-        "prefix": "crypto_evp_hmac",
-        "body": "crypto_evp_hmac( ${1:digestname}, ${2:key}, ${3:buffer var}, ${4:digest var} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_evp_sign": {
-        "prefix": "crypto_evp_sign",
-        "body": "crypto_evp_sign( ${1:digestname}, ${2:privkey}, ${3:buffer}, ${4:signature var} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_evp_verify": {
-        "prefix": "crypto_evp_verify",
-        "body": "crypto_evp_verify( ${1:digestname}, ${2:pubkey}, ${3:buffer}, ${4:signature} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_hmac_md5": {
-        "prefix": "crypto_hmac_md5",
-        "body": "crypto_hmac_md5( ${1:buffer var}, ${2:key}, ${3|'hex','binary'|}, ${4:result var} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_hmac_sha1": {
-        "prefix": "crypto_hmac_sha1",
-        "body": "crypto_hmac_sha1( ${1:value}, ${2:key}, ${3|'hex','binary'|}, ${4:output} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_hmac_sha256": {
-        "prefix": "crypto_hmac_sha256",
-        "body": "crypto_hmac_sha256( ${1:buffer var}, ${2:key}, ${3|'hex','binary'|}, ${4:result var} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_last_error": {
-        "prefix": "crypto_last_error",
-        "body": "crypto_last_error()$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_last_ssl_error": {
-        "prefix": "crypto_last_ssl_error",
-        "body": "crypto_last_ssl_error()$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_library_version": {
-        "prefix": "crypto_library_version",
-        "body": "crypto_library_version( ${1:info} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_md5": {
-        "prefix": "crypto_md5",
-        "body": "crypto_md5( ${1:buffer} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_md5_file": {
-        "prefix": "crypto_md5_file",
-        "body": "crypto_md5_file( ${1:file}, ${2|'script','data'|}, ${3:hash var} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_next_error": {
-        "prefix": "crypto_next_error",
-        "body": "crypto_next_error()$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_pbkdf1": {
-        "prefix": "crypto_pbkdf1",
-        "body": "crypto_pbkdf1( ${1|'md2','md5','sha1'|}, ${2:password}, ${3:salt}, ${4:iterations}, ${5:dklen}, ${6:dk var} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_pbkdf2": {
-        "prefix": "crypto_pbkdf2",
-        "body": "crypto_pbkdf2( ${1|'md2','md5','sha1'|}, ${2:password}, ${3:salt}, ${4:iterations}, ${5:dklen}, ${6:dk var} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_rand_bytes": {
-        "prefix": "crypto_rand_bytes",
-        "body": "crypto_rand_bytes( ${1:n} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_rand_set_rand_engine": {
-        "prefix": "crypto_rand_set_rand_engine",
-        "body": "crypto_rand_set_rand_engine( ${1:engine} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_sha1": {
-        "prefix": "crypto_sha1",
-        "body": "crypto_sha1( ${1:buffer var}, ${2|'hex','binary'|}, ${3:result var} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_sha256": {
-        "prefix": "crypto_sha256",
-        "body": "crypto_sha256( ${1:buffer var}, ${2|'hex','binary'|}, ${3:result var} )$0",
-        "scope": "mvt,mv"
-    },
-    "crypto_xor": {
-        "prefix": "crypto_xor",
-        "body": "crypto_xor( ${1:buffer var}, ${2:dest var} )$0",
-        "scope": "mvt,mv"
-    },
-    "decodeattribute": {
-        "prefix": "decodeattribute",
-        "body": "decodeattribute( ${1:attribute} )$0",
-        "scope": "mvt,mv"
-    },
-    "decodeentities": {
-        "prefix": "decodeentities",
-        "body": "decodeentities( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "dir": {
-        "prefix": "dir",
-        "body": "dir( ${1:path}, ${2|'script','data'|}, ${3:entries var} )$0",
-        "scope": "mvt,mv"
-    },
-    "encodeattribute": {
-        "prefix": "encodeattribute",
-        "body": "encodeattribute( ${1:attribute} )$0",
-        "scope": "mvt,mv"
-    },
-    "encodeentities": {
-        "prefix": "encodeentities",
-        "body": "encodeentities( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "encodejavascriptstring": {
-        "prefix": "encodejavascriptstring",
-        "body": "encodejavascriptstring( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "evp_pkey_derive": {
-        "prefix": "evp_pkey_derive",
-        "body": "evp_pkey_derive( ${1:privkey var}, ${2:peer var}, ${3:key var} )$0",
-        "scope": "mvt,mv"
-    },
-    "evp_pkey_free": {
-        "prefix": "evp_pkey_free",
-        "body": "evp_pkey_free( ${1:key var} )$0",
-        "scope": "mvt,mv"
-    },
-    "evp_pkey_load_mem": {
-        "prefix": "evp_pkey_load_mem",
-        "body": "evp_pkey_load_mem( ${1:data}, 'pkcs12', ${2:passphrase}, ${3:pkey var} )$0",
-        "scope": "mvt,mv"
-    },
-    "evp_pkey_load_pubkey_mem": {
-        "prefix": "evp_pkey_load_pubkey_mem",
-        "body": "evp_pkey_load_pubkey_mem( ${1:data}, ${2|'pem','der'|}, ${3:pkey var} )$0",
-        "scope": "mvt,mv"
-    },
-    "evp_pkey_load_pubkey_x509": {
-        "prefix": "evp_pkey_load_pubkey_x509",
-        "body": "evp_pkey_load_pubkey_x509( ${1:x509 var}, ${2:pkey var} )$0",
-        "scope": "mvt,mv"
-    },
-    "exp": {
-        "prefix": "exp",
-        "body": "exp( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "fchmod": {
-        "prefix": "fchmod",
-        "body": "fchmod( ${1:path}, ${2:mode} )$0",
-        "scope": "mvt,mv"
-    },
-    "fcopy": {
-        "prefix": "fcopy",
-        "body": "fcopy( ${1:source}, ${2:destination} )$0",
-        "scope": "mvt,mv"
-    },
-    "fdelete": {
-        "prefix": "fdelete",
-        "body": "fdelete( ${1:path} )$0",
-        "scope": "mvt,mv"
-    },
-    "fexists": {
-        "prefix": "fexists",
-        "body": "fexists( ${1:path} )$0",
-        "scope": "mvt,mv"
-    },
-    "file_append": {
-        "prefix": "file_append",
-        "body": "file_append( ${1:path}, ${2|'data','script'|}, ${3:data var} )$0",
-        "scope": "mvt,mv"
-    },
-    "file_create": {
-        "prefix": "file_create",
-        "body": "file_create( ${1:path}, ${2|'data','script'|}, ${3:data var} )$0",
-        "scope": "mvt,mv"
-    },
-    "file_overwrite": {
-        "prefix": "file_overwrite",
-        "body": "file_overwrite( ${1:path}, ${2|'data','script'|}, ${3:data var} )$0",
-        "scope": "mvt,mv"
-    },
-    "file_read": {
-        "prefix": "file_read",
-        "body": "file_read( ${1:path}, ${2|'data','script'|}, ${3:data var} )$0",
-        "scope": "mvt,mv"
-    },
-    "file_read_bytes": {
-        "prefix": "file_read_bytes",
-        "body": "file_read_bytes( ${1:path}, ${2|'data','script'|}, ${3:offset}, ${4:length}, ${5:data} )$0",
-        "scope": "mvt,mv"
-    },
-    "file_set_time": {
-        "prefix": "file_set_time",
-        "body": "file_set_time( ${1:path}, ${2|'data','script'|}, ${3:modified} )$0",
-        "scope": "mvt,mv"
-    },
-    "file_touch": {
-        "prefix": "file_touch",
-        "body": "file_touch( ${1:file}, ${2|'data','script'|} )$0",
-        "scope": "mvt,mv"
-    },
-    "fisdir": {
-        "prefix": "fisdir",
-        "body": "fisdir( ${1:path} )$0",
-        "scope": "mvt,mv"
-    },
-    "floor": {
-        "prefix": "floor",
-        "body": "floor( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "fmkdir": {
-        "prefix": "fmkdir",
-        "body": "fmkdir( ${1:path} )$0",
-        "scope": "mvt,mv"
-    },
-    "fmod": {
-        "prefix": "fmod",
-        "body": "fmod( ${1:x}, ${2:y} )$0",
-        "scope": "mvt,mv"
-    },
-    "fmode": {
-        "prefix": "fmode",
-        "body": "fmode( ${1:path} )$0",
-        "scope": "mvt,mv"
-    },
-    "frename": {
-        "prefix": "frename",
-        "body": "frename( ${1:source}, ${2:destination} )$0",
-        "scope": "mvt,mv"
-    },
-    "fscopy": {
-        "prefix": "fscopy",
-        "body": "fscopy( ${1:data_source}, ${2:script_destination} )$0",
-        "scope": "mvt,mv"
-    },
-    "fsize": {
-        "prefix": "fsize",
-        "body": "fsize( ${1:path} )$0",
-        "scope": "mvt,mv"
-    },
-    "fsrename": {
-        "prefix": "fsrename",
-        "body": "fsrename( ${1:source}, ${2:destination} )$0",
-        "scope": "mvt,mv"
-    },
-    "fsymlink": {
-        "prefix": "fsymlink",
-        "body": "fsymlink( ${1:source}, ${2:destination} )$0",
-        "scope": "mvt,mv"
-    },
-    "fssymlink": {
-        "prefix": "fssymlink",
-        "body": "fssymlink( ${1:source}, ${2:destination} )$0",
-        "scope": "mvt,mv"
-    },
-    "ftime": {
-        "prefix": "ftime",
-        "body": "ftime( ${1:path} )$0",
-        "scope": "mvt,mv"
-    },
-    "gettoken": {
-        "prefix": "gettoken",
-        "body": "gettoken( ${1:delimited_string}, ${2:character}, ${3:position} )$0",
-        "scope": "mvt,mv"
-    },
-    "glosub": {
-        "prefix": "glosub",
-        "body": "glosub( ${1:target_string}, ${2:search}, ${3:replace} )$0",
-        "scope": "mvt,mv"
-    },
-    "glosub_array": {
-        "prefix": "glosub_array",
-        "body": "glosub_array( ${1:string}, ${2:search}, ${3:replace} )$0",
-        "scope": "mvt,mv"
-    },
-    "indexof": {
-        "prefix": "indexof",
-        "body": "indexof( ${1:search_string}, ${2:target_string var}, ${3:start_number} )$0",
-        "scope": "mvt,mv"
-    },
-    "indexofi": {
-        "prefix": "indexofi",
-        "body": "indexofi( ${1:search_string}, ${2:target_string var}, ${3:start_number} )$0",
-        "scope": "mvt,mv"
-    },
-    "indexofl": {
-        "prefix": "indexofl",
-        "body": "indexofl( ${1:needle}, ${2:haystack var}, ${3:offset} )$0",
-        "scope": "mvt,mv"
-    },
-    "indexofli": {
-        "prefix": "indexofli",
-        "body": "indexofli( ${1:needle}, ${2:haystack var}, ${3:offset} )$0",
-        "scope": "mvt,mv"
-    },
-    "int": {
-        "prefix": "int",
-        "body": "int( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "isalnum": {
-        "prefix": "isalnum",
-        "body": "isalnum( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "isalpha": {
-        "prefix": "isalpha",
-        "body": "isalpha( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "isascii": {
-        "prefix": "isascii",
-        "body": "isascii( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "iscntrl": {
-        "prefix": "iscntrl",
-        "body": "iscntrl( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "isdigit": {
-        "prefix": "isdigit",
-        "body": "isdigit( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "isgraph": {
-        "prefix": "isgraph",
-        "body": "isgraph( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "islower": {
-        "prefix": "islower",
-        "body": "islower( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "isprint": {
-        "prefix": "isprint",
-        "body": "isprint( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "ispunct": {
-        "prefix": "ispunct",
-        "body": "ispunct( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "isspace": {
-        "prefix": "isspace",
-        "body": "isspace( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "isupper": {
-        "prefix": "isupper",
-        "body": "isupper( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "isxdigit": {
-        "prefix": "isxdigit",
-        "body": "isxdigit( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "keyword_extract": {
-        "prefix": "keyword_extract",
-        "body": "keyword_extract( ${1:string}, ${2:keywords var} )$0",
-        "scope": "mvt,mv"
-    },
-    "keyword_extract_merge": {
-        "prefix": "keyword_extract_merge",
-        "body": "keyword_extract_merge( ${1:string}, ${2:weight} )$0",
-        "scope": "mvt,mv"
-    },
-    "keyword_extract_merge_init": {
-        "prefix": "keyword_extract_merge_init",
-        "body": "keyword_extract_merge_init()$0",
-        "scope": "mvt,mv"
-    },
-    "keyword_extract_merge_results": {
-        "prefix": "keyword_extract_merge_results",
-        "body": "keyword_extract_merge_results( ${1:keywords var} )$0",
-        "scope": "mvt,mv"
-    },
-    "keyword_in": {
-        "prefix": "keyword_in",
-        "body": "keyword_in( ${1:keywords_array var}, ${2:search_string} )$0",
-        "scope": "mvt,mv"
-    },
-    "len": {
-        "prefix": "len",
-        "body": "len( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "len_var": {
-        "prefix": "len_var",
-        "body": "len_var( ${1:string var} )$0",
-        "scope": "mvt,mv"
-    },
-    "log": {
-        "prefix": "log",
-        "body": "log( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "log10": {
-        "prefix": "log10",
-        "body": "log10( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "ltrim": {
-        "prefix": "ltrim",
-        "body": "ltrim( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "makesessionid": {
-        "prefix": "makesessionid",
-        "body": "makesessionid()$0",
-        "scope": "mvt,mv"
-    },
-    "max": {
-        "prefix": "max",
-        "body": "max( ${1:a}, ${2:b} )$0",
-        "scope": "mvt,mv"
-    },
-    "min": {
-        "prefix": "min",
-        "body": "min( ${1:a}, ${2:b} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_binarysearch": {
-        "prefix": "miva_array_binarysearch",
-        "body": "miva_array_binarysearch( ${1:key}, ${2:array var}, ${3:callback}, ${4:data var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_clear": {
-        "prefix": "miva_array_clear",
-        "body": "miva_array_clear( ${1:array var}, ${2:start}, ${3:count} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_collapse": {
-        "prefix": "miva_array_collapse",
-        "body": "miva_array_collapse( ${1:array var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_copy": {
-        "prefix": "miva_array_copy",
-        "body": "miva_array_copy( ${1:source var}, ${2:sstart}, ${3:scount}, ${4:dest var}, ${5:dpos} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_copy_ref": {
-        "prefix": "miva_array_copy_ref",
-        "body": "miva_array_copy_ref( ${1:source var}, ${2:sstart}, ${3:scount}, ${4:dest var}, ${5:dpos} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_delete": {
-        "prefix": "miva_array_delete",
-        "body": "miva_array_delete( ${1:array var}, ${2:start}, ${3:count} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_deserialize": {
-        "prefix": "miva_array_deserialize",
-        "body": "miva_array_deserialize( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_elements": {
-        "prefix": "miva_array_elements",
-        "body": "miva_array_elements( ${1:aggregate var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_filter": {
-        "prefix": "miva_array_filter",
-        "body": "miva_array_filter( ${1:array var}, ${2:offset}, ${3:element var}, ${4:filter_expression}, ${5:output var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_filter_ref": {
-        "prefix": "miva_array_filter_ref",
-        "body": "miva_array_filter_ref( ${1:array var}, ${2:offset}, ${3:element var}, ${4:filter_expression}, ${5:output var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_find": {
-        "prefix": "miva_array_find",
-        "body": "miva_array_find( ${1:needle}, ${2:haystack var}, ${3:offset} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_insert": {
-        "prefix": "miva_array_insert",
-        "body": "miva_array_insert( ${1:array var}, ${2:element}, ${3:pos} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_insert_ref": {
-        "prefix": "miva_array_insert_ref",
-        "body": "miva_array_insert_ref( ${1:array var}, ${2:element var}, ${3:pos} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_insert_var": {
-        "prefix": "miva_array_insert_var",
-        "body": "miva_array_insert_var( ${1:array var}, ${2:element var}, ${3:pos} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_max": {
-        "prefix": "miva_array_max",
-        "body": "miva_array_max( ${1:aggregate var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_merge": {
-        "prefix": "miva_array_merge",
-        "body": "miva_array_merge( ${1:source var}, ${2:sstart}, ${3:scount}, ${4:dest var}, ${5:dpos} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_merge_ref": {
-        "prefix": "miva_array_merge_ref",
-        "body": "miva_array_merge_ref( ${1:source var}, ${2:sstart}, ${3:scount}, ${4:dest var}, ${5:dpos} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_min": {
-        "prefix": "miva_array_min",
-        "body": "miva_array_min( ${1:aggregate var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_next": {
-        "prefix": "miva_array_next",
-        "body": "miva_array_next( ${1:aggregate var}, ${2:index} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_pop": {
-        "prefix": "miva_array_pop",
-        "body": "miva_array_pop( ${1:array var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_pop_ref": {
-        "prefix": "miva_array_pop_ref",
-        "body": "miva_array_pop_ref( ${1:array var}, ${2:element var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_previous": {
-        "prefix": "miva_array_previous",
-        "body": "miva_array_previous( ${1:aggregate var}, ${2:index} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_search": {
-        "prefix": "miva_array_search",
-        "body": "miva_array_search( ${1:array var}, ${2:offset}, ${3:element var}, ${4:filter_expr} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_serialize": {
-        "prefix": "miva_array_serialize",
-        "body": "miva_array_serialize( ${1:aggregate var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_shift": {
-        "prefix": "miva_array_shift",
-        "body": "miva_array_shift( ${1:array var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_shift_ref": {
-        "prefix": "miva_array_shift_ref",
-        "body": "miva_array_shift_ref( ${1:array var}, ${2:element var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_array_sort": {
-        "prefix": "miva_array_sort",
-        "body": "miva_array_sort( ${1:aggregate var}, ${2:callback}, ${3:data var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_async_sleep": {
-        "prefix": "miva_async_sleep",
-        "body": "miva_async_sleep( ${1:until}, ${2:semfile}, ${3:semlocation} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_cdata_encode": {
-        "prefix": "miva_cdata_encode",
-        "body": "miva_cdata_encode( ${1:text} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_closelog": {
-        "prefix": "miva_closelog",
-        "body": "miva_closelog()$0",
-        "scope": "mvt,mv"
-    },
-    "miva_csv_encode": {
-        "prefix": "miva_csv_encode",
-        "body": "miva_csv_encode( ${1:text}, ${2:delimiter} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_element_exists": {
-        "prefix": "miva_element_exists",
-        "body": "miva_element_exists( ${1:array var}, ${2:index} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_getvarlist": {
-        "prefix": "miva_getvarlist",
-        "body": "miva_getvarlist( ${1:scope} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_hex_decode": {
-        "prefix": "miva_hex_decode",
-        "body": "miva_hex_decode( ${1:data} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_hex_encode": {
-        "prefix": "miva_hex_encode",
-        "body": "miva_hex_encode( ${1:data} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_html_strip": {
-        "prefix": "miva_html_strip",
-        "body": "miva_html_strip( ${1:text}, ${2:allowed_tags} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_ieee754_normalize": {
-        "prefix": "miva_ieee754_normalize",
-        "body": "miva_ieee754_normalize( ${1:significant_digits}, ${2:value} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_joinstring": {
-        "prefix": "miva_joinstring",
-        "body": "miva_joinstring( ${1:input var}, ${2:join_with}, ${3|'trim','ltrim','rtrim','lower','upper','insensitive'|} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_json_decode": {
-        "prefix": "miva_json_decode",
-        "body": "miva_json_decode( ${1:data}, ${2:output var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_json_decode_last_error": {
-        "prefix": "miva_json_decode_last_error",
-        "body": "miva_json_decode_last_error()$0",
-        "scope": "mvt,mv"
-    },
-    "miva_lockfile": {
-        "prefix": "miva_lockfile",
-        "body": "miva_lockfile( ${1:path}, ${2:location} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_member_exists": {
-        "prefix": "miva_member_exists",
-        "body": "miva_member_exists( ${1:structure var}, ${2:member} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_openlog": {
-        "prefix": "miva_openlog",
-        "body": "miva_openlog( ${1:ident}, ${2|'PID','CONS','ODELAY','NDELAY','NOWAIT','PERROR'|}, ${3|'USER','LOCAL0','LOCAL1','LOCAL2','LOCAL3','LOCAL4','LOCAL5','LOCAL6','LOCAL7'|} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_output_flush": {
-        "prefix": "miva_output_flush",
-        "body": "miva_output_flush()$0",
-        "scope": "mvt,mv"
-    },
-    "miva_output_header": {
-        "prefix": "miva_output_header",
-        "body": "miva_output_header( ${1:header}, ${2:value} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_setdefaultdatabase": {
-        "prefix": "miva_setdefaultdatabase",
-        "body": "miva_setdefaultdatabase( ${1:database} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_setdefaultlanguage": {
-        "prefix": "miva_setdefaultlanguage",
-        "body": "miva_setdefaultlanguage( ${1:language} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_setlanguage": {
-        "prefix": "miva_setlanguage",
-        "body": "miva_setlanguage( ${1:language} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_setlogmask": {
-        "prefix": "miva_setlogmask",
-        "body": "miva_setlogmask( ${1|'EMERG','ALERT','CRIT','ERR','WARNING','NOTICE','INFO','DEBUG'|} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_setprocessname": {
-        "prefix": "miva_setprocessname",
-        "body": "miva_setprocessname( ${1:name} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_sleep": {
-        "prefix": "miva_sleep",
-        "body": "miva_sleep( ${1:msecs} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_splitstring": {
-        "prefix": "miva_splitstring",
-        "body": "miva_splitstring( ${1:string}, ${2:sep}, ${3:output var}, ${4|'trim','ltrim','rtrim','lower','upper','insensitive'|} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_struct_members": {
-        "prefix": "miva_struct_members",
-        "body": "miva_struct_members( ${1:aggregate var}, ${2:members var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_struct_merge": {
-        "prefix": "miva_struct_merge",
-        "body": "miva_struct_merge( ${1:source var}, ${2:dest var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_struct_merge_ref": {
-        "prefix": "miva_struct_merge_ref",
-        "body": "miva_struct_merge_ref( ${1:source var}, ${2:dest var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_template_compile": {
-        "prefix": "miva_template_compile",
-        "body": "miva_template_compile( ${1:signat}, ${2:source var}, ${3:sourceitems var}, ${4:target}, ${5:errors var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_template_compile_dump": {
-        "prefix": "miva_template_compile_dump",
-        "body": "miva_template_compile_dump( ${1:source var}, ${2:errors var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_template_compile_itemlist": {
-        "prefix": "miva_template_compile_itemlist",
-        "body": "miva_template_compile_itemlist( ${1:signat}, ${2:source var}, ${3:sourceitems var}, ${4:target}, ${5:errors var} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_variable_type": {
-        "prefix": "miva_variable_type",
-        "body": "miva_variable_type( ${1:variable} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_variable_value": {
-        "prefix": "miva_variable_value",
-        "body": "miva_variable_value( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "miva_writelog": {
-        "prefix": "miva_writelog",
-        "body": "miva_writelog( ${1'EMERG','ALERT','CRIT','ERR','WARNING','NOTICE','INFO','DEBUG','USER','LOCAL0','LOCAL1','LOCAL2','LOCAL3','LOCAL4','LOCAL5','LOCAL6','LOCAL7'}, ${2:message} )$0",
-        "scope": "mvt,mv"
-    },
-    "mktime_t": {
-        "prefix": "mktime_t",
-        "body": "mktime_t( ${1:year}, ${2:month}, ${3:dayofmonth}, ${4:hours}, ${5:minutes}, ${6:seconds}, ${7:timezone} )$0",
-        "scope": "mvt,mv"
-    },
-    "padl": {
-        "prefix": "padl",
-        "body": "padl( ${1:string}, ${2:length}, ${3:character} )$0",
-        "scope": "mvt,mv"
-    },
-    "padr": {
-        "prefix": "padr",
-        "body": "padr( ${1:string}, ${2:length}, ${3:character} )$0",
-        "scope": "mvt,mv"
-    },
-    "pkcs7_free": {
-        "prefix": "pkcs7_free",
-        "body": "pkcs7_free( ${1:pkcs7 var} )$0",
-        "scope": "mvt,mv"
-    },
-    "pkcs7_get_certs": {
-        "prefix": "pkcs7_get_certs",
-        "body": "pkcs7_get_certs( ${1:pkcs7 var}, ${2:x509s var} )$0",
-        "scope": "mvt,mv"
-    },
-    "pkcs7_load_mem": {
-        "prefix": "pkcs7_load_mem",
-        "body": "pkcs7_load_mem( ${1:cert}, ${2:format}, ${3:pkcs7 var} )$0",
-        "scope": "mvt,mv"
-    },
-    "pkcs7_verify": {
-        "prefix": "pkcs7_verify",
-        "body": "pkcs7_verify( ${1:pkcs7 var}, ${2:root_x509 var}, ${3:content} )$0",
-        "scope": "mvt,mv"
-    },
-    "power": {
-        "prefix": "power",
-        "body": "power( ${1:number}, ${2:matissa} )$0",
-        "scope": "mvt,mv"
-    },
-    "random": {
-        "prefix": "random",
-        "body": "random( ${1:max} )$0",
-        "scope": "mvt,mv"
-    },
-    "rnd": {
-        "prefix": "rnd",
-        "body": "rnd( ${1:value}, ${2:precision} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_free": {
-        "prefix": "rsa_free",
-        "body": "rsa_free( ${1:rsa var} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_generate_keypair": {
-        "prefix": "rsa_generate_keypair",
-        "body": "rsa_generate_keypair( ${1:pubkey_file}, ${2:privkey_file}, ${3:bits}, ${4|3,17,65537|}, ${5:passphrase} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_generate_keypair_mem": {
-        "prefix": "rsa_generate_keypair_mem",
-        "body": "rsa_generate_keypair_mem( ${1:pubkey var}, ${2:privkey var}, ${3:bits}, ${4|3,17,65537|}, ${5:passphrase} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_generate_keypair_mem_cipher": {
-        "prefix": "rsa_generate_keypair_mem_cipher",
-        "body": "rsa_generate_keypair_mem_cipher( ${1:pubkey var}, ${2:privkey var}, ${3:bits}, ${4|3,17,65537|}, ${5:passphrase}, ${6:ciphername} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_load_privatekey": {
-        "prefix": "rsa_load_privatekey",
-        "body": "rsa_load_privatekey( ${1:privkey_file}, ${2:rsa var}, ${3:passphrase} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_load_privatekey_engine": {
-        "prefix": "rsa_load_privatekey_engine",
-        "body": "rsa_load_privatekey_engine( ${1:engine}, ${2:key_id}, ${3:rsa var} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_load_privatekey_mem": {
-        "prefix": "rsa_load_privatekey_mem",
-        "body": "rsa_load_privatekey_mem( ${1:privkey}, ${2:rsa var}, ${3:passphrase} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_load_publickey": {
-        "prefix": "rsa_load_publickey",
-        "body": "rsa_load_publickey( ${1:pubkey_file}, ${2:rsa var} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_load_publickey_engine": {
-        "prefix": "rsa_load_publickey_engine",
-        "body": "rsa_load_publickey_engine( ${1:engine}, ${2:key_id}, ${3:rsa var} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_load_publickey_mem": {
-        "prefix": "rsa_load_publickey_mem",
-        "body": "rsa_load_publickey_mem( ${1:pubkey}, ${2:rsa var} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_private_decrypt": {
-        "prefix": "rsa_private_decrypt",
-        "body": "rsa_private_decrypt( ${1:rsa}, ${2:encrypted}, ${3:plaintext var} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_private_encrypt": {
-        "prefix": "rsa_private_encrypt",
-        "body": "rsa_private_encrypt( ${1:rsa}, ${2:plaintext}, ${3:encrypted var} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_public_decrypt": {
-        "prefix": "rsa_public_decrypt",
-        "body": "rsa_public_decrypt( ${1:rsa}, ${2:encrypted}, ${3:plaintext var} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_public_encrypt": {
-        "prefix": "rsa_public_encrypt",
-        "body": "rsa_public_encrypt( ${1:rsa}, ${2:plaintext}, ${3:encrypted var} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_save_privatekey": {
-        "prefix": "rsa_save_privatekey",
-        "body": "rsa_save_privatekey( ${1:privkey_file}, ${2:rsa var}, ${3:passphrase} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_save_privatekey_mem": {
-        "prefix": "rsa_save_privatekey_mem",
-        "body": "rsa_save_privatekey_mem( ${1:privkey var}, ${2:rsa var}, ${3:passphrase} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_save_privatekey_mem_cipher": {
-        "prefix": "rsa_save_privatekey_mem_cipher",
-        "body": "rsa_save_privatekey_mem_cipher( ${1:privkey var}, ${2:rsa var}, ${3:passphrase}, ${4:ciphername} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_sign": {
-        "prefix": "rsa_sign",
-        "body": "rsa_sign( ${1:rsa}, ${2:buffer}, ${3:signature var} )$0",
-        "scope": "mvt,mv"
-    },
-    "rsa_verify": {
-        "prefix": "rsa_verify",
-        "body": "rsa_verify( ${1:rsa}, ${2:buffer}, ${3:signature} )$0",
-        "scope": "mvt,mv"
-    },
-    "rtrim": {
-        "prefix": "rtrim",
-        "body": "rtrim( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "schmod": {
-        "prefix": "schmod",
-        "body": "schmod( ${1:path}, ${2:mode} )$0",
-        "scope": "mvt,mv"
-    },
-    "scopy": {
-        "prefix": "scopy",
-        "body": "scopy( ${1:source}, ${2:destination} )$0",
-        "scope": "mvt,mv"
-    },
-    "sdelete": {
-        "prefix": "sdelete",
-        "body": "sdelete( ${1:path} )$0",
-        "scope": "mvt,mv"
-    },
-    "sexists": {
-        "prefix": "sexists",
-        "body": "sexists( ${1:path} )$0",
-        "scope": "mvt,mv"
-    },
-    "sfrename": {
-        "prefix": "sfrename",
-        "body": "sfrename( ${1:source}, ${2:destination} )$0",
-        "scope": "mvt,mv"
-    },
-    "sfsymlink": {
-        "prefix": "sfsymlink",
-        "body": "sfsymlink( ${1:source}, ${2:destination} )$0",
-        "scope": "mvt,mv"
-    },
-    "sin": {
-        "prefix": "sin",
-        "body": "sin( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "sinh": {
-        "prefix": "sinh",
-        "body": "sinh( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "sisdir": {
-        "prefix": "sisdir",
-        "body": "sisdir( ${1:path} )$0",
-        "scope": "mvt,mv"
-    },
-    "slugify": {
-        "prefix": "slugify",
-        "body": "slugify( ${1:data} )$0",
-        "scope": "mvt,mv"
-    },
-    "smkdir": {
-        "prefix": "smkdir",
-        "body": "smkdir( ${1:path} )$0",
-        "scope": "mvt,mv"
-    },
-    "smode": {
-        "prefix": "smode",
-        "body": "smode( ${1:path} )$0",
-        "scope": "mvt,mv"
-    },
-    "sqrt": {
-        "prefix": "sqrt",
-        "body": "sqrt( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "srandom": {
-        "prefix": "srandom",
-        "body": "srandom( ${1:seed} )$0",
-        "scope": "mvt,mv"
-    },
-    "srename": {
-        "prefix": "srename",
-        "body": "srename( ${1:source}, ${2:destination} )$0",
-        "scope": "mvt,mv"
-    },
-    "ssize": {
-        "prefix": "ssize",
-        "body": "ssize( ${1:path} )$0",
-        "scope": "mvt,mv"
-    },
-    "ssymlink": {
-        "prefix": "ssymlink",
-        "body": "ssymlink( ${1:source}, ${2:destination} )$0",
-        "scope": "mvt,mv"
-    },
-    "stime": {
-        "prefix": "stime",
-        "body": "stime( ${1:path} )$0",
-        "scope": "mvt,mv"
-    },
-    "substring": {
-        "prefix": "substring",
-        "body": "substring( ${1:string}, ${2:position}, ${3:length} )$0",
-        "scope": "mvt,mv"
-    },
-    "substring_var": {
-        "prefix": "substring_var",
-        "body": "substring_var( ${1:string var}, ${2:position}, ${3:length} )$0",
-        "scope": "mvt,mv"
-    },
-    "tan": {
-        "prefix": "tan",
-        "body": "tan( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "tanh": {
-        "prefix": "tanh",
-        "body": "tanh( ${1:number} )$0",
-        "scope": "mvt,mv"
-    },
-    "tar_create": {
-        "prefix": "tar_create",
-        "body": "tar_create( ${1:file}, ${2|'data','script'|}, ${3:dir}, ${4|'data','script'|}, ${5|'','compress'|} )$0",
-        "scope": "mvt,mv"
-    },
-    "tar_directory": {
-        "prefix": "tar_directory",
-        "body": "tar_directory( ${1:file}, ${2:|'data','script'|}, ${3:desc var} )$0",
-        "scope": "mvt,mv"
-    },
-    "tar_extract": {
-        "prefix": "tar_extract",
-        "body": "tar_extract( ${1:file}, ${2:|'data','script'|}, ${3:dir}, ${4:|'data','script'|} )$0",
-        "scope": "mvt,mv"
-    },
-    "time_t_dayofmonth": {
-        "prefix": "time_t_dayofmonth",
-        "body": "time_t_dayofmonth( ${1:timet}, ${2:time_zone} )$0",
-        "scope": "mvt,mv"
-    },
-    "time_t_dayofweek": {
-        "prefix": "time_t_dayofweek",
-        "body": "time_t_dayofweek( ${1:timet}, ${2:time_zone} )$0",
-        "scope": "mvt,mv"
-    },
-    "time_t_dayofyear": {
-        "prefix": "time_t_dayofyear",
-        "body": "time_t_dayofyear( ${1:timet}, ${2:time_zone} )$0",
-        "scope": "mvt,mv"
-    },
-    "time_t_hour": {
-        "prefix": "time_t_hour",
-        "body": "time_t_hour( ${1:timet}, ${2:time_zone} )$0",
-        "scope": "mvt,mv"
-    },
-    "time_t_min": {
-        "prefix": "time_t_min",
-        "body": "time_t_min( ${1:timet}, ${2:time_zone} )$0",
-        "scope": "mvt,mv"
-    },
-    "time_t_month": {
-        "prefix": "time_t_month",
-        "body": "time_t_month( ${1:timet}, ${2:time_zone} )$0",
-        "scope": "mvt,mv"
-    },
-    "time_t_sec": {
-        "prefix": "time_t_sec",
-        "body": "time_t_sec( ${1:timet}, ${2:time_zone} )$0",
-        "scope": "mvt,mv"
-    },
-    "time_t_year": {
-        "prefix": "time_t_year",
-        "body": "time_t_year( ${1:timet}, ${2:time_zone} )$0",
-        "scope": "mvt,mv"
-    },
-    "timezone": {
-        "prefix": "timezone",
-        "body": "timezone()$0",
-        "scope": "mvt,mv"
-    },
-    "tokenize": {
-        "prefix": "tokenize",
-        "body": "tokenize( ${1:string}, ${2:variables} )$0",
-        "scope": "mvt,mv"
-    },
-    "tolower": {
-        "prefix": "tolower",
-        "body": "tolower( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "toupper": {
-        "prefix": "toupper",
-        "body": "toupper( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "trim": {
-        "prefix": "trim",
-        "body": "trim( ${1:string} )$0",
-        "scope": "mvt,mv"
-    },
-    "wdownload": {
-        "prefix": "wdownload",
-        "body": "wdownload( ${1:url}, ${2:filepath}, ${3|'data','script'|}, ${4:callback}, ${5:callbackdata var} )$0",
-        "scope": "mvt,mv"
-    },
-    "wget": {
-        "prefix": "wget",
-        "body": "wget( ${1:url}, ${2:filepath}, ${3|'data','script'|} )$0",
-        "scope": "mvt,mv"
-    },
-    "x509_create": {
-        "prefix": "x509_create",
-        "body": "x509_create( ${1:cert}, ${2:x509 var} )$0",
-        "scope": "mvt,mv"
-    },
-    "x509_digest": {
-        "prefix": "x509_digest",
-        "body": "x509_digest( ${1:x509 var}, ${2|'md5','sha256'|}, ${3:digest var} )$0",
-        "scope": "mvt,mv"
-    },
-    "x509_free": {
-        "prefix": "x509_free",
-        "body": "x509_free( ${1:rsa var} )$0",
-        "scope": "mvt,mv"
-    },
-    "x509_get_extensions": {
-        "prefix": "x509_get_extensions",
-        "body": "x509_get_extensions( ${1:certref var}, ${2:extensions var} )$0",
-        "scope": "mvt,mv"
-    },
-    "x509_get_issuer_name": {
-        "prefix": "x509_get_issuer_name",
-        "body": "x509_get_issuer_name( ${1:certref var}, ${2:issuername var} )$0",
-        "scope": "mvt,mv"
-    },
-    "x509_get_subject_name": {
-        "prefix": "x509_get_subject_name",
-        "body": "x509_get_subject_name( ${1:certref var}, ${2:subjectname var} )$0",
-        "scope": "mvt,mv"
-    },
-    "x509_load": {
-        "prefix": "x509_load",
-        "body": "x509_load( ${1:cert}, ${2:x509 var} )$0",
-        "scope": "mvt,mv"
-    },
-    "x509_load_mem": {
-        "prefix": "x509_load_mem",
-        "body": "x509_load_mem( ${1:cert}, ${2:x509 var} )$0",
-        "scope": "mvt,mv"
-    },
-    "x509_pubkey_digest": {
-        "prefix": "x509_pubkey_digest",
-        "body": "x509_pubkey_digest( ${1:x509 var}, ${2|'md5','sha256'|}, ${3:digest var} )$0",
-        "scope": "mvt,mv"
-    },
-    "x509_rsa_publickey": {
-        "prefix": "x509_rsa_publickey",
-        "body": "x509_rsa_publickey( ${1:x509 var}, ${2:rsa var} )$0",
-        "scope": "mvt,mv"
-    },
-    "x509_verify": {
-        "prefix": "x509_verify",
-        "body": "x509_verify( ${1:x509 var}, ${2:trusted_certs} )$0",
-        "scope": "mvt,mv"
-    },
-    "xml_parse": {
-        "prefix": "xml_parse",
-        "body": "xml_parse( ${1:filepath}, ${2|'data','script'|}, ${3:output var} )$0",
-        "scope": "mvt,mv"
-    },
-    "xml_parse_error": {
-        "prefix": "xml_parse_error",
-        "body": "xml_parse_error( ${1:lineno var}, ${2:error var} )$0",
-        "scope": "mvt,mv"
-    },
-    "xml_parse_section": {
-        "prefix": "xml_parse_section",
-        "body": "xml_parse_section( ${1:output var}, ${2:eof var} )$0",
-        "scope": "mvt,mv"
-    },
-    "xml_parse_section_getstate": {
-        "prefix": "xml_parse_section_getstate",
-        "body": "xml_parse_section_getstate( ${1:target var} )$0",
-        "scope": "mvt,mv"
-    },
-    "xml_parse_section_init": {
-        "prefix": "xml_parse_section_init",
-        "body": "xml_parse_section_init( ${1:filepath}, ${2|'data','script'|}, ${3:level} )$0",
-        "scope": "mvt,mv"
-    },
-    "xml_parse_section_setstate": {
-        "prefix": "xml_parse_section_setstate",
-        "body": "xml_parse_section_setstate( ${1:source var} )$0",
-        "scope": "mvt,mv"
-    },
-    "xml_parse_set_colon_replacement": {
-        "prefix": "xml_parse_set_colon_replacement",
-        "body": "xml_parse_set_colon_replacement( ${1:colon} )$0",
-        "scope": "mvt,mv"
-    },
-    "xml_parse_var": {
-        "prefix": "xml_parse_var",
-        "body": "xml_parse_var( ${1:var var}, ${2:output var} )$0",
-        "scope": "mvt,mv"
-    }
+	"abs": {
+		"prefix": "abs",
+		"body": "abs( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the absolute value of number.Returns the absolute value of number."
+	},
+	"acos": {
+		"prefix": "acos",
+		"body": "acos( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the arccosine of number. The results are returned in radians.Returns the results in radians."
+	},
+	"asciichar": {
+		"prefix": "asciichar",
+		"body": "asciichar( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the character corresponding to ascii character code in number. (number must 0 to 255).Returns the ascii character code"
+	},
+	"asciivalue": {
+		"prefix": "asciivalue",
+		"body": "asciivalue( ${1:character} )$0",
+		"scope": "mv",
+		"description": "Returns the ASCII numeric value for character (character must be a single character)."
+	},
+	"asin": {
+		"prefix": "asin",
+		"body": "asin( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the arcsine of number. The results are returned in radians.Returns the reaults in radians."
+	},
+	"atan": {
+		"prefix": "atan",
+		"body": "atan( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the arctangent of number. The results are returned in radians.Returns the results in radians."
+	},
+	"atan2": {
+		"prefix": "atan2",
+		"body": "atan2( ${1:x}, ${2:y} )$0",
+		"scope": "mv",
+		"description": "Returns the arctangent of y/x. This is similar to atan(), but the signs of y and x are taken into account when computing the quadrant of the result. The results are returned in radians.Returns the results in radians."
+	},
+	"bf_decrypt": {
+		"prefix": "bf_decrypt",
+		"body": "bf_decrypt( ${1:key}, ${2:encrypted}, ${3:plaintext var} )$0",
+		"scope": "mv",
+		"description": "Blowfish decryptionReturns 1 on success, 0 on error"
+	},
+	"bf_encrypt": {
+		"prefix": "bf_encrypt",
+		"body": "bf_encrypt( ${1:key}, ${2:plaintext}, ${3:encrypted var} )$0",
+		"scope": "mv",
+		"description": "Blowfish encryptionReturns 1 on success, 0 on error"
+	},
+	"ceil": {
+		"prefix": "ceil",
+		"body": "ceil( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the smallest integer greater than or equal to numberReturns the results as an integer."
+	},
+	"cos": {
+		"prefix": "cos",
+		"body": "cos( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the cosine of number.  The argument should be expressed in radians.Returns the results in radians."
+	},
+	"cosh": {
+		"prefix": "cosh",
+		"body": "cosh( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the hyperbolic cosine of number.  The argument should be expressed in radians.Returns the hyperbolic cosine."
+	},
+	"crypto_base64_decode": {
+		"prefix": "crypto_base64_decode",
+		"body": "crypto_base64_decode( ${1:data} )$0",
+		"scope": "mv",
+		"description": "Decodes and returns Base-64 decodes data.Returns the decrypted data"
+	},
+	"crypto_base64_encode": {
+		"prefix": "crypto_base64_encode",
+		"body": "crypto_base64_encode( ${1:data} )$0",
+		"scope": "mv",
+		"description": "Encodes and returns Base-64 encoded data.Returns the encrypted data"
+	},
+	"crypto_cipher_block_size": {
+		"prefix": "crypto_cipher_block_size",
+		"body": "crypto_cipher_block_size( ${1|'aes-128-cbc','rc2-ofb',ciphername|} )$0",
+		"scope": "mv",
+		"description": "Programatically determine the block size attribute of   the cipher specified by \"ciphername\".returns the numeric size, in bytes, or -1 if an invalid \"ciphername\" is specified."
+	},
+	"crypto_cipher_iv_length": {
+		"prefix": "crypto_cipher_iv_length",
+		"body": "crypto_cipher_iv_length( ${1|'aes-128-cbc','rc2-ofb',ciphername|} )$0",
+		"scope": "mv",
+		"description": "Programatically determine the iv_length attribute of the cipher specified by \"ciphername\".returns the numeric size, in bytes, or -1 if an invalid \"ciphername\" is specified."
+	},
+	"crypto_cipher_key_length": {
+		"prefix": "crypto_cipher_key_length",
+		"body": "crypto_cipher_key_length( ${1|'aes-128-cbc','rc2-ofb',ciphername|} )$0",
+		"scope": "mv",
+		"description": "Programatically determine the key_length attribute of the cipher specified by \"ciphername\".returns the numeric size, in bytes, or -1 if an invalid \"ciphername\" is specified."
+	},
+	"crypto_cipher_mode": {
+		"prefix": "crypto_cipher_mode",
+		"body": "crypto_cipher_mode( ${1|'aes-128-cbc','rc2-ofb',ciphername|} )$0",
+		"scope": "mv",
+		"description": "Returns the block mode of operation of the cipher specified by \"ciphername.\""
+	},
+	"crypto_digest_block_size": {
+		"prefix": "crypto_digest_block_size",
+		"body": "crypto_digest_block_size( ${1|'sha256','md5',digestname|} )$0",
+		"scope": "mv",
+		"description": "Programatically determines the block_size attribute of the digest algorithm specified by \"digestname\".Returns the numeric size, in bytes, or -1 if an invalid \"digestname\" is specified."
+	},
+	"crypto_digest_size": {
+		"prefix": "crypto_digest_size",
+		"body": "crypto_digest_size( ${1|'sha256','md5',digestname|} )$0",
+		"scope": "mv",
+		"description": "Programatically determines the digest_size attribute of the digest algorithm specified by \"digestname\".Returns the numeric size, in bytes, or -1 if an invalid \"digestname\" is specified."
+	},
+	"crypto_evp_decrypt": {
+		"prefix": "crypto_evp_decrypt",
+		"body": "crypto_evp_decrypt( ${1|'bf-cbc','des-ede3-cbc',ciphername|}, ${2:key}, ${3:iv}, ${4:encrypted}, ${5:plaintext var} )$0",
+		"scope": "mv",
+		"description": "Decrypts \"plaintext\" using the block cipher specified by \"ciphername\", placing the decrypted data into \"plaintext\".Return 1 on success, 0 on failure."
+	},
+	"crypto_evp_digest": {
+		"prefix": "crypto_evp_digest",
+		"body": "crypto_evp_digest( ${1|'sha256','md5',digestname|}, ${2:buffer var}, ${3:digest var} )$0",
+		"scope": "mv",
+		"description": "Calculates the digest of \"buffer\" using digest algorithm \"digestname\", placing the calculated digest in \"digest\". The digest output is always in raw binary format, use miva_hex_encode() or crypto_base64_encode() if other output formats are desired.Returns 1 on success or 0 if an invalid or unsupported \"digestname\" is specified."
+	},
+	"crypto_evp_encrypt": {
+		"prefix": "crypto_evp_encrypt",
+		"body": "crypto_evp_encrypt( ${1|'bf-cbc','des-ede3-cbc',ciphername|}, ${2:key}, ${3:iv}, ${4:plaintext}, ${5:encrypted var} )$0",
+		"scope": "mv",
+		"description": "Encrypts \"plaintext\" using the block cipher specified by \"ciphername\", placing the encrypted data into \"encrypted\".returns 1 on success, 0 on failure"
+	},
+	"crypto_evp_encrypt_auth": {
+		"prefix": "crypto_evp_encrypt_auth",
+		"body": "crypto_evp_encrypt_auth( ${1|'bf-cbc','des-ede3-cbc',ciphername|}, ${2:key}, ${3:iv}, ${4:aad}, ${5:plaintext}, ${6:encrypted var}, ${7:tag var} )$0",
+		"scope": "mv",
+		"description": "Encrypt the data in \"plaintext\" using the ciphername, key, and initial vector, returning the encrypted data in \"encrypted\" and a tag value in \"tag\" to be used to ensure that the ciphertext and AAD are not tampered with in transit.Returns 1 on success, 0 on failure"
+	},
+	"crypto_evp_hmac": {
+		"prefix": "crypto_evp_hmac",
+		"body": "crypto_evp_hmac( ${1|'sha256','md5',digestname|}, ${2:key}, ${3:buffer var}, ${4:digest var} )$0",
+		"scope": "mv",
+		"description": "Calculates the HMAC of \"buffer\" using digest algorithm \"digestname\" and key \"key\", placing the HMAC in \"digest\".  The HMAC output is always in raw binary format, use miva_hex_encode() or crypto_base64_encode() if other output formats are desired.Returns 1 on success or 0 if an invalid or unsupported \"digestname\" is specified."
+	},
+	"crypto_hmac_md5": {
+		"prefix": "crypto_hmac_md5",
+		"body": "crypto_hmac_md5( ${1:buffer var}, ${2:key}, ${3|'hex','binary'|}, ${4:result var} )$0",
+		"scope": "mv",
+		"description": "Performs an HMAC-MD5 on \"buffer\" using key \"key\", storing the result in \"result\".Returns 1 on success, 0 on error."
+	},
+	"crypto_hmac_sha1": {
+		"prefix": "crypto_hmac_sha1",
+		"body": "crypto_hmac_sha1( ${1:value}, ${2:key}, ${3:output_format}, ${4:output} )$0",
+		"scope": "mv",
+		"description": "Calculates an HMAC SHA-1 (Hash-based Message Authentication Code) of valuereturns: 1 on success, 0 on failure (including OpenSSL not being available)"
+	},
+	"crypto_hmac_sha256": {
+		"prefix": "crypto_hmac_sha256",
+		"body": "crypto_hmac_sha256( ${1:buffer var}, ${2:key}, ${3|'hex','binary'|}, ${4:result var} )$0",
+		"scope": "mv",
+		"description": "Calculates an HMAC SHA-256 (Hash-based Message Authentication Code) of bufferReturns 1 on success, 0 on error or if on an unsuported platform."
+	},
+	"crypto_last_error": {
+		"prefix": "crypto_last_error",
+		"body": "crypto_last_error()$0",
+		"scope": "mv",
+		"description": "Returns the error text from the last SSL error, or other internal errors in the crypto suite of functions. Use crypto_last_ssl_error()  instead to get the code of the last SSL error. ⇨ Version 5.32 -- Previously if the crypto error originated from Miva Empresa, the returned error was always the same. If the crypto error was from OpenSSL then it would be lost after calling the function. Modified to always return the last crypto error.Returns error text."
+	},
+	"crypto_last_ssl_error": {
+		"prefix": "crypto_last_ssl_error",
+		"body": "crypto_last_ssl_error()$0",
+		"scope": "mv",
+		"description": "Returns the Integer value of the last SSL error code.  Use crypto_last_error() instead to get the text of the last SSL error.Returns error code."
+	},
+	"crypto_library_version": {
+		"prefix": "crypto_library_version",
+		"body": "crypto_library_version( ${1:info} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"crypto_md5": {
+		"prefix": "crypto_md5",
+		"body": "crypto_md5( ${1:buffer} )$0",
+		"scope": "mv",
+		"description": "Calculates the MD5 hash of a string.Returns the MD5 hash value."
+	},
+	"crypto_md5_file": {
+		"prefix": "crypto_md5_file",
+		"body": "crypto_md5_file( ${1:file}, ${2|'data','script'|}, ${3:hash var} )$0",
+		"scope": "mv",
+		"description": "Calculates the md5 hash of a fileReturns 1 on success, 0 on failure."
+	},
+	"crypto_pbkdf1": {
+		"prefix": "crypto_pbkdf1",
+		"body": "crypto_pbkdf1( ${1|'md2','md5','sha1'|}, ${2:password}, ${3:salt}, ${4:iterations}, ${5:dklen}, ${6:dk var} )$0",
+		"scope": "mv",
+		"description": "Derives a key of \"dklen\" bytes using PBKDF1 from PKCS #5.Returns 1 on success or 0 on error."
+	},
+	"crypto_pbkdf2": {
+		"prefix": "crypto_pbkdf2",
+		"body": "crypto_pbkdf2( ${1:digestname}, ${2:password}, ${3:salt}, ${4:iterations}, ${5:dklen}, ${6:dk var} )$0",
+		"scope": "mv",
+		"description": "Derives a key of \"dklen\" bytes using PBKDF2 from PKCS #5.Returns 1 on success or 0 on error."
+	},
+	"crypto_rand_bytes": {
+		"prefix": "crypto_rand_bytes",
+		"body": "crypto_rand_bytes( ${1:n} )$0",
+		"scope": "mv",
+		"description": "Generates n random bytes.Returns a string of bytes"
+	},
+	"crypto_rand_set_rand_engine": {
+		"prefix": "crypto_rand_set_rand_engine",
+		"body": "crypto_rand_set_rand_engine( ${1:engine} )$0",
+		"scope": "mv",
+		"description": "Specify the random number generating engine to use.Return value: 1 on success, 0 on failure."
+	},
+	"crypto_sha1": {
+		"prefix": "crypto_sha1",
+		"body": "crypto_sha1( ${1:buffer var}, ${2:format}, ${3:result var} )$0",
+		"scope": "mv",
+		"description": "Returns an SHA1 hash of buffer. Secure Hash AlgorithmReturns 1 on success, 0 on failure. (including OpenSSL not being available)"
+	},
+	"crypto_sha256": {
+		"prefix": "crypto_sha256",
+		"body": "crypto_sha256( ${1:buffer var}, ${2:format}, ${3:result var} )$0",
+		"scope": "mv",
+		"description": "Returns an SHA256 hash of buffer. Secure Hash Algorithm. May not be available on platforms running versions of OpenSSL Older than v0.9.8.Returns 1 on success, 0 on failure. (including OpenSSL not being available)"
+	},
+	"crypto_xor": {
+		"prefix": "crypto_xor",
+		"body": "crypto_xor( ${1:buffer var}, ${2:dest var} )$0",
+		"scope": "mv",
+		"description": "Efficiently performs a byte-by-byte XOR of buffer and dest, storing the resulting data in \"dest\".  If \"buffer\" is longer than \"dest\", any extra bytes are ignored.Returns nothing."
+	},
+	"decodeattribute": {
+		"prefix": "decodeattribute",
+		"body": "decodeattribute( ${1:attribute} )$0",
+		"scope": "mv",
+		"description": "Returns a copy of string (which is usually a URL) converted from URL-encoded format to ordinary text. This function is the opposite of encodeattribute.Returns the results as a URL-decoded string."
+	},
+	"decodeentities": {
+		"prefix": "decodeentities",
+		"body": "decodeentities( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Returns a copy of string in which all HTML entities have been converted to their plain text equivalents (for example, & is converted to &). This function is the opposite of encodeentities.Returns an entity decoded string."
+	},
+	"dir": {
+		"prefix": "dir",
+		"body": "dir( ${1:path}, ${2|'data','script'|}, ${3:entries var} )$0",
+		"scope": "mv",
+		"description": "Reads a directory list in path.Returns the number of files found or 0 (zero) if none are found. The parameter entries returns an array of file names found."
+	},
+	"encodeattribute": {
+		"prefix": "encodeattribute",
+		"body": "encodeattribute( ${1:attribute} )$0",
+		"scope": "mv",
+		"description": "Returns a copy of string (which is usually a URI or part of an URI ) in URI-encoded format. \nSpecial characters such as space, tilde (~), and the plus sign are converted to hexadecimal \n%nn format. This function is the opposite of decodeattribute.Returns a URI encoded string"
+	},
+	"encodeentities": {
+		"prefix": "encodeentities",
+		"body": "encodeentities( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Returns a copy of string in which all characters have been converted to their HTML entity equivalents, where applicable (for example, & is converted to \"&\"). This function is the opposite of decodeentities.Returns an entity encoded string."
+	},
+	"encodejavascriptstring": {
+		"prefix": "encodejavascriptstring",
+		"body": "encodejavascriptstring( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Encodes \"string\" in a format suitable for use inside a JavaScript quoted string declaration, \nhonoring the current character set.Returns the encoded string."
+	},
+	"evp_pkey_derive": {
+		"prefix": "evp_pkey_derive",
+		"body": "evp_pkey_derive( ${1:privkey var}, ${2:peer var}, ${3:key var} )$0",
+		"scope": "mv",
+		"description": "Given structure references to a EVP PKEY structure with a secret key and a peer public key, derive a shared secret key and return the text in \"key\".Returns 1 on success, 0 on failure"
+	},
+	"evp_pkey_free": {
+		"prefix": "evp_pkey_free",
+		"body": "evp_pkey_free( ${1:key var} )$0",
+		"scope": "mv",
+		"description": "Remove an EVP_PKEY structure from internal memory. The passed EVP_PKEY structure reference is unchanged on failure (invalid reference) or set to 0 on success.Returns 1 on success, 0 on failure"
+	},
+	"evp_pkey_load_mem": {
+		"prefix": "evp_pkey_load_mem",
+		"body": "evp_pkey_load_mem( ${1:data}, pkcs12, ${3:passphrase}, ${4:pkey var} )$0",
+		"scope": "mv",
+		"description": "Given a EVP PKEY structure in the given format and a passphrase, verifies the PKEY structure and stores it in internal storage, and returns a reference to the internal storage. ⇨ Version 5.32 -- now supports the DER and PEM formats.Returns 1 on success, 0 on failure"
+	},
+	"evp_pkey_load_pubkey_mem": {
+		"prefix": "evp_pkey_load_pubkey_mem",
+		"body": "evp_pkey_load_pubkey_mem( ${1:data}, ${2|'pem','der'|}, ${3:pkey var} )$0",
+		"scope": "mv",
+		"description": "Given EVP PKEY information in the given format, parse and load the public key from it and return a reference to the internal storage.Returns 1 on success, 0 on failure"
+	},
+	"exp": {
+		"prefix": "exp",
+		"body": "exp( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the constant e (approximately 2.71828) Raised to the power number."
+	},
+	"fchmod": {
+		"prefix": "fchmod",
+		"body": "fchmod( ${1:path}, ${2:mode} )$0",
+		"scope": "mv",
+		"description": "Changes a files or directory permissions.Returns 1 if sucessful, 0 if fails"
+	},
+	"fcopy": {
+		"prefix": "fcopy",
+		"body": "fcopy( ${1:source}, ${2:destination} )$0",
+		"scope": "mv",
+		"description": "Copies a file in the data directory.Returns 1 if sucessful, 0 if fails"
+	},
+	"fdelete": {
+		"prefix": "fdelete",
+		"body": "fdelete( ${1:path} )$0",
+		"scope": "mv",
+		"description": "Deletes a file in the data directory. See sdelete()Returns 1 if sucessful, 0 if fails"
+	},
+	"fexists": {
+		"prefix": "fexists",
+		"body": "fexists( ${1:path} )$0",
+		"scope": "mv",
+		"description": "Tests if the file named in path exists in the data directory.Returns 1 if the file exsists else 0."
+	},
+	"file_append": {
+		"prefix": "file_append",
+		"body": "file_append( ${1:path}, ${2|'data','script'|}, ${3:outputdata var} )$0",
+		"scope": "mv",
+		"description": "Appends data to the end of the file in path.Returns length of outputdata or -1 on error. file_append() will not create a file, but return -1 if the file does not exist."
+	},
+	"file_create": {
+		"prefix": "file_create",
+		"body": "file_create( ${1:path}, ${2|'data','script'|}, ${3:outputdata var} )$0",
+		"scope": "mv",
+		"description": "Creates and appends data to the file in path.Returns length of outputdata or -1 on error. file_create() will not append to an existing file, but return -1 if the file exists."
+	},
+	"file_read": {
+		"prefix": "file_read",
+		"body": "file_read( ${1:path}, ${2|'data','script'|}, ${3:inputdata var} )$0",
+		"scope": "mv",
+		"description": "Reads a file.Returns length of inputdata or -1 on error or file does not exist."
+	},
+	"file_read_bytes": {
+		"prefix": "file_read_bytes",
+		"body": "file_read_bytes( ${1:path}, ${2|'data','script'|}, ${3:offset}, ${4:length}, ${5:data} )$0",
+		"scope": "mv",
+		"description": "Reads a portion of the file specified by \"path\" and \"location\" into \"data\". Returns the number of bytes read, which may be less than \"length\", if an attempt was made to read past the end of the file, or -1 on error.Returns the number of bytes read from the file. The file data is returned in \"data\"."
+	},
+	"file_touch": {
+		"prefix": "file_touch",
+		"body": "file_touch( ${1:file}, ${2|'data','script'|} )$0",
+		"scope": "mv",
+		"description": "Updates the modification time of the specified file.Return value: 0 on success, -1 on failure."
+	},
+	"fisdir": {
+		"prefix": "fisdir",
+		"body": "fisdir( ${1:path} )$0",
+		"scope": "mv",
+		"description": "Tests if the file named in path is a  directory.Returns 1 if the path is a directory else 0."
+	},
+	"floor": {
+		"prefix": "floor",
+		"body": "floor( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the largest integer less than or equal to number"
+	},
+	"fmkdir": {
+		"prefix": "fmkdir",
+		"body": "fmkdir( ${1:path} )$0",
+		"scope": "mv",
+		"description": "Creates a directory specified by path in the data directory.Returns 1 if sucessful, 0 if fails"
+	},
+	"fmod": {
+		"prefix": "fmod",
+		"body": "fmod( ${1:x}, ${2:y} )$0",
+		"scope": "mv",
+		"description": "Returns the remainder of number1/number2; number1, number2, and the result are all floating point numbers."
+	},
+	"fmode": {
+		"prefix": "fmode",
+		"body": "fmode( ${1:path} )$0",
+		"scope": "mv",
+		"description": "Returns the permissions mode of path in the data directory.Returns the permissions mode or -1 if the file does not exist"
+	},
+	"frename": {
+		"prefix": "frename",
+		"body": "frename( ${1:source}, ${2:destination} )$0",
+		"scope": "mv",
+		"description": "Rename source file to destination file. Can rename or move a file in the data directory.Returns 1 if sucessful, 0 if fails"
+	},
+	"fscopy": {
+		"prefix": "fscopy",
+		"body": "fscopy( ${1:data_source}, ${2:script_destination} )$0",
+		"scope": "mv",
+		"description": "Copies a file from data directory to the scripts directory.Returns 1 if sucessful, 0 if fails"
+	},
+	"fsize": {
+		"prefix": "fsize",
+		"body": "fsize( ${1:path} )$0",
+		"scope": "mv",
+		"description": "Get the size of a file in the data directoryReturns the file size in bytes or -1 if the file does not exist."
+	},
+	"fsrename": {
+		"prefix": "fsrename",
+		"body": "fsrename( ${1:source}, ${2:destination} )$0",
+		"scope": "mv",
+		"description": "Rename data directory source file to script directory destination file. Can rename or move a file.Returns 1 if sucessful, 0 if fails"
+	},
+	"fssymlink": {
+		"prefix": "fssymlink",
+		"body": "fssymlink( ${1:source}, ${2:destination} )$0",
+		"scope": "mv",
+		"description": "This function creates a symbolic link from a file in the data directory to the scripts directory (Available on UNIX file systems only)Returns 1 if sucessful, 0 if fails"
+	},
+	"fsymlink": {
+		"prefix": "fsymlink",
+		"body": "fsymlink( ${1:source}, ${2:destination} )$0",
+		"scope": "mv",
+		"description": "(Unix only) Creates a symbolic link to the file in the data directory.Returns 1 if sucessful, 0 if fails"
+	},
+	"ftime": {
+		"prefix": "ftime",
+		"body": "ftime( ${1:path} )$0",
+		"scope": "mv",
+		"description": "Gets the last modified time for the file in data directory.Returns time_t since a file in the was last modified or -1 if the file does not exist."
+	},
+	"gdClearLastError": {
+		"prefix": "gdClearLastError",
+		"body": "gdClearLastError()$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageAABlend": {
+		"prefix": "gdImageAABlend",
+		"body": "gdImageAABlend( ${1:im} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageAlpha": {
+		"prefix": "gdImageAlpha",
+		"body": "gdImageAlpha( ${1:im}, ${2:c} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageAlphaBlending": {
+		"prefix": "gdImageAlphaBlending",
+		"body": "gdImageAlphaBlending( ${1:im}, ${2:alphaBlendingArg} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageArc": {
+		"prefix": "gdImageArc",
+		"body": "gdImageArc( ${1:im}, ${2:cx}, ${3:cy}, ${4:w}, ${5:h}, ${6:s}, ${7:e}, ${8:color} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageBlue": {
+		"prefix": "gdImageBlue",
+		"body": "gdImageBlue( ${1:im}, ${2:c} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageBoundsSafe": {
+		"prefix": "gdImageBoundsSafe",
+		"body": "gdImageBoundsSafe( ${1:im}, ${2:x}, ${3:y} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageColorAllocate": {
+		"prefix": "gdImageColorAllocate",
+		"body": "gdImageColorAllocate( ${1:im}, ${2:r}, ${3:g}, ${4:b} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageColorAllocateAlpha": {
+		"prefix": "gdImageColorAllocateAlpha",
+		"body": "gdImageColorAllocateAlpha( ${1:im}, ${2:r}, ${3:g}, ${4:b}, ${5:a} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageColorClosest": {
+		"prefix": "gdImageColorClosest",
+		"body": "gdImageColorClosest( ${1:im}, ${2:r}, ${3:g}, ${4:b} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageColorClosestAlpha": {
+		"prefix": "gdImageColorClosestAlpha",
+		"body": "gdImageColorClosestAlpha( ${1:im}, ${2:r}, ${3:g}, ${4:b}, ${5:a} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageColorClosestHWB": {
+		"prefix": "gdImageColorClosestHWB",
+		"body": "gdImageColorClosestHWB( ${1:im}, ${2:r}, ${3:g}, ${4:b} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageColorDeallocate": {
+		"prefix": "gdImageColorDeallocate",
+		"body": "gdImageColorDeallocate( ${1:im}, ${2:color} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageColorExact": {
+		"prefix": "gdImageColorExact",
+		"body": "gdImageColorExact( ${1:im}, ${2:r}, ${3:g}, ${4:b} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageColorExactAlpha": {
+		"prefix": "gdImageColorExactAlpha",
+		"body": "gdImageColorExactAlpha( ${1:im}, ${2:r}, ${3:g}, ${4:b}, ${5:a} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageColorResolve": {
+		"prefix": "gdImageColorResolve",
+		"body": "gdImageColorResolve( ${1:im}, ${2:r}, ${3:g}, ${4:b} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageColorResolveAlpha": {
+		"prefix": "gdImageColorResolveAlpha",
+		"body": "gdImageColorResolveAlpha( ${1:im}, ${2:r}, ${3:g}, ${4:b}, ${5:a} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageColorsTotal": {
+		"prefix": "gdImageColorsTotal",
+		"body": "gdImageColorsTotal( ${1:im} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageColorTransparent": {
+		"prefix": "gdImageColorTransparent",
+		"body": "gdImageColorTransparent( ${1:im}, ${2:color} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCompare": {
+		"prefix": "gdImageCompare",
+		"body": "gdImageCompare( ${1:im1}, ${2:im2} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCopy": {
+		"prefix": "gdImageCopy",
+		"body": "gdImageCopy( ${1:dst}, ${2:src}, ${3:dstX}, ${4:dstY}, ${5:srcX}, ${6:srcY}, ${7:w}, ${8:h} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCopyMerge": {
+		"prefix": "gdImageCopyMerge",
+		"body": "gdImageCopyMerge( ${1:dst}, ${2:src}, ${3:dstX}, ${4:dstY}, ${5:srcX}, ${6:srcY}, ${7:w}, ${8:h}, ${9:pct} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCopyMergeGray": {
+		"prefix": "gdImageCopyMergeGray",
+		"body": "gdImageCopyMergeGray( ${1:dst}, ${2:src}, ${3:dstX}, ${4:dstY}, ${5:srcX}, ${6:srcY}, ${7:w}, ${8:h}, ${9:pct} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCopyResampled": {
+		"prefix": "gdImageCopyResampled",
+		"body": "gdImageCopyResampled( ${1:dst}, ${2:src}, ${3:dstX}, ${4:dstY}, ${5:srcX}, ${6:srcY}, ${7:dstW}, ${8:dstH}, ${9:srcW}, ${10:srcH} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCopyResized": {
+		"prefix": "gdImageCopyResized",
+		"body": "gdImageCopyResized( ${1:dst}, ${2:src}, ${3:dstX}, ${4:dstY}, ${5:srcX}, ${6:srcY}, ${7:dstW}, ${8:dstH}, ${9:srcW}, ${10:srcH} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCopyRotated": {
+		"prefix": "gdImageCopyRotated",
+		"body": "gdImageCopyRotated( ${1:dst}, ${2:src}, ${3:dstX}, ${4:dstY}, ${5:srcX}, ${6:srcY}, ${7:srcWidth}, ${8:srcHeight}, ${9:angle} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreate": {
+		"prefix": "gdImageCreate",
+		"body": "gdImageCreate( ${1:sx}, ${2:sy} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreateFromGd": {
+		"prefix": "gdImageCreateFromGd",
+		"body": "gdImageCreateFromGd( ${1:filename}, ${2:location} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreateFromGd2": {
+		"prefix": "gdImageCreateFromGd2",
+		"body": "gdImageCreateFromGd2( ${1:filename}, ${2:location} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreateFromGd2Mem": {
+		"prefix": "gdImageCreateFromGd2Mem",
+		"body": "gdImageCreateFromGd2Mem( ${1:data var} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreateFromGd2Part": {
+		"prefix": "gdImageCreateFromGd2Part",
+		"body": "gdImageCreateFromGd2Part( ${1:filename}, ${2:location}, ${3:srcx}, ${4:srcy}, ${5:w}, ${6:h} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreateFromGd2PartMem": {
+		"prefix": "gdImageCreateFromGd2PartMem",
+		"body": "gdImageCreateFromGd2PartMem( ${1:data var}, ${2:srcx}, ${3:srcy}, ${4:w}, ${5:h} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreateFromGdMem": {
+		"prefix": "gdImageCreateFromGdMem",
+		"body": "gdImageCreateFromGdMem( ${1:data var} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreateFromGif": {
+		"prefix": "gdImageCreateFromGif",
+		"body": "gdImageCreateFromGif( ${1:filename}, ${2:location} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreateFromGifMem": {
+		"prefix": "gdImageCreateFromGifMem",
+		"body": "gdImageCreateFromGifMem( ${1:data var} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreateFromJpeg": {
+		"prefix": "gdImageCreateFromJpeg",
+		"body": "gdImageCreateFromJpeg( ${1:filename}, ${2:location} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreateFromJpegMem": {
+		"prefix": "gdImageCreateFromJpegMem",
+		"body": "gdImageCreateFromJpegMem( ${1:data var} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreateFromPng": {
+		"prefix": "gdImageCreateFromPng",
+		"body": "gdImageCreateFromPng( ${1:filename}, ${2:location} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreateFromPngMem": {
+		"prefix": "gdImageCreateFromPngMem",
+		"body": "gdImageCreateFromPngMem( ${1:data var} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreateFromWBMP": {
+		"prefix": "gdImageCreateFromWBMP",
+		"body": "gdImageCreateFromWBMP( ${1:filename}, ${2:location} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreateFromWBMPMem": {
+		"prefix": "gdImageCreateFromWBMPMem",
+		"body": "gdImageCreateFromWBMPMem( ${1:data var} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreatePaletteFromTrueColor": {
+		"prefix": "gdImageCreatePaletteFromTrueColor",
+		"body": "gdImageCreatePaletteFromTrueColor( ${1:im}, ${2:ditherFlag}, ${3:colorsWanted} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageCreateTrueColor": {
+		"prefix": "gdImageCreateTrueColor",
+		"body": "gdImageCreateTrueColor( ${1:sx}, ${2:sy} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageDashedLine": {
+		"prefix": "gdImageDashedLine",
+		"body": "gdImageDashedLine( ${1:im}, ${2:x1}, ${3:y1}, ${4:x2}, ${5:y2}, ${6:color} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageDestroy": {
+		"prefix": "gdImageDestroy",
+		"body": "gdImageDestroy( ${1:im} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageEllipse": {
+		"prefix": "gdImageEllipse",
+		"body": "gdImageEllipse( ${1:im}, ${2:cx}, ${3:cy}, ${4:w}, ${5:h}, ${6:color} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageFill": {
+		"prefix": "gdImageFill",
+		"body": "gdImageFill( ${1:im}, ${2:x}, ${3:y}, ${4:color} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageFilledArc": {
+		"prefix": "gdImageFilledArc",
+		"body": "gdImageFilledArc( ${1:im}, ${2:cx}, ${3:cy}, ${4:w}, ${5:h}, ${6:s}, ${7:e}, ${8:color}, ${9:style} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageFilledEllipse": {
+		"prefix": "gdImageFilledEllipse",
+		"body": "gdImageFilledEllipse( ${1:im}, ${2:cx}, ${3:cy}, ${4:w}, ${5:h}, ${6:color} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageFilledPolygon": {
+		"prefix": "gdImageFilledPolygon",
+		"body": "gdImageFilledPolygon( ${1:im}, ${2:points var}, ${3:n}, ${4:color} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageFilledRectangle": {
+		"prefix": "gdImageFilledRectangle",
+		"body": "gdImageFilledRectangle( ${1:im}, ${2:x1}, ${3:y1}, ${4:x2}, ${5:y2}, ${6:color} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageFillToBorder": {
+		"prefix": "gdImageFillToBorder",
+		"body": "gdImageFillToBorder( ${1:im}, ${2:x}, ${3:y}, ${4:border}, ${5:color} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGetClip": {
+		"prefix": "gdImageGetClip",
+		"body": "gdImageGetClip( ${1:im}, ${2:x1P var}, ${3:y1P var}, ${4:x2P var}, ${5:y2P var} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGetInterlaced": {
+		"prefix": "gdImageGetInterlaced",
+		"body": "gdImageGetInterlaced( ${1:im} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGetPixel": {
+		"prefix": "gdImageGetPixel",
+		"body": "gdImageGetPixel( ${1:im}, ${2:x}, ${3:y} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGetTransparent": {
+		"prefix": "gdImageGetTransparent",
+		"body": "gdImageGetTransparent( ${1:im} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGetTrueColorPixel": {
+		"prefix": "gdImageGetTrueColorPixel",
+		"body": "gdImageGetTrueColorPixel( ${1:im}, ${2:x}, ${3:y} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGif": {
+		"prefix": "gdImageGif",
+		"body": "gdImageGif( ${1:im}, ${2:filename}, ${3:location} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGifAnimAdd": {
+		"prefix": "gdImageGifAnimAdd",
+		"body": "gdImageGifAnimAdd( ${1:im}, ${2:out}, ${3:LocalCM}, ${4:LeftOfs}, ${5:TopOfs}, ${6:Delay}, ${7:Disposal}, ${8:previm} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGifAnimAddMem": {
+		"prefix": "gdImageGifAnimAddMem",
+		"body": "gdImageGifAnimAddMem( ${1:im}, ${2:ctx}, ${3:LocalCM}, ${4:LeftOfs}, ${5:TopOfs}, ${6:Delay}, ${7:Disposal}, ${8:previm} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGifAnimAddOutput": {
+		"prefix": "gdImageGifAnimAddOutput",
+		"body": "gdImageGifAnimAddOutput( ${1:im}, ${2:LocalCM}, ${3:LeftOfs}, ${4:TopOfs}, ${5:Delay}, ${6:Disposal}, ${7:previm} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGifAnimBegin": {
+		"prefix": "gdImageGifAnimBegin",
+		"body": "gdImageGifAnimBegin( ${1:im}, ${2:filename}, ${3:location}, ${4:GlobalCM}, ${5:Loops} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGifAnimBeginMem": {
+		"prefix": "gdImageGifAnimBeginMem",
+		"body": "gdImageGifAnimBeginMem( ${1:im}, ${2:GlobalCM}, ${3:Loops} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGifAnimBeginOutput": {
+		"prefix": "gdImageGifAnimBeginOutput",
+		"body": "gdImageGifAnimBeginOutput( ${1:im}, ${2:GlobalCM}, ${3:Loops} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGifAnimEnd": {
+		"prefix": "gdImageGifAnimEnd",
+		"body": "gdImageGifAnimEnd( ${1:out} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGifAnimEndMem": {
+		"prefix": "gdImageGifAnimEndMem",
+		"body": "gdImageGifAnimEndMem( ${1:ctx}, ${2:output var} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGifAnimEndOutput": {
+		"prefix": "gdImageGifAnimEndOutput",
+		"body": "gdImageGifAnimEndOutput()$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGifMem": {
+		"prefix": "gdImageGifMem",
+		"body": "gdImageGifMem( ${1:im}, ${2:output var} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGifOutput": {
+		"prefix": "gdImageGifOutput",
+		"body": "gdImageGifOutput( ${1:im} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageGreen": {
+		"prefix": "gdImageGreen",
+		"body": "gdImageGreen( ${1:im}, ${2:c} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageInterlace": {
+		"prefix": "gdImageInterlace",
+		"body": "gdImageInterlace( ${1:im}, ${2:interlaceArg} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageJpeg": {
+		"prefix": "gdImageJpeg",
+		"body": "gdImageJpeg( ${1:im}, ${2:filename}, ${3:location}, ${4:quality} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageJpegMem": {
+		"prefix": "gdImageJpegMem",
+		"body": "gdImageJpegMem( ${1:im}, ${2:output var}, ${3:quality} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageJpegOutput": {
+		"prefix": "gdImageJpegOutput",
+		"body": "gdImageJpegOutput( ${1:im}, ${2:quality} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageLine": {
+		"prefix": "gdImageLine",
+		"body": "gdImageLine( ${1:im}, ${2:x1}, ${3:y1}, ${4:x2}, ${5:y2}, ${6:color} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageOpenPolygon": {
+		"prefix": "gdImageOpenPolygon",
+		"body": "gdImageOpenPolygon( ${1:im}, ${2:points var}, ${3:n}, ${4:color} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImagePaletteCopy": {
+		"prefix": "gdImagePaletteCopy",
+		"body": "gdImagePaletteCopy( ${1:dst}, ${2:src} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImagePalettePixel": {
+		"prefix": "gdImagePalettePixel",
+		"body": "gdImagePalettePixel( ${1:im}, ${2:x}, ${3:y} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImagePng": {
+		"prefix": "gdImagePng",
+		"body": "gdImagePng( ${1:im}, ${2:filename}, ${3:location} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImagePngMem": {
+		"prefix": "gdImagePngMem",
+		"body": "gdImagePngMem( ${1:im}, ${2:output var} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImagePngOutput": {
+		"prefix": "gdImagePngOutput",
+		"body": "gdImagePngOutput( ${1:im} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImagePolygon": {
+		"prefix": "gdImagePolygon",
+		"body": "gdImagePolygon( ${1:im}, ${2:points var}, ${3:n}, ${4:color} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageRectangle": {
+		"prefix": "gdImageRectangle",
+		"body": "gdImageRectangle( ${1:im}, ${2:x1}, ${3:y1}, ${4:x2}, ${5:y2}, ${6:color} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageRed": {
+		"prefix": "gdImageRed",
+		"body": "gdImageRed( ${1:im}, ${2:c} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageSaveAlpha": {
+		"prefix": "gdImageSaveAlpha",
+		"body": "gdImageSaveAlpha( ${1:im}, ${2:saveAlphaArg} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageSetAntiAliased": {
+		"prefix": "gdImageSetAntiAliased",
+		"body": "gdImageSetAntiAliased( ${1:im}, ${2:c} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageSetAntiAliasedDontBlend": {
+		"prefix": "gdImageSetAntiAliasedDontBlend",
+		"body": "gdImageSetAntiAliasedDontBlend( ${1:im}, ${2:color}, ${3:dont_blend} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageSetBrush": {
+		"prefix": "gdImageSetBrush",
+		"body": "gdImageSetBrush( ${1:im}, ${2:brush} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageSetClip": {
+		"prefix": "gdImageSetClip",
+		"body": "gdImageSetClip( ${1:im}, ${2:x1}, ${3:y1}, ${4:x2}, ${5:y2} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageSetPixel": {
+		"prefix": "gdImageSetPixel",
+		"body": "gdImageSetPixel( ${1:im}, ${2:x}, ${3:y}, ${4:color} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageSetStyle": {
+		"prefix": "gdImageSetStyle",
+		"body": "gdImageSetStyle( ${1:im}, ${2:style var}, ${3:n} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageSetThickness": {
+		"prefix": "gdImageSetThickness",
+		"body": "gdImageSetThickness( ${1:im}, ${2:thickness} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageSetTile": {
+		"prefix": "gdImageSetTile",
+		"body": "gdImageSetTile( ${1:im}, ${2:tile} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageSharpen": {
+		"prefix": "gdImageSharpen",
+		"body": "gdImageSharpen( ${1:im}, ${2:pct} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageSquareToCircle": {
+		"prefix": "gdImageSquareToCircle",
+		"body": "gdImageSquareToCircle( ${1:im}, ${2:radius} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageStringFT": {
+		"prefix": "gdImageStringFT",
+		"body": "gdImageStringFT( ${1:im}, ${2:brect var}, ${3:fg}, ${4:fontlist}, ${5:ptsize}, ${6:angle}, ${7:x}, ${8:y}, ${9:string} )$0",
+		"scope": "mv",
+		"description": "This will append a string of text to an image.Returns an error message"
+	},
+	"gdImageStringFTCircle": {
+		"prefix": "gdImageStringFTCircle",
+		"body": "gdImageStringFTCircle( ${1:im}, ${2:cx}, ${3:cy}, ${4:radius}, ${5:textRadius}, ${6:fillPortion}, ${7:font}, ${8:points}, ${9:top}, ${10:bottom}, ${11:fgcolor} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageSX": {
+		"prefix": "gdImageSX",
+		"body": "gdImageSX( ${1:im} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageSY": {
+		"prefix": "gdImageSY",
+		"body": "gdImageSY( ${1:im} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageTrueColor": {
+		"prefix": "gdImageTrueColor",
+		"body": "gdImageTrueColor( ${1:im} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageTrueColorPixel": {
+		"prefix": "gdImageTrueColorPixel",
+		"body": "gdImageTrueColorPixel( ${1:im}, ${2:x}, ${3:y} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageTrueColorToPalette": {
+		"prefix": "gdImageTrueColorToPalette",
+		"body": "gdImageTrueColorToPalette( ${1:im}, ${2:ditherFlag}, ${3:colorsWanted} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageWBMP": {
+		"prefix": "gdImageWBMP",
+		"body": "gdImageWBMP( ${1:im}, ${2:fg}, ${3:filename}, ${4:location} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageWBMPMem": {
+		"prefix": "gdImageWBMPMem",
+		"body": "gdImageWBMPMem( ${1:im}, ${2:fg}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdImageWBMPOutput": {
+		"prefix": "gdImageWBMPOutput",
+		"body": "gdImageWBMPOutput( ${1:im}, ${2:fg} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdLastError": {
+		"prefix": "gdLastError",
+		"body": "gdLastError()$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdTrueColor": {
+		"prefix": "gdTrueColor",
+		"body": "gdTrueColor( ${1:r}, ${2:g}, ${3:b} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gdTrueColorAlpha": {
+		"prefix": "gdTrueColorAlpha",
+		"body": "gdTrueColorAlpha( ${1:r}, ${2:g}, ${3:b}, ${4:a} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"gettoken": {
+		"prefix": "gettoken",
+		"body": "gettoken( ${1:delimited_string}, ${2:characters}, ${3:position_num} )$0",
+		"scope": "mv",
+		"description": "Returns the nth number token (i.e. substring) of a delimited_string using characters as token separators. A null string is returned if there is no nth token. Common delimiter characters are comma, tab, linefeeds, pipe but are not limited to these.Returns the position_num token (i.e. substring) of a delimited_string delimited by characters."
+	},
+	"glosub": {
+		"prefix": "glosub",
+		"body": "glosub( ${1:target_string}, ${2:search}, ${3:replace} )$0",
+		"scope": "mv",
+		"description": "Global substitution returns a copy of string in which all instances of string search have been replaced by string replace. (Note: to represent a backslash () in replace, use '\\\\').Returns string where all instances of search have been replaced."
+	},
+	"glosub_array": {
+		"prefix": "glosub_array",
+		"body": "glosub_array( ${1:string}, ${2:search_array}, ${3:replace_array} )$0",
+		"scope": "mv",
+		"description": "Works like glosub(), but search_array and replace_array are iterated through, each value in search_array found in the string is replaced by the corresponding value in replace_arrayReturn Value: string is returned with all found values replaced."
+	},
+	"indexof": {
+		"prefix": "indexof",
+		"body": "indexof( ${1:search_string}, ${2:target_string var}, ${3:start_number} )$0",
+		"scope": "mv",
+		"description": "Returns the position of the first occurrence of search_string within the target_string beginning at the start_number position. The search is CASE SENSITIVE sensitive. If not found, the functions return 0. The offset parameter and returned string offset are 1-based. For speed, target_string is passed by reference .Returns the 1 based offset_number of search_string within the target_string. The search is case sensitive."
+	},
+	"indexofi": {
+		"prefix": "indexofi",
+		"body": "indexofi( ${1:search_string}, ${2:target_string var}, ${3:start_number} )$0",
+		"scope": "mv",
+		"description": "Returns the position of the first occurrence of search_string within the target_string beginning at the start_number position. The search is  CASE IN-SENSITIVE. If not found, the functions return 0. The offset parameter and returned string offset are 1-based. For speed, target_string is passed by referenceReturns the 1 based offset_number of search_string within the target_string. The search is case in-sensitive."
+	},
+	"indexofl": {
+		"prefix": "indexofl",
+		"body": "indexofl( ${1:needle}, ${2:haystack var}, ${3:offset} )$0",
+		"scope": "mv",
+		"description": "Search from the end of the haystack for needle, starting at the offset position.Return value: Index of found value, or 0 if not found."
+	},
+	"indexofli": {
+		"prefix": "indexofli",
+		"body": "indexofli( ${1:needle}, ${2:haystack var}, ${3:offset} )$0",
+		"scope": "mv",
+		"description": "Search without regard to case from the end of the haystack for needle, starting at the offset position.Return value: Index of found value, or 0 if not found."
+	},
+	"int": {
+		"prefix": "int",
+		"body": "int( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns integer portion of number (removes the decimal and any digits to the right of it)"
+	},
+	"isalnum": {
+		"prefix": "isalnum",
+		"body": "isalnum( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Test if all characters are either alphabetic or digitsReturns 1 if true, 0 if false"
+	},
+	"isalpha": {
+		"prefix": "isalpha",
+		"body": "isalpha( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Test if all characters are alphabetic.Returns 1 if true, 0 if false"
+	},
+	"isascii": {
+		"prefix": "isascii",
+		"body": "isascii( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Test if all characters are ASCII characters (those with decimal value between 0 and 127).Returns 1 if true, 0 if false"
+	},
+	"iscntrl": {
+		"prefix": "iscntrl",
+		"body": "iscntrl( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Test if all characters are control characters (those with decimal value between 0 and 31, or 127).Returns 1 if true, 0 if false"
+	},
+	"isdigit": {
+		"prefix": "isdigit",
+		"body": "isdigit( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Test if all characters are digits in the range 0-9.Returns 1 if true, 0 if false"
+	},
+	"isgraph": {
+		"prefix": "isgraph",
+		"body": "isgraph( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Test if all characters are graphic (see isprint) characters (those with decimal value between 33 and 127).Returns 1 if true, 0 if false"
+	},
+	"islower": {
+		"prefix": "islower",
+		"body": "islower( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Test if all characters are lowercase letters,Returns 1 if true, 0 if false"
+	},
+	"isprint": {
+		"prefix": "isprint",
+		"body": "isprint( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Test if all characters are printable (same as graphic characters, with the addition of the space character).Returns 1 if true, 0 if false"
+	},
+	"ispunct": {
+		"prefix": "ispunct",
+		"body": "ispunct( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Test if all characters are whitespace (space, tab, vertical tab, newline, form feed) characters.Returns 1 if true, 0 if false"
+	},
+	"isspace": {
+		"prefix": "isspace",
+		"body": "isspace( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Test if all characters are whitespace (space, tab, vertical tab, newline, form feed) characters.Returns 1 if true, 0 if false"
+	},
+	"isupper": {
+		"prefix": "isupper",
+		"body": "isupper( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Test if all characters are uppercase letters.Returns 1 if true, 0 if false"
+	},
+	"isxdigit": {
+		"prefix": "isxdigit",
+		"body": "isxdigit( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Test if all characters are hexadecimal digits (a-f, A-F, 0-9).Returns 1 if true, 0 if false"
+	},
+	"keyword_extract": {
+		"prefix": "keyword_extract",
+		"body": "keyword_extract( ${1:string}, ${2:keywords var} )$0",
+		"scope": "mv",
+		"description": "Given a string, will extract keywords from it.  Skipping SGML tags and stemming words (e.g., \"running\" becomes \"run\", but \"bring\" is not changed), the unique list of keywords are placed in the keywords as an array.  Also, some common english words (the articles, \"for\" \"are\", etc.) are removed. Note that there are some words may stem unexpectedly (e.g., \"has\" transforms to \"ha\").Populates the keywords array and returns number of elements."
+	},
+	"keyword_extract_merge": {
+		"prefix": "keyword_extract_merge",
+		"body": "keyword_extract_merge( ${1:string}, ${2:weight} )$0",
+		"scope": "mv",
+		"description": "Extracts keywords as described in keyword_extract, but inserts them into a persistent array initialized by keyword_extract_merge_init.  The weight value passed in is associated with the results from the current string being analyzed. Return null.Returns null."
+	},
+	"keyword_extract_merge_init": {
+		"prefix": "keyword_extract_merge_init",
+		"body": "keyword_extract_merge_init()$0",
+		"scope": "mv",
+		"description": "Initializes persistent storage for a multiple calls to keyword_merge_extract.  Note that this persistent storage is usable for multiple calls within a running Miva Script program, and is deleted by the VM at the end of program execution.Returns null."
+	},
+	"keyword_extract_merge_results": {
+		"prefix": "keyword_extract_merge_results",
+		"body": "keyword_extract_merge_results( ${1:keywords var} )$0",
+		"scope": "mv",
+		"description": "Returns results from one or more keyword_extract_merge calls, storing them as an aggregate in \"keywords\".Returns null."
+	},
+	"keyword_in": {
+		"prefix": "keyword_in",
+		"body": "keyword_in( ${1:keywords_array var}, ${2:search_string} )$0",
+		"scope": "mv",
+		"description": "Performs a keyword_extract() on the string parameter, and determines if the value in the keywords parameter is contained in the keyword list, and returns a boolean 1 or 0 to signify that the keyword is or is not in the string. If the keywords parameter is an array of strings, checks each value in the array, and returns an array of booleans specifying whether the array element is or is not in the string.If keywords is an array, returns an array of booleans specifying if a given keyword element is in the keyword list. -- If keywords is a string, returns a boolean specifying if the given keyword is in the keyword list."
+	},
+	"len": {
+		"prefix": "len",
+		"body": "len( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Returns the number of characters in string.The length of string."
+	},
+	"len_var": {
+		"prefix": "len_var",
+		"body": "len_var( ${1:string var} )$0",
+		"scope": "mv",
+		"description": "Returns the number of characters in string. This function is identical to len() but its parameter is passed by reference, improving performance when dealing with large strings.the length of the string"
+	},
+	"log": {
+		"prefix": "log",
+		"body": "log( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the natural logarithm (base e, approximately 2.71828) of number."
+	},
+	"log10": {
+		"prefix": "log10",
+		"body": "log10( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the base 10 logarithm of number"
+	},
+	"ltrim": {
+		"prefix": "ltrim",
+		"body": "ltrim( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Returns a copy of string with all space characters removed from the left end. ⇨ Version 5.32 -- Will now trim whitespace from arrays and structures. Previously the functions would convert arrays and structures to serialized data and\nthen trim it. Arrays and structures are now iterated and all values within are trimmed appropriately."
+	},
+	"makesessionid": {
+		"prefix": "makesessionid",
+		"body": "makesessionid()$0",
+		"scope": "mv",
+		"description": "Returns a 128-bit unique ID."
+	},
+	"max": {
+		"prefix": "max",
+		"body": "max( ${1:a}, ${2:b} )$0",
+		"scope": "mv",
+		"description": "Compares and returns the higher of two values.Returns the higher value of a or b"
+	},
+	"min": {
+		"prefix": "min",
+		"body": "min( ${1:a}, ${2:b} )$0",
+		"scope": "mv",
+		"description": "Compares and returns the lower of two values.Returns the smaller value of a or b"
+	},
+	"miva_array_binarysearch": {
+		"prefix": "miva_array_binarysearch",
+		"body": "miva_array_binarysearch( ${1:key}, ${2:array var}, ${3:callback}, ${4:data var} )$0",
+		"scope": "mv",
+		"description": "Performs a binary search for \"key\" in \"array\".  \"array\" must have been previously sorted.Returns the index of \"key\" in \"array\" or 0 if no match was found."
+	},
+	"miva_array_clear": {
+		"prefix": "miva_array_clear",
+		"body": "miva_array_clear( ${1:array var}, ${2:start}, ${3:count} )$0",
+		"scope": "mv",
+		"description": "Removes \"count\" elements from \"array\", starting at position \"start\".  The elements are removed from the array, but the array is not collapsed.Returns the number of elements remaining in the array."
+	},
+	"miva_array_collapse": {
+		"prefix": "miva_array_collapse",
+		"body": "miva_array_collapse( ${1:aggregate var} )$0",
+		"scope": "mv",
+		"description": "Collapses the array_variable making the indices sequential starting at 1. Returns the number of elements in the array."
+	},
+	"miva_array_copy": {
+		"prefix": "miva_array_copy",
+		"body": "miva_array_copy( ${1:source var}, ${2:sstart}, ${3:scount}, ${4:dest var}, ${5:dpos} )$0",
+		"scope": "mv",
+		"description": "Copies \"scount\" elements from \"source\" into \"dest\", starting with \"sstart\"     and placing the elements at \"dpos\".  Existing elements in \"dest\" are overwritten.Returns the number of elements in the \"dest\" array after the copy."
+	},
+	"miva_array_copy_ref": {
+		"prefix": "miva_array_copy_ref",
+		"body": "miva_array_copy_ref( ${1:source var}, ${2:sstart}, ${3:scount}, ${4:dest var}, ${5:dpos} )$0",
+		"scope": "mv",
+		"description": "Copies \"scount\" elements from \"source\" into \"dest\", starting with \"sstart\"     and placing the elements at \"dpos\".  Existing elements in \"dest\" are overwritten.Returns the number of elements in the \"dest\" array after the copy."
+	},
+	"miva_array_delete": {
+		"prefix": "miva_array_delete",
+		"body": "miva_array_delete( ${1:array var}, ${2:start}, ${3:count} )$0",
+		"scope": "mv",
+		"description": "Removes \"count\" elements from \"array\", starting at position \"start\".  The array is collapsed after the elements are removed.Returns the number of elements remaining in the array."
+	},
+	"miva_array_deserialize": {
+		"prefix": "miva_array_deserialize",
+		"body": "miva_array_deserialize( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Reverses miva_array_serialize(). Returns an aggregate array repopulated to match the original."
+	},
+	"miva_array_elements": {
+		"prefix": "miva_array_elements",
+		"body": "miva_array_elements( ${1:aggregate var} )$0",
+		"scope": "mv",
+		"description": "Returns the number of elements in the array_variable that were actually used."
+	},
+	"miva_array_filter": {
+		"prefix": "miva_array_filter",
+		"body": "miva_array_filter( ${1:array var}, ${2:offset}, ${3:element var}, ${4:filter_expression}, ${5:output var} )$0",
+		"scope": "mv",
+		"description": "Iterate through an array starting at a given offset, execute a filter expression against each element, and copy the member to a new output array.  See also miva_array_filter_ref.Return value: Count of output array elements."
+	},
+	"miva_array_filter_ref": {
+		"prefix": "miva_array_filter_ref",
+		"body": "miva_array_filter_ref( ${1:array var}, ${2:offset}, ${3:element var}, ${4:filter_expression}, ${5:output var} )$0",
+		"scope": "mv",
+		"description": "Iterate through an array starting at a given offset, execute a filter expression against each element, and create a new member with references to the members in the output array.  See also miva_array_filter.Return value: Count of output array elements."
+	},
+	"miva_array_find": {
+		"prefix": "miva_array_find",
+		"body": "miva_array_find( ${1:needle}, ${2:haystack var}, ${3:offset} )$0",
+		"scope": "mv",
+		"description": "Performs a sequential search for \"needle\" in array \"haystack\", starting at \"offset\". Comparison is equivalent to the EQ operator. (i.e. looks for an exact match). Haystack must be a simple array( no members), or contain no more than 1 member.Returns the index of \"needle\" in \"haystack\" or 0 if the element was not found."
+	},
+	"miva_array_insert": {
+		"prefix": "miva_array_insert",
+		"body": "miva_array_insert( ${1:array var}, ${2:element}, ${3:pos} )$0",
+		"scope": "mv",
+		"description": "Inserts single element \"element\" into \"array\" at position \"pos\". If \"pos\" = -1, the element is inserted at the end of \"array\".Returns the number of elements in \"array\" after the insertion."
+	},
+	"miva_array_insert_ref": {
+		"prefix": "miva_array_insert_ref",
+		"body": "miva_array_insert_ref( ${1:array var}, ${2:element var}, ${3:pos} )$0",
+		"scope": "mv",
+		"description": "Inserts single element \"element\" into \"array\" at position \"pos\".Returns the number of elements in \"array\" after the insertion."
+	},
+	"miva_array_insert_var": {
+		"prefix": "miva_array_insert_var",
+		"body": "miva_array_insert_var( ${1:array var}, ${2:element var}, ${3:pos} )$0",
+		"scope": "mv",
+		"description": "Inserts single element \"element\" into \"array\" at position \"pos\".Returns the number of elements in \"array\" after the insertion."
+	},
+	"miva_array_max": {
+		"prefix": "miva_array_max",
+		"body": "miva_array_max( ${1:aggregate var} )$0",
+		"scope": "mv",
+		"description": "Return the maximum array_variable index used."
+	},
+	"miva_array_merge": {
+		"prefix": "miva_array_merge",
+		"body": "miva_array_merge( ${1:source var}, ${2:sstart}, ${3:scount}, ${4:dest var}, ${5:dpos} )$0",
+		"scope": "mv",
+		"description": "Copies \"scount\" elements from \"source\" into \"dest\", starting with \"sstart\" and inserting the elements at \"dpos\".  Existing elements in \"dest\" past \"dpos\" are pushed forward by \"scount\" elements.Returns the number of elements in the \"dest\" array after the merge."
+	},
+	"miva_array_merge_ref": {
+		"prefix": "miva_array_merge_ref",
+		"body": "miva_array_merge_ref( ${1:source var}, ${2:sstart}, ${3:scount}, ${4:dest var}, ${5:dpos} )$0",
+		"scope": "mv",
+		"description": "Copies \"scount\" elements from \"source\" into \"dest\", starting with \"sstart\" and inserting the elements at \"dpos\".  Existing elements in \"dest\" past \"dpos\" are pushed forward by \"scount\" elements.Returns the number of elements in the \"dest\" array after the merge."
+	},
+	"miva_array_min": {
+		"prefix": "miva_array_min",
+		"body": "miva_array_min( ${1:aggregate var} )$0",
+		"scope": "mv",
+		"description": "Return the minumum array_variable index used."
+	},
+	"miva_array_next": {
+		"prefix": "miva_array_next",
+		"body": "miva_array_next( ${1:aggregate var}, ${2:index} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"miva_array_pop": {
+		"prefix": "miva_array_pop",
+		"body": "miva_array_pop( ${1:array var} )$0",
+		"scope": "mv",
+		"description": "Removes and returns the last element of \"array\".Returns the number of elements remaining in \"array\"."
+	},
+	"miva_array_pop_ref": {
+		"prefix": "miva_array_pop_ref",
+		"body": "miva_array_pop_ref( ${1:array var}, ${2:element var} )$0",
+		"scope": "mv",
+		"description": "Makes \"element\" a reference to the last element of \"array\", then removes it  from the array.Returns the number of elements remaining in \"array\"."
+	},
+	"miva_array_previous": {
+		"prefix": "miva_array_previous",
+		"body": "miva_array_previous( ${1:aggregate var}, ${2:index} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"miva_array_search": {
+		"prefix": "miva_array_search",
+		"body": "miva_array_search( ${1:array var}, ${2:offset}, ${3:element var}, ${4:filter_expr} )$0",
+		"scope": "mv",
+		"description": "Performs an sequential search in \"array\", starting at \"offset\". Comparison is made by evaluating \"filter_expr\" for each element. This allows you to specify the comparison type.Returns the index of the first element in \"array\" for which filter_expr evaluated as true, or 0 if no elements met this condition."
+	},
+	"miva_array_serialize": {
+		"prefix": "miva_array_serialize",
+		"body": "miva_array_serialize( ${1:aggregate var} )$0",
+		"scope": "mv",
+		"description": "Returns a string representation of the array and any subarrays. Can be used to store an entire array in a database for later retreival."
+	},
+	"miva_array_shift": {
+		"prefix": "miva_array_shift",
+		"body": "miva_array_shift( ${1:array var} )$0",
+		"scope": "mv",
+		"description": "Removes and returns the first element of \"array\".Returns the first element of \"array\"."
+	},
+	"miva_array_shift_ref": {
+		"prefix": "miva_array_shift_ref",
+		"body": "miva_array_shift_ref( ${1:array var}, ${2:element var} )$0",
+		"scope": "mv",
+		"description": "Makes \"element\" a reference to the first element of \"array\", then removes it from the array.Returns the number of elements remaining in \"array\"."
+	},
+	"miva_array_sort": {
+		"prefix": "miva_array_sort",
+		"body": "miva_array_sort( ${1:aggregate var}, ${2:callback}, ${3:data var} )$0",
+		"scope": "mv",
+		"description": "This function will sort an array structureReturns the number of array elements in the aggregate array structure after sorting."
+	},
+	"miva_async_sleep": {
+		"prefix": "miva_async_sleep",
+		"body": "miva_async_sleep( ${1:until}, ${2:semfile}, ${3|'data','script'|} )$0",
+		"scope": "mv",
+		"description": "Sleep until the \"until\" time, or the modified time on the file described by semfile and semlocation is changed.Return Value: None"
+	},
+	"miva_cdata_encode": {
+		"prefix": "miva_cdata_encode",
+		"body": "miva_cdata_encode( ${1:text} )$0",
+		"scope": "mv",
+		"description": "Create one or more CDATA tags with the provided text, splitting any data with \"]]>\" into two CDATA tags with \"]]\" at the end of one CDATA tag, and \">\" as the first value of the next CDATA tag.Return value: Text quoted within one or more CDATA tags."
+	},
+	"miva_closelog": {
+		"prefix": "miva_closelog",
+		"body": "miva_closelog()$0",
+		"scope": "mv",
+		"description": "Closes the connection to the log file and otherwise eliminates the effect of the last call to miva_openlog.  Will cause any subsequent calls to miva_setlogmask and miva_writelog to fail until miva_openlog is called again.Returns 1 on success, 0 on error"
+	},
+	"miva_csv_encode": {
+		"prefix": "miva_csv_encode",
+		"body": "miva_csv_encode( ${1:text}, ${2:delimiter} )$0",
+		"scope": "mv",
+		"description": "Takes a string of text and a delimiter, and returns a string with appropriately doubled quotes or escaped delimiters, suitable for including in a CSV record.Returns: An appropriately escaped or quoted string, or a copy of the original string if no quotes or delimiters were found."
+	},
+	"miva_element_exists": {
+		"prefix": "miva_element_exists",
+		"body": "miva_element_exists( ${1:array var}, ${2:index} )$0",
+		"scope": "mv",
+		"description": "Tests if an element exists where: array is an array and index is index number being tested.Returns 1 if the element found else 0"
+	},
+	"miva_getvarlist": {
+		"prefix": "miva_getvarlist",
+		"body": "miva_getvarlist( ${1:scope} )$0",
+		"scope": "mv",
+		"description": "Returns a comma-separated list of the names of all currently defined variables where: scope = the string literal \"l\", \"g\", \"s\" (i.e. local, global, system)"
+	},
+	"miva_hex_decode": {
+		"prefix": "miva_hex_decode",
+		"body": "miva_hex_decode( ${1:data} )$0",
+		"scope": "mv",
+		"description": "Convert \"data\" to hexadecimal notation.returns the resulting decoded data"
+	},
+	"miva_hex_encode": {
+		"prefix": "miva_hex_encode",
+		"body": "miva_hex_encode( ${1:data} )$0",
+		"scope": "mv",
+		"description": "Convert \"data\" to hexadecimal notation.returns the resulting encoded data."
+	},
+	"miva_html_strip": {
+		"prefix": "miva_html_strip",
+		"body": "miva_html_strip( ${1:text}, ${2:allowed_tags} )$0",
+		"scope": "mv",
+		"description": "Removes HTML tags from a given string.Return value: Text string with all HTML tags except those listed in allowed_tags removed."
+	},
+	"miva_ieee754_normalize": {
+		"prefix": "miva_ieee754_normalize",
+		"body": "miva_ieee754_normalize( ${1:significant_digits}, ${2:value} )$0",
+		"scope": "mv",
+		"description": "Normalize the value to IEEE 754 specifications, to the given number of significant digits.Return value: The normalized value to the specified significant digits"
+	},
+	"miva_json_decode": {
+		"prefix": "miva_json_decode",
+		"body": "miva_json_decode( ${1:data}, ${2:output var} )$0",
+		"scope": "mv",
+		"description": "Decodes a block of JSON data in \"data\", returning the parsed aggregate value in \"output\".Returns 1 on success, 0 on error."
+	},
+	"miva_json_decode_last_error": {
+		"prefix": "miva_json_decode_last_error",
+		"body": "miva_json_decode_last_error()$0",
+		"scope": "mv",
+		"description": "Returns a text description of the most recent parsing error encountered by miva_json_decode()Returns a text description of the most recent parsing error."
+	},
+	"miva_lockfile": {
+		"prefix": "miva_lockfile",
+		"body": "miva_lockfile( ${1:path}, ${2|'data','script'|} )$0",
+		"scope": "mv",
+		"description": "Creates and locks a lockfile.  Similar to the behavior of MvLOCKFILE without the closing /MvLOCKFILE behavior. It also creates the exact filename, rather than appending \".lck\" to the filename as MvLOCKFILE does.Returns 1 if sucessful, -1 if fails"
+	},
+	"miva_member_exists": {
+		"prefix": "miva_member_exists",
+		"body": "miva_member_exists( ${1:structure var}, ${2:member} )$0",
+		"scope": "mv",
+		"description": "Tests if a member exists where: \"structure\" is a data structure and \"member\" is the name of a structure member being tested. Returns 0 or 1.Returns 1 if found else returns 0"
+	},
+	"miva_openlog": {
+		"prefix": "miva_openlog",
+		"body": "miva_openlog( ${1:ident}, ${2|'PID','CONS','ODELAY','NDELAY','NOWAIT','PERROR'|}, ${3|'USER','LOCAL0','LOCAL1','LOCAL2','LOCAL3','LOCAL4','LOCAL5','LOCAL6','LOCAL7'|} )$0",
+		"scope": "mv",
+		"description": "Opens a connection to the log file and sets default behavior for all subsequent miva_writelog calls.Returns 1 on success, 0 on error"
+	},
+	"miva_output_flush": {
+		"prefix": "miva_output_flush",
+		"body": "miva_output_flush()$0",
+		"scope": "mv",
+		"description": "Writes the HTTP headers and any other output to the browser. Subsequent calls will write the output, but not the headers."
+	},
+	"miva_output_header": {
+		"prefix": "miva_output_header",
+		"body": "miva_output_header( ${1:header}, ${2:value} )$0",
+		"scope": "mv",
+		"description": "Sets an HTTP header name-value pair."
+	},
+	"miva_setdefaultdatabase": {
+		"prefix": "miva_setdefaultdatabase",
+		"body": "miva_setdefaultdatabase( ${1:database} )$0",
+		"scope": "mv",
+		"description": "This function takes a string as a parameter which specifies the type of database to which the miva_defaultdatabase system variable is set."
+	},
+	"miva_setdefaultlanguage": {
+		"prefix": "miva_setdefaultlanguage",
+		"body": "miva_setdefaultlanguage( ${1:language} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"miva_setlanguage": {
+		"prefix": "miva_setlanguage",
+		"body": "miva_setlanguage( ${1:language} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"miva_setlogmask": {
+		"prefix": "miva_setlogmask",
+		"body": "miva_setlogmask( ${1|'EMERG','ALERT','CRIT','ERR','WARNING','NOTICE','INFO','DEBUG'|} )$0",
+		"scope": "mv",
+		"description": "Causes all subsequent calls to miva_writelog to be ignored unless they specify a priority that is included in the maskpri argument.  Will return failure unless the miva log is open.Returns 1 on success, 0 on error"
+	},
+	"miva_setprocessname": {
+		"prefix": "miva_setprocessname",
+		"body": "miva_setprocessname( ${1:name} )$0",
+		"scope": "mv",
+		"description": "Set the process name (where possible) and alters the s.process_name variable.Return value: None."
+	},
+	"miva_sleep": {
+		"prefix": "miva_sleep",
+		"body": "miva_sleep( ${1:msecs} )$0",
+		"scope": "mv",
+		"description": "Delays the running application for msecs milliseconds or until the global timeout expires, whichever is shorter.Return Value: None"
+	},
+	"miva_splitstring": {
+		"prefix": "miva_splitstring",
+		"body": "miva_splitstring( ${1:string}, ${2:sep}, ${3:output var}, ${4|'trim','ltrim','rtrim','lower','upper','insensitive'|} )$0",
+		"scope": "mv",
+		"description": "Splits a string into chunks in an array, using the separator parameter as the point to split the string. Returns the number of elements in the output array.Returns: The number of elements in the output array.flags = A comma separated list of any of the following keywords\ntrim : removes extra space around the left and right sides of all elements\nltrim : removes extra space around the left side of all elements\nrtrim : removes extra space around the right side of all elements\nlower : converts all elements to lowercase\nupper : converts all elements to uppercase\ninsensitive : searches for the sep input parameter using a case-insensitive searchflags = A comma separated list of any of the following keywords\ntrim : removes extra space around the left and right sides of all elements\nltrim : removes extra space around the left side of all elements\nrtrim : removes extra space around the right side of all elements\nlower : converts all elements to lowercase\nupper : converts all elements to uppercase\ninsensitive : searches for the sep input parameter using a case-insensitive search"
+	},
+	"miva_struct_members": {
+		"prefix": "miva_struct_members",
+		"body": "miva_struct_members( ${1:struct var}, ${2:members var} )$0",
+		"scope": "mv",
+		"description": "This function retreives the member / field names of a data structure.Returns the number of member names found.  Important: A member name will be returned even if its value is null."
+	},
+	"miva_struct_merge": {
+		"prefix": "miva_struct_merge",
+		"body": "miva_struct_merge( ${1:source var}, ${2:dest var} )$0",
+		"scope": "mv",
+		"description": "Copy the structure members from source into dest, if the member does not exist in dest. See also miva_struct_merge_ref.Return value: 0 on success, -1 on failure."
+	},
+	"miva_struct_merge_ref": {
+		"prefix": "miva_struct_merge_ref",
+		"body": "miva_struct_merge_ref( ${1:source var}, ${2:dest var} )$0",
+		"scope": "mv",
+		"description": "Make references of the structure members from source in dest, if the member does not exist in dest.  Similar to miva_struct_merge, but makes references into original structure rather than copies.Return value: None."
+	},
+	"miva_template_compile": {
+		"prefix": "miva_template_compile",
+		"body": "miva_template_compile( ${1:signat}, ${2:source var}, ${3:sourceitems var}, ${4:target}, ${5:errors var} )$0",
+		"scope": "mv",
+		"description": "Compiles the contents of a string into a page template file.Returns 1 if compilation succeeds, 0 if error occured."
+	},
+	"miva_template_compile_dump": {
+		"prefix": "miva_template_compile_dump",
+		"body": "miva_template_compile_dump( ${1:source var}, ${2:errors var} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"miva_template_compile_itemlist": {
+		"prefix": "miva_template_compile_itemlist",
+		"body": "miva_template_compile_itemlist( ${1:signat}, ${2:source var}, ${3:sourceitems var}, ${4:target}, ${5:errors var} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"miva_variable_type": {
+		"prefix": "miva_variable_type",
+		"body": "miva_variable_type( ${1:variable} )$0",
+		"scope": "mv",
+		"description": "Return a string representation of the variable type e.g. \"INTEGER\", \"DOUBLE\", \"ARRAY\", etc...Returns the variable type"
+	},
+	"miva_variable_value": {
+		"prefix": "miva_variable_value",
+		"body": "miva_variable_value( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Returns the value of a variable where expression is the literal name of the variable."
+	},
+	"miva_writelog": {
+		"prefix": "miva_writelog",
+		"body": "miva_writelog( ${1:priority}, ${2:message} )$0",
+		"scope": "mv",
+		"description": "Writes a message to the log with the specified priority.  Will return failure unless the miva log is open.Returns 1 on success, 0 on error"
+	},
+	"mktime_t": {
+		"prefix": "mktime_t",
+		"body": "mktime_t( ${1:year}, ${2:month}, ${3:dayofmonth}, ${4:hours}, ${5:minutes}, ${6:seconds}, ${7:timezone} )$0",
+		"scope": "mv",
+		"description": "Returns the s.time_t value for the time specified. time_zone can be the keyword 'local'"
+	},
+	"padl": {
+		"prefix": "padl",
+		"body": "padl( ${1:string}, ${2:length}, ${3:character} )$0",
+		"scope": "mv",
+		"description": "Returns a string length characters long, consisting of string padded on the left with as many instances of padcharacter as are needed to make up the full length."
+	},
+	"padr": {
+		"prefix": "padr",
+		"body": "padr( ${1:string}, ${2:length}, ${3:character} )$0",
+		"scope": "mv",
+		"description": "Returns a string length characters long, consisting of string padded on the right with as many instances of padcharacter as are needed to make up the full length."
+	},
+	"pkcs7_free": {
+		"prefix": "pkcs7_free",
+		"body": "pkcs7_free( ${1:pkcs7 var} )$0",
+		"scope": "mv",
+		"description": "Remove a pkcs7 structure from internal memory. The passed pkcs7 structure reference is unchanged on failure (invalid reference) or set to 0 on success.Returns 1 on success, 0 on failure"
+	},
+	"pkcs7_get_certs": {
+		"prefix": "pkcs7_get_certs",
+		"body": "pkcs7_get_certs( ${1:pkcs7 var}, ${2:x509s var} )$0",
+		"scope": "mv",
+		"description": "Given a structure reference such as returned from pkcs7_load_mem, return certificate references for the x509 certificates that are embedded therein.Returns Count of array elements returned, -1 on failure"
+	},
+	"pkcs7_load_mem": {
+		"prefix": "pkcs7_load_mem",
+		"body": "pkcs7_load_mem( ${1:cert}, ${2|'pem','der','pkcs12'|}, ${3:pkcs7 var} )$0",
+		"scope": "mv",
+		"description": "Load a list of PKCS7 structures in the specified format into memory, and return a structure reference that refers to the structure(s) in internal storage.Returns 1 on success, 0 on failure"
+	},
+	"pkcs7_verify": {
+		"prefix": "pkcs7_verify",
+		"body": "pkcs7_verify( ${1:pkcs7 var}, ${2:root_x509 var}, ${3:content} )$0",
+		"scope": "mv",
+		"description": "Given a pkcs7 structure reference and root x509 certificate reference, verify the pkcs7 structure and the signed content (if provided).Returns 1 on success, 0 on failure"
+	},
+	"power": {
+		"prefix": "power",
+		"body": "power( ${1:number}, ${2:matissa} )$0",
+		"scope": "mv",
+		"description": "Raises number to a a power (for example, power(12,2)=144)"
+	},
+	"random": {
+		"prefix": "random",
+		"body": "random( ${1:max} )$0",
+		"scope": "mv",
+		"description": "Returns a random number less than or equal to maximum"
+	},
+	"rnd": {
+		"prefix": "rnd",
+		"body": "rnd( ${1:value}, ${2:precision} )$0",
+		"scope": "mv",
+		"description": "Works like the ROUND operator, rounding number up or down to number_of_places after the decimal"
+	},
+	"rsa_free": {
+		"prefix": "rsa_free",
+		"body": "rsa_free( ${1:rsa var} )$0",
+		"scope": "mv",
+		"description": "Frees memory associated with a previously loaded RSA keypair.Returns 1 on success, 0 on error."
+	},
+	"rsa_generate_keypair": {
+		"prefix": "rsa_generate_keypair",
+		"body": "rsa_generate_keypair( ${1:pubkey_file}, ${2:privkey_file}, ${3:bits}, ${4:e}, ${5:passphrase} )$0",
+		"scope": "mv",
+		"description": "Generates an RSA keypair, saving the public key in pubkey_file, the private key in privkey_file, and encrypting the private key with passphrase.Returns 1 on success, 0 on error."
+	},
+	"rsa_generate_keypair_mem": {
+		"prefix": "rsa_generate_keypair_mem",
+		"body": "rsa_generate_keypair_mem( ${1:pubkey var}, ${2:privkey var}, ${3:bits}, ${4:e}, ${5:passphrase} )$0",
+		"scope": "mv",
+		"description": "Generates an RSA keypair, returning the public and private keys in variables, and encrypting the private key with passphrase.Returns 1 on success, 0 on error."
+	},
+	"rsa_generate_keypair_mem_cipher": {
+		"prefix": "rsa_generate_keypair_mem_cipher",
+		"body": "rsa_generate_keypair_mem_cipher( ${1:pubkey var}, ${2:privkey var}, ${3:bits}, ${4:e}, ${5:passphrase}, ${6:ciphername} )$0",
+		"scope": "mv",
+		"description": "Behaves identical to the legacy counterpart rsa_generate_keypair_mem() except that it allows the caller to specify the cipher used to encrypt the private key (the legacy function always uses des-ede3-cbc).Returns 1 on success or 0 on error."
+	},
+	"rsa_load_privatekey": {
+		"prefix": "rsa_load_privatekey",
+		"body": "rsa_load_privatekey( ${1:privkey_file}, ${2:rsa var}, ${3:passphrase} )$0",
+		"scope": "mv",
+		"description": "Load an encrypted RSA private key from a PKCS#8 file specified by privkey_file, and decrypt it using passphrase.Returns 1 on success, 0 on error."
+	},
+	"rsa_load_privatekey_engine": {
+		"prefix": "rsa_load_privatekey_engine",
+		"body": "rsa_load_privatekey_engine( ${1:engine}, ${2:key_id}, ${3:rsa var} )$0",
+		"scope": "mv",
+		"description": "Load an encryption key based on a key id.Return value: 1 on success, 0 on failure."
+	},
+	"rsa_load_privatekey_mem": {
+		"prefix": "rsa_load_privatekey_mem",
+		"body": "rsa_load_privatekey_mem( ${1:privkey}, ${2:rsa var}, ${3:passphrase} )$0",
+		"scope": "mv",
+		"description": "Loads an encrypted RSA private key from a memory buffer containing PKCS#8 dataReturns 1 on success, 0 on error."
+	},
+	"rsa_load_publickey": {
+		"prefix": "rsa_load_publickey",
+		"body": "rsa_load_publickey( ${1:pubkey_file}, ${2:rsa var} )$0",
+		"scope": "mv",
+		"description": "Load an RSA public key from a PKCS#1 file specified by \"pubkey_file\".Returns 1 on success, 0 on error."
+	},
+	"rsa_load_publickey_engine": {
+		"prefix": "rsa_load_publickey_engine",
+		"body": "rsa_load_publickey_engine( ${1:engine}, ${2:key_id}, ${3:rsa var} )$0",
+		"scope": "mv",
+		"description": "Load an encryption key based on a key id.Return value: 1 on success, 0 on failure."
+	},
+	"rsa_load_publickey_mem": {
+		"prefix": "rsa_load_publickey_mem",
+		"body": "rsa_load_publickey_mem( ${1:pubkey}, ${2:rsa var} )$0",
+		"scope": "mv",
+		"description": "Loads an RSA public key from a memory buffer containing PKCS#1 dataReturns 1 on success, 0 on error."
+	},
+	"rsa_private_decrypt": {
+		"prefix": "rsa_private_decrypt",
+		"body": "rsa_private_decrypt( ${1:rsa}, ${2:encrypted}, ${3:plaintext var} )$0",
+		"scope": "mv",
+		"description": "Decrypts data previously encrypted using the public key portion of an RSA keypair.Returns 1 on success, 0 on error."
+	},
+	"rsa_private_encrypt": {
+		"prefix": "rsa_private_encrypt",
+		"body": "rsa_private_encrypt( ${1:rsa}, ${2:plaintext}, ${3:encrypted var} )$0",
+		"scope": "mv",
+		"description": "Encrypts data using the private key portion of an RSA keypair.Returns 1 on success, 0 on error."
+	},
+	"rsa_public_decrypt": {
+		"prefix": "rsa_public_decrypt",
+		"body": "rsa_public_decrypt( ${1:rsa}, ${2:encrypted}, ${3:plaintext var} )$0",
+		"scope": "mv",
+		"description": "Decrypts data previously encrypted using the private key portion of an RSA keypair.Returns 1 on success, 0 on error."
+	},
+	"rsa_public_encrypt": {
+		"prefix": "rsa_public_encrypt",
+		"body": "rsa_public_encrypt( ${1:rsa}, ${2:plaintext}, ${3:encrypted var} )$0",
+		"scope": "mv",
+		"description": "Encrypts data using the public key portion of an RSA keypair.Returns 1 on success, 0 on error."
+	},
+	"rsa_save_privatekey": {
+		"prefix": "rsa_save_privatekey",
+		"body": "rsa_save_privatekey( ${1:privkey_file}, ${2:rsa var}, ${3:passphrase} )$0",
+		"scope": "mv",
+		"description": "Encrypts and writes a previously loaded RSA private key to a file in PKCS#8 formatReturns 1 on success, 0 on error."
+	},
+	"rsa_save_privatekey_mem": {
+		"prefix": "rsa_save_privatekey_mem",
+		"body": "rsa_save_privatekey_mem( ${1:privkey var}, ${2:rsa var}, ${3:passphrase} )$0",
+		"scope": "mv",
+		"description": "Encrypts a previously loaded RSA private key and stores it into a variable in PKCS#8 formatReturns 1 on success, 0 on error."
+	},
+	"rsa_save_privatekey_mem_cipher": {
+		"prefix": "rsa_save_privatekey_mem_cipher",
+		"body": "rsa_save_privatekey_mem_cipher( ${1:privkey var}, ${2:rsa var}, ${3:passphrase}, ${4:ciphername} )$0",
+		"scope": "mv",
+		"description": "Behaves identical to the legacy counterpart rsa_save_privatekey_mem() except that it allows the caller to specify the cipher used to encrypt the private key (the legacy function always uses des-ede3-cbc)."
+	},
+	"rsa_sign": {
+		"prefix": "rsa_sign",
+		"body": "rsa_sign( ${1:rsa}, ${2:buffer}, ${3:signature var} )$0",
+		"scope": "mv",
+		"description": "Generates a digital signature using SHA1 and an RSA private keyReturns 1 on success, 0 on failure. Requires OpenSSL 0.9.7 or greater."
+	},
+	"rsa_verify": {
+		"prefix": "rsa_verify",
+		"body": "rsa_verify( ${1:rsa}, ${2:buffer}, ${3:signature} )$0",
+		"scope": "mv",
+		"description": "Verifies a digital signature previously generated by rsa_signReturns 1 on success, 0 on verification failure or error. Requires OpenSSL 0.9.7 or greater."
+	},
+	"rtrim": {
+		"prefix": "rtrim",
+		"body": "rtrim( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Returns a copy of string with all space characters removed from the right end. ⇨ Version 5.32. Will now trim whitespace from arrays and structures.  Previously the functions would convert arrays and structures to serialized data and\nthen trim it. Arrays and structures are now iterated and all values within are trimmed appropriately."
+	},
+	"schmod": {
+		"prefix": "schmod",
+		"body": "schmod( ${1:path}, ${2:mode} )$0",
+		"scope": "mv",
+		"description": "Changes a files or directory permissions.Returns 1 if sucessful, 0 if fails"
+	},
+	"scopy": {
+		"prefix": "scopy",
+		"body": "scopy( ${1:source}, ${2:destination} )$0",
+		"scope": "mv",
+		"description": "Copies a file in the scripts directory.Returns 1 if sucessful, 0 if fails"
+	},
+	"sdelete": {
+		"prefix": "sdelete",
+		"body": "sdelete( ${1:path} )$0",
+		"scope": "mv",
+		"description": "Deletes a file in the scripts directory. See See fdelete()Returns 1 if sucessful, 0 if fails"
+	},
+	"sexists": {
+		"prefix": "sexists",
+		"body": "sexists( ${1:path} )$0",
+		"scope": "mv",
+		"description": "Tests if the file named in path exists in the scripts directory.Returns 1 if the file exsists else 0."
+	},
+	"sfcopy": {
+		"prefix": "sfcopy",
+		"body": "sfcopy( ${1:source}, ${2:destination} )$0",
+		"scope": "mv",
+		"description": "Copies a file from the scripts directory to the data directory.Returns 1 if sucessful, 0 if fails"
+	},
+	"sfrename": {
+		"prefix": "sfrename",
+		"body": "sfrename( ${1:source}, ${2:destination} )$0",
+		"scope": "mv",
+		"description": "Rename source file to destination file. Can rename or move a file in the scripts directory.Returns 1 if sucessful, 0 if fails"
+	},
+	"sfsymlink": {
+		"prefix": "sfsymlink",
+		"body": "sfsymlink( ${1:source}, ${2:destination} )$0",
+		"scope": "mv",
+		"description": "This function creates a symbolic from a file in the scripts directory to the data directory (Available on UNIX file systems only)Returns 1 if sucessful, 0 if fails"
+	},
+	"sin": {
+		"prefix": "sin",
+		"body": "sin( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the sine of number.  The argument should be expressed in radians."
+	},
+	"sinh": {
+		"prefix": "sinh",
+		"body": "sinh( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the hyperbolic sine of number.  The argument should be expressed in radians."
+	},
+	"sisdir": {
+		"prefix": "sisdir",
+		"body": "sisdir( ${1:path} )$0",
+		"scope": "mv",
+		"description": "Tests if the file named in path is a  directory.Returns 1 if the path is a directory else 0."
+	},
+	"slugify": {
+		"prefix": "slugify",
+		"body": "slugify( ${1:data} )$0",
+		"scope": "mv",
+		"description": "Use this function to create friendly (human-readable) URLs.  It takes characters that are forbidden in URIs and either converts them to a valid ASCII character or remove them completely.\nIt adds a hyphen (-) in place of all space characters. For example, the product \"Dodger Blue Baseball Hat!\" becomes \"Dodger-Blue-Baseball-Hat\" which is now URI friendly.A URL friendly string."
+	},
+	"smkdir": {
+		"prefix": "smkdir",
+		"body": "smkdir( ${1:path} )$0",
+		"scope": "mv",
+		"description": "Creates a directory specified by path in the scripts directory.Returns 1 if sucessful, 0 if fails"
+	},
+	"smode": {
+		"prefix": "smode",
+		"body": "smode( ${1:path} )$0",
+		"scope": "mv",
+		"description": "Returns the permissions mode of path in the scripts directory.Returns the permissions mode or -1 if the file does not exist"
+	},
+	"sqrt": {
+		"prefix": "sqrt",
+		"body": "sqrt( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the square root of number."
+	},
+	"srandom": {
+		"prefix": "srandom",
+		"body": "srandom( ${1:seed} )$0",
+		"scope": "mv",
+		"description": "Allows a script to reseed the random number generator used by random()"
+	},
+	"srename": {
+		"prefix": "srename",
+		"body": "srename( ${1:source}, ${2:destination} )$0",
+		"scope": "mv",
+		"description": "Rename source file to destination file. Can rename or move a file in the scripts directory.Returns 1 if sucessful, 0 if fails"
+	},
+	"ssize": {
+		"prefix": "ssize",
+		"body": "ssize( ${1:path} )$0",
+		"scope": "mv",
+		"description": "Get the size of a file in the scripts directoryReturns the file size in bytes or -1 if the file does not exist."
+	},
+	"ssymlink": {
+		"prefix": "ssymlink",
+		"body": "ssymlink( ${1:source}, ${2:destination} )$0",
+		"scope": "mv",
+		"description": "(Unix only) Creates a symbolic link to the file in the scripts directory.Returns 1 if sucessful, 0 if fails"
+	},
+	"stime": {
+		"prefix": "stime",
+		"body": "stime( ${1:path} )$0",
+		"scope": "mv",
+		"description": "Gets the last modified time for the file in scripts directory.Returns time_t since a file in the was last modified or -1 if the file does not exist."
+	},
+	"substring": {
+		"prefix": "substring",
+		"body": "substring( ${1:string}, ${2:position}, ${3:length} )$0",
+		"scope": "mv",
+		"description": "Returns the substring of string, beginning at position start, length characters long."
+	},
+	"substring_var": {
+		"prefix": "substring_var",
+		"body": "substring_var( ${1:string var}, ${2:position}, ${3:length} )$0",
+		"scope": "mv",
+		"description": "Returns the substring of string, beginning at position start, length characters long. This function is identical to substring() but its first parameter is passed by reference, improving performance when dealing with large strings."
+	},
+	"tan": {
+		"prefix": "tan",
+		"body": "tan( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the tangent of number.  The argument should be expressed in radians."
+	},
+	"tanh": {
+		"prefix": "tanh",
+		"body": "tanh( ${1:number} )$0",
+		"scope": "mv",
+		"description": "Returns the hyperbolic tangent of number.  The argument should be expressed in radians."
+	},
+	"tar_create": {
+		"prefix": "tar_create",
+		"body": "tar_create( ${1:file}, ${2|'data','script'|}, ${3:dir}, ${4|'data','script'|}, ${5|'','compress'|} )$0",
+		"scope": "mv",
+		"description": "Creates a compressed Unix style tar file.Return 1 on success 0 on failure"
+	},
+	"tar_directory": {
+		"prefix": "tar_directory",
+		"body": "tar_directory( ${1:file}, ${2|'data','script'|}, ${3:desc var} )$0",
+		"scope": "mv",
+		"description": "Return information about a tar file.Number of files in output array, 0 on error"
+	},
+	"tar_extract": {
+		"prefix": "tar_extract",
+		"body": "tar_extract( ${1:file}, ${2|'data','script'|}, ${3:dir}, ${4|'data','script'|} )$0",
+		"scope": "mv",
+		"description": "Unpacks a tar file to a specified directory.Returns 1 on success 0 on failure"
+	},
+	"timezone": {
+		"prefix": "timezone",
+		"body": "timezone()$0",
+		"scope": "mv",
+		"description": "Returns an integer which is the number of hours behind or ahead of GMT (not accounting for Daylight Time)"
+	},
+	"time_t_dayofmonth": {
+		"prefix": "time_t_dayofmonth",
+		"body": "time_t_dayofmonth( ${1:time_t}, ${2:time_zone} )$0",
+		"scope": "mv",
+		"description": "Returns the current month as a number.  time_zone can be the keyword 'local'"
+	},
+	"time_t_dayofweek": {
+		"prefix": "time_t_dayofweek",
+		"body": "time_t_dayofweek( ${1:time_t}, ${2:time_zone} )$0",
+		"scope": "mv",
+		"description": "Returns the current day of the week as a number (Sunday=1). time_zone can be the keyword 'local'"
+	},
+	"time_t_dayofyear": {
+		"prefix": "time_t_dayofyear",
+		"body": "time_t_dayofyear( ${1:time_t}, ${2:time_zone} )$0",
+		"scope": "mv",
+		"description": "Returns the number of days since the beginning of the year, including today. time_zone can be the keyword 'local'"
+	},
+	"time_t_hour": {
+		"prefix": "time_t_hour",
+		"body": "time_t_hour( ${1:time_t}, ${2:time_zone} )$0",
+		"scope": "mv",
+		"description": "Returns current hour (using a 24-hour clock). time_zone can be the keyword 'local'"
+	},
+	"time_t_min": {
+		"prefix": "time_t_min",
+		"body": "time_t_min( ${1:time_t}, ${2:time_zone} )$0",
+		"scope": "mv",
+		"description": "Returns the current minute in the hour. time_zone can be the keyword 'local'"
+	},
+	"time_t_month": {
+		"prefix": "time_t_month",
+		"body": "time_t_month( ${1:time_t}, ${2:time_zone} )$0",
+		"scope": "mv",
+		"description": "Returns the current month as a number. time_zone can be the keyword 'local'"
+	},
+	"time_t_sec": {
+		"prefix": "time_t_sec",
+		"body": "time_t_sec( ${1:time_t}, ${2:time_zone} )$0",
+		"scope": "mv",
+		"description": "Returns the current second in the minute. time_zone can be the keyword 'local'"
+	},
+	"time_t_year": {
+		"prefix": "time_t_year",
+		"body": "time_t_year( ${1:time_t}, ${2:time_zone} )$0",
+		"scope": "mv",
+		"description": "Returns the current year, time_zone can be the keyword 'local'"
+	},
+	"tokenize": {
+		"prefix": "tokenize",
+		"body": "tokenize( ${1:string}, ${2:variables} )$0",
+		"scope": "mv",
+		"description": "Returns the string, concatenated with the value of each token contained in replacements. Replacements is an array of structures, each with a token and a value."
+	},
+	"tolower": {
+		"prefix": "tolower",
+		"body": "tolower( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Returns a copy of string in lower case."
+	},
+	"toupper": {
+		"prefix": "toupper",
+		"body": "toupper( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Returns a copy of string in upper case."
+	},
+	"trim": {
+		"prefix": "trim",
+		"body": "trim( ${1:string} )$0",
+		"scope": "mv",
+		"description": "Returns the value of string with leading and trailing spaces removed. ⇨ Version 5.32. Will now trim whitespace from arrays and structures.  Previously the functions would convert arrays and structures to serialized data and\nthen trim it. Arrays and structures are now iterated and all values within are trimmed appropriately."
+	},
+	"wdownload": {
+		"prefix": "wdownload",
+		"body": "wdownload( ${1:url}, ${2:filepath}, ${3|'data','script'|}, ${4:callback}, ${5:callbackdata var} )$0",
+		"scope": "mv",
+		"description": "Downloads and stores a file from a URL. Acts as a front end to wget()Returns -1 if fails, returns the server response code: Possible examples 200 = success, 301 = moved, 404 = not found."
+	},
+	"wget": {
+		"prefix": "wget",
+		"body": "wget( ${1:url}, ${2:filepath}, ${3|'data','script'|} )$0",
+		"scope": "mv",
+		"description": "Downloads and stores a file from a URL. Note: If an error occurs, the error message will be stored instead.Returns -1 if fails, returns the server response code: Possible examples 200 = success, 301 = moved, 404 = not found."
+	},
+	"x509_create": {
+		"prefix": "x509_create",
+		"body": "x509_create( ${1:cert}, ${2:x509 var} )$0",
+		"scope": "mv",
+		"description": "Create an X509 Certificate from the PEM format data in \"cert\" where cert = PEM format certificate, x509 =Index into an internal array of certificates.Returns 1 on sucess, 0 on error."
+	},
+	"x509_digest": {
+		"prefix": "x509_digest",
+		"body": "x509_digest( ${1:x509 var}, ${2|'sha256','md5',digestname|}, ${3:digest var} )$0",
+		"scope": "mv",
+		"description": "Return the digest of the given certificate referred to by the certificate reference, using the specified hash algorithm.Returns 1 on success, 0 on failure"
+	},
+	"x509_free": {
+		"prefix": "x509_free",
+		"body": "x509_free( ${1:rsa var} )$0",
+		"scope": "mv",
+		"description": "Deletes an x509 from the internal array of x509 certificates where x509 = Index into internal array of x509 certificates.Returns 1 on success, 0 on error."
+	},
+	"x509_get_extensions": {
+		"prefix": "x509_get_extensions",
+		"body": "x509_get_extensions( ${1:certref var}, ${2:extensions var} )$0",
+		"scope": "mv",
+		"description": "Return X509 extension information for the certificate referred to by the certificate reference.Returns 1 on success, 0 on failure"
+	},
+	"x509_get_issuer_name": {
+		"prefix": "x509_get_issuer_name",
+		"body": "x509_get_issuer_name( ${1:certref var}, ${2:issuername var} )$0",
+		"scope": "mv",
+		"description": "Return X509 issuer information for the certificate referred to by the certificate reference.Returns 1 on success, 0 on failure"
+	},
+	"x509_get_subject_name": {
+		"prefix": "x509_get_subject_name",
+		"body": "x509_get_subject_name( ${1:certref var}, ${2:subjectname var} )$0",
+		"scope": "mv",
+		"description": "Return X509 name information for the certificate referred to by the certificate reference.Returns 1 on success, 0 on failure"
+	},
+	"x509_load": {
+		"prefix": "x509_load",
+		"body": "x509_load( ${1:cert}, ${2:x509 var} )$0",
+		"scope": "mv",
+		"description": "Load an X509 Certificate from the file specified by \"cert\" where cert = File containing an x509 certificate, x509 = Index into an internal array of certificates.Returns 1 on sucess, 0 on error."
+	},
+	"x509_load_mem": {
+		"prefix": "x509_load_mem",
+		"body": "x509_load_mem( ${1:cert}, ${2:x509 var} )$0",
+		"scope": "mv",
+		"description": "Loads and parses the text of an x509 certificate, and gives a certificate reference that refers to the certificate in internal storage.Returns 1 on success, 0 on failure"
+	},
+	"x509_pubkey_digest": {
+		"prefix": "x509_pubkey_digest",
+		"body": "x509_pubkey_digest( ${1:x509 var}, ${2|'sha256','md5',digestname|}, ${3:digest var} )$0",
+		"scope": "mv",
+		"description": "Return the digest of the public key portion of the given certificate referred to by the certificate reference, using the specified hash algorithm.Returns 1 on success, 0 on failure"
+	},
+	"x509_rsa_publickey": {
+		"prefix": "x509_rsa_publickey",
+		"body": "x509_rsa_publickey( ${1:x509 var}, ${2:rsa var} )$0",
+		"scope": "mv",
+		"description": "Extracts the RSA public key from the X509 specified by \"x509\" and stores it in \"rsa\" where x509 = Index into internal array of x509 certificates, rsa =Index into internal array of RSA public keys.Returns 1 on success, 0 on error."
+	},
+	"x509_verify": {
+		"prefix": "x509_verify",
+		"body": "x509_verify( ${1:x509 var}, ${2:trusted_certs} )$0",
+		"scope": "mv",
+		"description": "Verifies that the X509 certificate specified by \"x509\" was issued by one of the X509 certificates (in PEM format) in \"trusted_certs\", where x509 = Index into internal array of certificates, trusted_certs = Certificates (in PEM text format) to find the x50Returns 1 on successful find, 0 if certificate isn't in trusted_certs, or other error."
+	},
+	"xml_parse": {
+		"prefix": "xml_parse",
+		"body": "xml_parse( ${1:filepath}, ${2|'data','script'|}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": "Parces an XML file.Returns 1 on success, 0 on error"
+	},
+	"xml_parse_error": {
+		"prefix": "xml_parse_error",
+		"body": "xml_parse_error( ${1:lineno var}, ${2:error var} )$0",
+		"scope": "mv",
+		"description": "Retrieves error information for xml_parse(), xml_parse_section(), and xml_parse_section_init()Returns null"
+	},
+	"xml_parse_section": {
+		"prefix": "xml_parse_section",
+		"body": "xml_parse_section( ${1:output var}, ${2:eof var} )$0",
+		"scope": "mv",
+		"description": "Return a section of XMLReturns 1 on success, 0 on failure."
+	},
+	"xml_parse_section_getstate": {
+		"prefix": "xml_parse_section_getstate",
+		"body": "xml_parse_section_getstate( ${1:target var} )$0",
+		"scope": "mv",
+		"description": "Retrieves parse state information from a xml_parse_section session.Returns 1 on success, 0 on failure."
+	},
+	"xml_parse_section_init": {
+		"prefix": "xml_parse_section_init",
+		"body": "xml_parse_section_init( ${1:filepath}, ${2|'data','script'|}, ${3:level} )$0",
+		"scope": "mv",
+		"description": "Initializes a xml_parse_section session.Returns 1 on success, 0 on failure."
+	},
+	"xml_parse_section_setstate": {
+		"prefix": "xml_parse_section_setstate",
+		"body": "xml_parse_section_setstate( ${1:source var} )$0",
+		"scope": "mv",
+		"description": "Sets internal parse state information for a xml_parse_section session.Returns 1 on success, 0 on failure."
+	},
+	"xml_parse_set_colon_replacement": {
+		"prefix": "xml_parse_set_colon_replacement",
+		"body": "xml_parse_set_colon_replacement( ${1:colon} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"xml_parse_var": {
+		"prefix": "xml_parse_var",
+		"body": "xml_parse_var( ${1:var var}, ${2:output var} )$0",
+		"scope": "mv",
+		"description": ""
+	},
+	"file_overwrite": {
+		"prefix": "file_overwrite",
+		"body": "file_overwrite( ${1:path}, ${2|'data','script'|}, ${3:data var} )$0",
+		"scope": "mv",
+		"description": "Replaces the file in path if it exists. If will not create the file if it does not exist.Returns the length of data written or -1 on error"
+	},
+	"miva_joinstring": {
+		"prefix": "miva_joinstring",
+		"body": "miva_joinstring( ${1:input var}, ${2:join_with}, ${3|'trim','ltrim','rtrim','lower','upper','insensitive'|} )$0",
+		"scope": "mv",
+		"description": "Joins a simple array and outputs a string seperated by the join_with character or characters.\nIf the input parameter is an array, then a string is returned with each array element's value separated by the join_with parameter along with any modifications made via the flags parameter.\nIf the input parameter is a string, then a string is returned alongside any modifications made via the flags parameter.\nIf the input parameter is a structure, an empty string is returnedReturns : The joined string."
+	},
+	"file_set_time": {
+		"prefix": "file_set_time",
+		"body": "file_set_time( ${1:path}, ${2|'data','script'|}, ${3:modified} )$0",
+		"scope": "mv",
+		"description": "Updates the modification time of the specified file to the time_t value in modified.Return value: 0 on success, -1 on failure."
+	},
+	"crypto_next_error": {
+		"prefix": "crypto_next_error",
+		"body": "crypto_next_error()$0",
+		"scope": "mv",
+		"description": "A string value containing the appropriate crypto error"
+	},
+	"crypto_clear_error": {
+		"prefix": "crypto_clear_error",
+		"body": "crypto_clear_error()$0",
+		"scope": "mv",
+		"description": "Clear out all crypto errors."
+	},
+	"crypto_evp_sign": {
+		"prefix": "crypto_evp_sign",
+		"body": "crypto_evp_sign( ${1:digestname}, ${2:privkey}, ${3:buffer}, ${4:signature var} )$0",
+		"scope": "mv",
+		"description": "1 on success, 0 on failuredigestname = Hash algorithm name, such as \"md5\" or \"sha256\". Supported digest algorithms will vary between OpenSSL installations"
+	},
+	"crypto_evp_verify": {
+		"prefix": "crypto_evp_verify",
+		"body": "crypto_evp_verify( ${1|'sha256','md5',digestname|}, ${2:pubkey}, ${3:buffer}, ${4:signature} )$0",
+		"scope": "mv",
+		"description": "1 on success, 0 on failuredigestname - Hash algorithm name, such as \"md5\" or \"sha256\". Supported digest algorithms will vary between OpenSSL installations"
+	},
+	"evp_pkey_load_pubkey_x509": {
+		"prefix": "evp_pkey_load_pubkey_x509",
+		"body": "evp_pkey_load_pubkey_x509( ${1:x509 var}, ${2:pkey var} )$0",
+		"scope": "mv",
+		"description": "Loads a PKEY reference from an x509 public key reference1 on success, 0 on failure"
+	},
+	"redis_connect": {
+		"prefix": "redis_connect",
+		"body": "redis_connect( ${1:ip}, ${2:port}, ${3:conn_id var} )$0",
+		"scope": "mv",
+		"description": "Connects to Redis on the specified IP / hostname and port.Returns 1 on success, 0 on failure"
+	},
+	"redis_disconnect": {
+		"prefix": "redis_disconnect",
+		"body": "redis_disconnect( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "Disconnects the specified instance from the Redis serverReturns 1 on success, 0 on failure"
+	},
+	"redis_last_error": {
+		"prefix": "redis_last_error",
+		"body": "redis_last_error()$0",
+		"scope": "mv",
+		"description": "Gets the last error message resulting from a redis command.Returns the last error message."
+	},
+	"redis_append": {
+		"prefix": "redis_append",
+		"body": "redis_append( ${1:conn_id}, ${2:key}, ${3:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_append(...) "
+	},
+	"redis_auth": {
+		"prefix": "redis_auth",
+		"body": "redis_auth( ${1:conn_id}, ${2:password} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_auth(...) "
+	},
+	"redis_bgsave": {
+		"prefix": "redis_bgsave",
+		"body": "redis_bgsave( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_bgsave(...) "
+	},
+	"redis_bitcount": {
+		"prefix": "redis_bitcount",
+		"body": "redis_bitcount( ${1:conn_id}, ${2:key}, ${3:options var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_bitcount(...) "
+	},
+	"redis_bitfield": {
+		"prefix": "redis_bitfield",
+		"body": "redis_bitfield( ${1:conn_id}, ${2:key}, ${3:options var}, ${4:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_bitfield(...) "
+	},
+	"redis_bitop": {
+		"prefix": "redis_bitop",
+		"body": "redis_bitop( ${1:conn_id}, ${2:operation}, ${3:destkey}, ${4:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_bitop(...) "
+	},
+	"redis_bitpos": {
+		"prefix": "redis_bitpos",
+		"body": "redis_bitpos( ${1:conn_id}, ${2:key}, ${3:bit}, ${4:options var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_bitpos(...) "
+	},
+	"redis_blpop": {
+		"prefix": "redis_blpop",
+		"body": "redis_blpop( ${1:conn_id}, ${2:key}, ${3:timeout}, ${4:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_blpop(...) "
+	},
+	"redis_brpop": {
+		"prefix": "redis_brpop",
+		"body": "redis_brpop( ${1:conn_id}, ${2:key}, ${3:timeout}, ${4:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_brpop(...) "
+	},
+	"redis_brpoplpush": {
+		"prefix": "redis_brpoplpush",
+		"body": "redis_brpoplpush( ${1:conn_id}, ${2:source}, ${3:destination}, ${4:timeout} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_brpoplpush(...) "
+	},
+	"redis_client_getname": {
+		"prefix": "redis_client_getname",
+		"body": "redis_client_getname( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_client_getname(...) "
+	},
+	"redis_client_kill": {
+		"prefix": "redis_client_kill",
+		"body": "redis_client_kill( ${1:conn_id}, ${2:options var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_client_kill(...) "
+	},
+	"redis_client_list": {
+		"prefix": "redis_client_list",
+		"body": "redis_client_list( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_client_list(...) "
+	},
+	"redis_client_pause": {
+		"prefix": "redis_client_pause",
+		"body": "redis_client_pause( ${1:conn_id}, ${2:timeout} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_client_pause(...) "
+	},
+	"redis_client_setname": {
+		"prefix": "redis_client_setname",
+		"body": "redis_client_setname( ${1:conn_id}, ${2:name} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_client_setname(...) "
+	},
+	"redis_command": {
+		"prefix": "redis_command",
+		"body": "redis_command( ${1:conn_id}, ${2:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_command(...) "
+	},
+	"redis_command_count": {
+		"prefix": "redis_command_count",
+		"body": "redis_command_count( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_command_count(...) "
+	},
+	"redis_command_getkeys": {
+		"prefix": "redis_command_getkeys",
+		"body": "redis_command_getkeys( ${1:conn_id}, ${2:input var}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_command_getkeys(...) "
+	},
+	"redis_command_info": {
+		"prefix": "redis_command_info",
+		"body": "redis_command_info( ${1:conn_id}, ${2:command_name}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_command_info(...) "
+	},
+	"redis_config_get": {
+		"prefix": "redis_config_get",
+		"body": "redis_config_get( ${1:conn_id}, ${2:parameter}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_config_get(...) "
+	},
+	"redis_config_resetstat": {
+		"prefix": "redis_config_resetstat",
+		"body": "redis_config_resetstat( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_config_resetstat(...) "
+	},
+	"redis_config_rewrite": {
+		"prefix": "redis_config_rewrite",
+		"body": "redis_config_rewrite( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_config_rewrite(...) "
+	},
+	"redis_config_set": {
+		"prefix": "redis_config_set",
+		"body": "redis_config_set( ${1:conn_id}, ${2:parameter}, ${3:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_config_set(...) "
+	},
+	"redis_dbsize": {
+		"prefix": "redis_dbsize",
+		"body": "redis_dbsize( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_dbsize(...) "
+	},
+	"redis_debug_object": {
+		"prefix": "redis_debug_object",
+		"body": "redis_debug_object( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_debug_object(...) "
+	},
+	"redis_debug_segfault": {
+		"prefix": "redis_debug_segfault",
+		"body": "redis_debug_segfault( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_debug_segfault(...) "
+	},
+	"redis_decr": {
+		"prefix": "redis_decr",
+		"body": "redis_decr( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_decr(...) "
+	},
+	"redis_decrby": {
+		"prefix": "redis_decrby",
+		"body": "redis_decrby( ${1:conn_id}, ${2:key}, ${3:decrement} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_decrby(...) "
+	},
+	"redis_del": {
+		"prefix": "redis_del",
+		"body": "redis_del( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_del(...) "
+	},
+	"redis_discard": {
+		"prefix": "redis_discard",
+		"body": "redis_discard( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_discard(...) "
+	},
+	"redis_dump": {
+		"prefix": "redis_dump",
+		"body": "redis_dump( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_dump(...) "
+	},
+	"redis_echo": {
+		"prefix": "redis_echo",
+		"body": "redis_echo( ${1:conn_id}, ${2:message} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_echo(...) "
+	},
+	"redis_eval": {
+		"prefix": "redis_eval",
+		"body": "redis_eval( ${1:conn_id}, ${2:script}, ${3:key}, ${4:arg} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_eval(...) "
+	},
+	"redis_eval_array": {
+		"prefix": "redis_eval_array",
+		"body": "redis_eval_array( ${1:conn_id}, ${2:script}, ${3:key}, ${4:arg}, ${5:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_eval_array(...) "
+	},
+	"redis_evalsha": {
+		"prefix": "redis_evalsha",
+		"body": "redis_evalsha( ${1:conn_id}, ${2:sha1}, ${3:key}, ${4:arg} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_evalsha(...) "
+	},
+	"redis_evalsha_array": {
+		"prefix": "redis_evalsha_array",
+		"body": "redis_evalsha_array( ${1:conn_id}, ${2:sha1}, ${3:key}, ${4:arg}, ${5:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_evalsha_array(...) "
+	},
+	"redis_exec": {
+		"prefix": "redis_exec",
+		"body": "redis_exec( ${1:conn_id}, ${2:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_exec(...) "
+	},
+	"redis_exists": {
+		"prefix": "redis_exists",
+		"body": "redis_exists( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_exists(...) "
+	},
+	"redis_expire": {
+		"prefix": "redis_expire",
+		"body": "redis_expire( ${1:conn_id}, ${2:key}, ${3:seconds} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_expire(...) "
+	},
+	"redis_expireat": {
+		"prefix": "redis_expireat",
+		"body": "redis_expireat( ${1:conn_id}, ${2:key}, ${3:timestamp} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_expireat(...) "
+	},
+	"redis_flushall": {
+		"prefix": "redis_flushall",
+		"body": "redis_flushall( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_flushall(...) "
+	},
+	"redis_flushdb": {
+		"prefix": "redis_flushdb",
+		"body": "redis_flushdb( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_flushdb(...) "
+	},
+	"redis_geoadd": {
+		"prefix": "redis_geoadd",
+		"body": "redis_geoadd( ${1:conn_id}, ${2:key}, ${3:longitude}, ${4:latitude}, ${5:member} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_geoadd(...) "
+	},
+	"redis_geodist": {
+		"prefix": "redis_geodist",
+		"body": "redis_geodist( ${1:conn_id}, ${2:key}, ${3:member1}, ${4:member2}, ${5:options var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_geodist(...) "
+	},
+	"redis_geohash": {
+		"prefix": "redis_geohash",
+		"body": "redis_geohash( ${1:conn_id}, ${2:key}, ${3:member}, ${4:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_geohash(...) "
+	},
+	"redis_geopos": {
+		"prefix": "redis_geopos",
+		"body": "redis_geopos( ${1:conn_id}, ${2:key}, ${3:member}, ${4:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_geopos(...) "
+	},
+	"redis_georadius": {
+		"prefix": "redis_georadius",
+		"body": "redis_georadius( ${1:conn_id}, ${2:key}, ${3:longitude}, ${4:latitude}, ${5:radius}, ${6:unit}, ${7:options var}, ${8:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_georadius(...) "
+	},
+	"redis_georadiusbymember": {
+		"prefix": "redis_georadiusbymember",
+		"body": "redis_georadiusbymember( ${1:conn_id}, ${2:key}, ${3:member}, ${4:radius}, ${5:unit}, ${6:options var}, ${7:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_georadiusbymember(...) "
+	},
+	"redis_georadiusbymemberstore": {
+		"prefix": "redis_georadiusbymemberstore",
+		"body": "redis_georadiusbymemberstore( ${1:conn_id}, ${2:key}, ${3:member}, ${4:latitude}, ${5:radius}, ${6:unit}, ${7:store_key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_georadiusbymemberstore(...) "
+	},
+	"redis_georadiusbymemberstoredist": {
+		"prefix": "redis_georadiusbymemberstoredist",
+		"body": "redis_georadiusbymemberstoredist( ${1:conn_id}, ${2:key}, ${3:member}, ${4:latitude}, ${5:radius}, ${6:unit}, ${7:storedist_key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_georadiusbymemberstoredist(...) "
+	},
+	"redis_georadiusstore": {
+		"prefix": "redis_georadiusstore",
+		"body": "redis_georadiusstore( ${1:conn_id}, ${2:key}, ${3:longitude}, ${4:latitude}, ${5:radius}, ${6:unit}, ${7:store_key}, ${8:count} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_georadiusstore(...) "
+	},
+	"redis_georadiusstoredist": {
+		"prefix": "redis_georadiusstoredist",
+		"body": "redis_georadiusstoredist( ${1:conn_id}, ${2:key}, ${3:longitude}, ${4:latitude}, ${5:radius}, ${6:unit}, ${7:storedist_key}, ${8:count} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_georadiusstoredist(...) "
+	},
+	"redis_get": {
+		"prefix": "redis_get",
+		"body": "redis_get( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_get(...) "
+	},
+	"redis_getbit": {
+		"prefix": "redis_getbit",
+		"body": "redis_getbit( ${1:conn_id}, ${2:key}, ${3:offset} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_getbit(...) "
+	},
+	"redis_getrange": {
+		"prefix": "redis_getrange",
+		"body": "redis_getrange( ${1:conn_id}, ${2:key}, ${3:start}, ${4:end} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_getrange(...) "
+	},
+	"redis_getset": {
+		"prefix": "redis_getset",
+		"body": "redis_getset( ${1:conn_id}, ${2:key}, ${3:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_getset(...) "
+	},
+	"redis_hdel": {
+		"prefix": "redis_hdel",
+		"body": "redis_hdel( ${1:conn_id}, ${2:key}, ${3:field} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_hdel(...) "
+	},
+	"redis_hexists": {
+		"prefix": "redis_hexists",
+		"body": "redis_hexists( ${1:conn_id}, ${2:key}, ${3:field} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_hexists(...) "
+	},
+	"redis_hget": {
+		"prefix": "redis_hget",
+		"body": "redis_hget( ${1:conn_id}, ${2:key}, ${3:field} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_hget(...) "
+	},
+	"redis_hgetall": {
+		"prefix": "redis_hgetall",
+		"body": "redis_hgetall( ${1:conn_id}, ${2:key}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_hgetall(...) "
+	},
+	"redis_hincrby": {
+		"prefix": "redis_hincrby",
+		"body": "redis_hincrby( ${1:conn_id}, ${2:key}, ${3:field}, ${4:increment} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_hincrby(...) "
+	},
+	"redis_hincrbyfloat": {
+		"prefix": "redis_hincrbyfloat",
+		"body": "redis_hincrbyfloat( ${1:conn_id}, ${2:key}, ${3:field}, ${4:increment} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_hincrbyfloat(...) "
+	},
+	"redis_hkeys": {
+		"prefix": "redis_hkeys",
+		"body": "redis_hkeys( ${1:conn_id}, ${2:key}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_hkeys(...) "
+	},
+	"redis_hlen": {
+		"prefix": "redis_hlen",
+		"body": "redis_hlen( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_hlen(...) "
+	},
+	"redis_hmget": {
+		"prefix": "redis_hmget",
+		"body": "redis_hmget( ${1:conn_id}, ${2:key}, ${3:field}, ${4:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_hmget(...) "
+	},
+	"redis_hmset": {
+		"prefix": "redis_hmset",
+		"body": "redis_hmset( ${1:conn_id}, ${2:key}, ${3:field}, ${4:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_hmset(...) "
+	},
+	"redis_hscan": {
+		"prefix": "redis_hscan",
+		"body": "redis_hscan( ${1:conn_id}, ${2:key}, ${3:cursor}, ${4:options var}, ${5:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_hscan(...) "
+	},
+	"redis_hset": {
+		"prefix": "redis_hset",
+		"body": "redis_hset( ${1:conn_id}, ${2:key}, ${3:field}, ${4:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_hset(...) "
+	},
+	"redis_hsetnx": {
+		"prefix": "redis_hsetnx",
+		"body": "redis_hsetnx( ${1:conn_id}, ${2:key}, ${3:field}, ${4:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_hsetnx(...) "
+	},
+	"redis_hstrlen": {
+		"prefix": "redis_hstrlen",
+		"body": "redis_hstrlen( ${1:conn_id}, ${2:key}, ${3:field} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_hstrlen(...) "
+	},
+	"redis_hvals": {
+		"prefix": "redis_hvals",
+		"body": "redis_hvals( ${1:conn_id}, ${2:key}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_hvals(...) "
+	},
+	"redis_incr": {
+		"prefix": "redis_incr",
+		"body": "redis_incr( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_incr(...) "
+	},
+	"redis_incrby": {
+		"prefix": "redis_incrby",
+		"body": "redis_incrby( ${1:conn_id}, ${2:key}, ${3:increment} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_incrby(...) "
+	},
+	"redis_incrbyfloat": {
+		"prefix": "redis_incrbyfloat",
+		"body": "redis_incrbyfloat( ${1:conn_id}, ${2:key}, ${3:increment} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_incrbyfloat(...) "
+	},
+	"redis_info": {
+		"prefix": "redis_info",
+		"body": "redis_info( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_info(...) "
+	},
+	"redis_info_section": {
+		"prefix": "redis_info_section",
+		"body": "redis_info_section( ${1:conn_id}, ${2:section} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_info_section(...) "
+	},
+	"redis_keys": {
+		"prefix": "redis_keys",
+		"body": "redis_keys( ${1:conn_id}, ${2:pattern}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_keys(...) "
+	},
+	"redis_lastsave": {
+		"prefix": "redis_lastsave",
+		"body": "redis_lastsave( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_lastsave(...) "
+	},
+	"redis_lindex": {
+		"prefix": "redis_lindex",
+		"body": "redis_lindex( ${1:conn_id}, ${2:key}, ${3:index} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_lindex(...) "
+	},
+	"redis_linsert_after": {
+		"prefix": "redis_linsert_after",
+		"body": "redis_linsert_after( ${1:conn_id}, ${2:key}, ${3:pivot}, ${4:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_linsert_after(...) "
+	},
+	"redis_linsert_before": {
+		"prefix": "redis_linsert_before",
+		"body": "redis_linsert_before( ${1:conn_id}, ${2:key}, ${3:pivot}, ${4:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_linsert_before(...) "
+	},
+	"redis_llen": {
+		"prefix": "redis_llen",
+		"body": "redis_llen( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_llen(...) "
+	},
+	"redis_lpop": {
+		"prefix": "redis_lpop",
+		"body": "redis_lpop( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_lpop(...) "
+	},
+	"redis_lpush": {
+		"prefix": "redis_lpush",
+		"body": "redis_lpush( ${1:conn_id}, ${2:key}, ${3:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_lpush(...) "
+	},
+	"redis_lpushx": {
+		"prefix": "redis_lpushx",
+		"body": "redis_lpushx( ${1:conn_id}, ${2:key}, ${3:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_lpushx(...) "
+	},
+	"redis_lrange": {
+		"prefix": "redis_lrange",
+		"body": "redis_lrange( ${1:conn_id}, ${2:key}, ${3:start}, ${4:stop}, ${5:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_lrange(...) "
+	},
+	"redis_lrem": {
+		"prefix": "redis_lrem",
+		"body": "redis_lrem( ${1:conn_id}, ${2:key}, ${3:count}, ${4:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_lrem(...) "
+	},
+	"redis_lset": {
+		"prefix": "redis_lset",
+		"body": "redis_lset( ${1:conn_id}, ${2:key}, ${3:index}, ${4:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_lset(...) "
+	},
+	"redis_ltrim": {
+		"prefix": "redis_ltrim",
+		"body": "redis_ltrim( ${1:conn_id}, ${2:key}, ${3:start}, ${4:stop} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_ltrim(...) "
+	},
+	"redis_mget": {
+		"prefix": "redis_mget",
+		"body": "redis_mget( ${1:conn_id}, ${2:key}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_mget(...) "
+	},
+	"redis_migrate": {
+		"prefix": "redis_migrate",
+		"body": "redis_migrate( ${1:conn_id}, ${2:host}, ${3:port}, ${4:key}, ${5:destination_db}, ${6:timeout}, ${7:options var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_migrate(...) "
+	},
+	"redis_move": {
+		"prefix": "redis_move",
+		"body": "redis_move( ${1:conn_id}, ${2:key}, ${3:db} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_move(...) "
+	},
+	"redis_mset": {
+		"prefix": "redis_mset",
+		"body": "redis_mset( ${1:conn_id}, ${2:key}, ${3:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_mset(...) "
+	},
+	"redis_msetnx": {
+		"prefix": "redis_msetnx",
+		"body": "redis_msetnx( ${1:conn_id}, ${2:key}, ${3:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_msetnx(...) "
+	},
+	"redis_multi": {
+		"prefix": "redis_multi",
+		"body": "redis_multi( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_multi(...) "
+	},
+	"redis_object_encoding": {
+		"prefix": "redis_object_encoding",
+		"body": "redis_object_encoding( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_object_encoding(...) "
+	},
+	"redis_object_idletime": {
+		"prefix": "redis_object_idletime",
+		"body": "redis_object_idletime( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_object_idletime(...) "
+	},
+	"redis_object_refcount": {
+		"prefix": "redis_object_refcount",
+		"body": "redis_object_refcount( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_object_refcount(...) "
+	},
+	"redis_persist": {
+		"prefix": "redis_persist",
+		"body": "redis_persist( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_persist(...) "
+	},
+	"redis_pexpire": {
+		"prefix": "redis_pexpire",
+		"body": "redis_pexpire( ${1:conn_id}, ${2:key}, ${3:milliseconds} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_pexpire(...) "
+	},
+	"redis_pexpireat": {
+		"prefix": "redis_pexpireat",
+		"body": "redis_pexpireat( ${1:conn_id}, ${2:key}, ${3:milliseconds_timestamp} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_pexpireat(...) "
+	},
+	"redis_pfadd": {
+		"prefix": "redis_pfadd",
+		"body": "redis_pfadd( ${1:conn_id}, ${2:key}, ${3:element} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_pfadd(...) "
+	},
+	"redis_pfcount": {
+		"prefix": "redis_pfcount",
+		"body": "redis_pfcount( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_pfcount(...) "
+	},
+	"redis_pfmerge": {
+		"prefix": "redis_pfmerge",
+		"body": "redis_pfmerge( ${1:conn_id}, ${2:destkey}, ${3:sourcekey} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_pfmerge(...) "
+	},
+	"redis_ping": {
+		"prefix": "redis_ping",
+		"body": "redis_ping( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_ping(...) "
+	},
+	"redis_ping_message": {
+		"prefix": "redis_ping_message",
+		"body": "redis_ping_message( ${1:conn_id}, ${2:message} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_ping_message(...) "
+	},
+	"redis_pttl": {
+		"prefix": "redis_pttl",
+		"body": "redis_pttl( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_pttl(...) "
+	},
+	"redis_quit": {
+		"prefix": "redis_quit",
+		"body": "redis_quit( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_quit(...) "
+	},
+	"redis_randomkey": {
+		"prefix": "redis_randomkey",
+		"body": "redis_randomkey( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_randomkey(...) "
+	},
+	"redis_rename": {
+		"prefix": "redis_rename",
+		"body": "redis_rename( ${1:conn_id}, ${2:key}, ${3:newkey} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_rename(...) "
+	},
+	"redis_renamenx": {
+		"prefix": "redis_renamenx",
+		"body": "redis_renamenx( ${1:conn_id}, ${2:key}, ${3:newkey} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_renamenx(...) "
+	},
+	"redis_restore": {
+		"prefix": "redis_restore",
+		"body": "redis_restore( ${1:conn_id}, ${2:key}, ${3:ttl}, ${4:serialized_value}, ${5:options var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_restore(...) "
+	},
+	"redis_role": {
+		"prefix": "redis_role",
+		"body": "redis_role( ${1:conn_id}, ${2:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_role(...) "
+	},
+	"redis_rpop": {
+		"prefix": "redis_rpop",
+		"body": "redis_rpop( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_rpop(...) "
+	},
+	"redis_rpoplpush": {
+		"prefix": "redis_rpoplpush",
+		"body": "redis_rpoplpush( ${1:conn_id}, ${2:source}, ${3:destination} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_rpoplpush(...) "
+	},
+	"redis_rpush": {
+		"prefix": "redis_rpush",
+		"body": "redis_rpush( ${1:conn_id}, ${2:key}, ${3:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_rpush(...) "
+	},
+	"redis_rpushx": {
+		"prefix": "redis_rpushx",
+		"body": "redis_rpushx( ${1:conn_id}, ${2:key}, ${3:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_rpushx(...) "
+	},
+	"redis_sadd": {
+		"prefix": "redis_sadd",
+		"body": "redis_sadd( ${1:conn_id}, ${2:key}, ${3:member} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_sadd(...) "
+	},
+	"redis_save": {
+		"prefix": "redis_save",
+		"body": "redis_save( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_save(...) "
+	},
+	"redis_scan": {
+		"prefix": "redis_scan",
+		"body": "redis_scan( ${1:conn_id}, ${2:cursor}, ${3:options var}, ${4:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_scan(...) "
+	},
+	"redis_scard": {
+		"prefix": "redis_scard",
+		"body": "redis_scard( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_scard(...) "
+	},
+	"redis_script_exists": {
+		"prefix": "redis_script_exists",
+		"body": "redis_script_exists( ${1:conn_id}, ${2:sha1}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_script_exists(...) "
+	},
+	"redis_script_flush": {
+		"prefix": "redis_script_flush",
+		"body": "redis_script_flush( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_script_flush(...) "
+	},
+	"redis_script_kill": {
+		"prefix": "redis_script_kill",
+		"body": "redis_script_kill( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_script_kill(...) "
+	},
+	"redis_script_load": {
+		"prefix": "redis_script_load",
+		"body": "redis_script_load( ${1:conn_id}, ${2:script} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_script_load(...) "
+	},
+	"redis_sdiff": {
+		"prefix": "redis_sdiff",
+		"body": "redis_sdiff( ${1:conn_id}, ${2:key}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_sdiff(...) "
+	},
+	"redis_sdiffstore": {
+		"prefix": "redis_sdiffstore",
+		"body": "redis_sdiffstore( ${1:conn_id}, ${2:destination}, ${3:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_sdiffstore(...) "
+	},
+	"redis_select": {
+		"prefix": "redis_select",
+		"body": "redis_select( ${1:conn_id}, ${2:index} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_select(...) "
+	},
+	"redis_set": {
+		"prefix": "redis_set",
+		"body": "redis_set( ${1:conn_id}, ${2:key}, ${3:value}, ${4:options var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_set(...) "
+	},
+	"redis_setbit": {
+		"prefix": "redis_setbit",
+		"body": "redis_setbit( ${1:conn_id}, ${2:key}, ${3:offset}, ${4:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_setbit(...) "
+	},
+	"redis_setrange": {
+		"prefix": "redis_setrange",
+		"body": "redis_setrange( ${1:conn_id}, ${2:key}, ${3:offset}, ${4:value} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_setrange(...) "
+	},
+	"redis_shutdown": {
+		"prefix": "redis_shutdown",
+		"body": "redis_shutdown( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_shutdown(...) "
+	},
+	"redis_shutdown_nosave": {
+		"prefix": "redis_shutdown_nosave",
+		"body": "redis_shutdown_nosave( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_shutdown_nosave(...) "
+	},
+	"redis_shutdown_save": {
+		"prefix": "redis_shutdown_save",
+		"body": "redis_shutdown_save( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_shutdown_save(...) "
+	},
+	"redis_sinter": {
+		"prefix": "redis_sinter",
+		"body": "redis_sinter( ${1:conn_id}, ${2:key}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_sinter(...) "
+	},
+	"redis_sinterstore": {
+		"prefix": "redis_sinterstore",
+		"body": "redis_sinterstore( ${1:conn_id}, ${2:destination}, ${3:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_sinterstore(...) "
+	},
+	"redis_sismember": {
+		"prefix": "redis_sismember",
+		"body": "redis_sismember( ${1:conn_id}, ${2:key}, ${3:member} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_sismember(...) "
+	},
+	"redis_slowlog_get": {
+		"prefix": "redis_slowlog_get",
+		"body": "redis_slowlog_get( ${1:conn_id}, ${2:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_slowlog_get(...) "
+	},
+	"redis_slowlog_get_count": {
+		"prefix": "redis_slowlog_get_count",
+		"body": "redis_slowlog_get_count( ${1:conn_id}, ${2:count}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_slowlog_get_count(...) "
+	},
+	"redis_slowlog_len": {
+		"prefix": "redis_slowlog_len",
+		"body": "redis_slowlog_len( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_slowlog_len(...) "
+	},
+	"redis_slowlog_reset": {
+		"prefix": "redis_slowlog_reset",
+		"body": "redis_slowlog_reset( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_slowlog_reset(...) "
+	},
+	"redis_smembers": {
+		"prefix": "redis_smembers",
+		"body": "redis_smembers( ${1:conn_id}, ${2:key}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_smembers(...) "
+	},
+	"redis_smove": {
+		"prefix": "redis_smove",
+		"body": "redis_smove( ${1:conn_id}, ${2:source}, ${3:destination}, ${4:member} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_smove(...) "
+	},
+	"redis_sort": {
+		"prefix": "redis_sort",
+		"body": "redis_sort( ${1:conn_id}, ${2:key}, ${3:options var}, ${4:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_sort(...) "
+	},
+	"redis_sortstore": {
+		"prefix": "redis_sortstore",
+		"body": "redis_sortstore( ${1:conn_id}, ${2:key}, ${3:destination}, ${4:options var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_sortstore(...) "
+	},
+	"redis_spop": {
+		"prefix": "redis_spop",
+		"body": "redis_spop( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_spop(...) "
+	},
+	"redis_spop_count": {
+		"prefix": "redis_spop_count",
+		"body": "redis_spop_count( ${1:conn_id}, ${2:key}, ${3:count}, ${4:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_spop_count(...) "
+	},
+	"redis_srandmember": {
+		"prefix": "redis_srandmember",
+		"body": "redis_srandmember( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_srandmember(...) "
+	},
+	"redis_srandmember_count": {
+		"prefix": "redis_srandmember_count",
+		"body": "redis_srandmember_count( ${1:conn_id}, ${2:key}, ${3:count}, ${4:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_srandmember_count(...) "
+	},
+	"redis_srem": {
+		"prefix": "redis_srem",
+		"body": "redis_srem( ${1:conn_id}, ${2:key}, ${3:member} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_srem(...) "
+	},
+	"redis_sscan": {
+		"prefix": "redis_sscan",
+		"body": "redis_sscan( ${1:conn_id}, ${2:key}, ${3:cursor}, ${4:options var}, ${5:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_sscan(...) "
+	},
+	"redis_strlen": {
+		"prefix": "redis_strlen",
+		"body": "redis_strlen( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_strlen(...) "
+	},
+	"redis_sunion": {
+		"prefix": "redis_sunion",
+		"body": "redis_sunion( ${1:conn_id}, ${2:key}, ${3:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_sunion(...) "
+	},
+	"redis_sunionstore": {
+		"prefix": "redis_sunionstore",
+		"body": "redis_sunionstore( ${1:conn_id}, ${2:destination}, ${3:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_sunionstore(...) "
+	},
+	"redis_time": {
+		"prefix": "redis_time",
+		"body": "redis_time( ${1:conn_id}, ${2:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_time(...) "
+	},
+	"redis_touch": {
+		"prefix": "redis_touch",
+		"body": "redis_touch( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_touch(...) "
+	},
+	"redis_ttl": {
+		"prefix": "redis_ttl",
+		"body": "redis_ttl( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_ttl(...) "
+	},
+	"redis_type": {
+		"prefix": "redis_type",
+		"body": "redis_type( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_type(...) "
+	},
+	"redis_unwatch": {
+		"prefix": "redis_unwatch",
+		"body": "redis_unwatch( ${1:conn_id} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_unwatch(...) "
+	},
+	"redis_watch": {
+		"prefix": "redis_watch",
+		"body": "redis_watch( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_watch(...) "
+	},
+	"redis_zadd": {
+		"prefix": "redis_zadd",
+		"body": "redis_zadd( ${1:conn_id}, ${2:key}, ${3:score}, ${4:member}, ${5:options var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zadd(...) "
+	},
+	"redis_zcard": {
+		"prefix": "redis_zcard",
+		"body": "redis_zcard( ${1:conn_id}, ${2:key} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zcard(...) "
+	},
+	"redis_zcount": {
+		"prefix": "redis_zcount",
+		"body": "redis_zcount( ${1:conn_id}, ${2:key}, ${3:min}, ${4:max} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zcount(...) "
+	},
+	"redis_zincrby": {
+		"prefix": "redis_zincrby",
+		"body": "redis_zincrby( ${1:conn_id}, ${2:key}, ${3:increment}, ${4:member} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zincrby(...) "
+	},
+	"redis_zinterstore": {
+		"prefix": "redis_zinterstore",
+		"body": "redis_zinterstore( ${1:conn_id}, ${2:destination}, ${3:key}, ${4:options var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zinterstore(...) "
+	},
+	"redis_zlexcount": {
+		"prefix": "redis_zlexcount",
+		"body": "redis_zlexcount( ${1:conn_id}, ${2:key}, ${3:min}, ${4:max} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zlexcount(...) "
+	},
+	"redis_zrange": {
+		"prefix": "redis_zrange",
+		"body": "redis_zrange( ${1:conn_id}, ${2:key}, ${3:start}, ${4:stop}, ${5:options var}, ${6:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zrange(...) "
+	},
+	"redis_zrangebylex": {
+		"prefix": "redis_zrangebylex",
+		"body": "redis_zrangebylex( ${1:conn_id}, ${2:key}, ${3:min}, ${4:max}, ${5:options var}, ${6:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zrangebylex(...) "
+	},
+	"redis_zrangebyscore": {
+		"prefix": "redis_zrangebyscore",
+		"body": "redis_zrangebyscore( ${1:conn_id}, ${2:key}, ${3:min}, ${4:max}, ${5:options var}, ${6:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zrangebyscore(...) "
+	},
+	"redis_zrank": {
+		"prefix": "redis_zrank",
+		"body": "redis_zrank( ${1:conn_id}, ${2:key}, ${3:member} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zrank(...) "
+	},
+	"redis_zrem": {
+		"prefix": "redis_zrem",
+		"body": "redis_zrem( ${1:conn_id}, ${2:key}, ${3:member} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zrem(...) "
+	},
+	"redis_zremrangebylex": {
+		"prefix": "redis_zremrangebylex",
+		"body": "redis_zremrangebylex( ${1:conn_id}, ${2:key}, ${3:min}, ${4:max} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zremrangebylex(...) "
+	},
+	"redis_zremrangebyrank": {
+		"prefix": "redis_zremrangebyrank",
+		"body": "redis_zremrangebyrank( ${1:conn_id}, ${2:key}, ${3:start}, ${4:stop} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zremrangebyrank(...) "
+	},
+	"redis_zremrangebyscore": {
+		"prefix": "redis_zremrangebyscore",
+		"body": "redis_zremrangebyscore( ${1:conn_id}, ${2:key}, ${3:min}, ${4:max} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zremrangebyscore(...) "
+	},
+	"redis_zrevrange": {
+		"prefix": "redis_zrevrange",
+		"body": "redis_zrevrange( ${1:conn_id}, ${2:key}, ${3:start}, ${4:stop}, ${5:options var}, ${6:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zrevrange(...) "
+	},
+	"redis_zrevrangebylex": {
+		"prefix": "redis_zrevrangebylex",
+		"body": "redis_zrevrangebylex( ${1:conn_id}, ${2:key}, ${3:max}, ${4:min}, ${5:options var}, ${6:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zrevrangebylex(...) "
+	},
+	"redis_zrevrangebyscore": {
+		"prefix": "redis_zrevrangebyscore",
+		"body": "redis_zrevrangebyscore( ${1:conn_id}, ${2:key}, ${3:max}, ${4:min}, ${5:optoins var}, ${6:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zrevrangebyscore(...) "
+	},
+	"redis_zrevrank": {
+		"prefix": "redis_zrevrank",
+		"body": "redis_zrevrank( ${1:conn_id}, ${2:key}, ${3:member} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zrevrank(...) "
+	},
+	"redis_zscan": {
+		"prefix": "redis_zscan",
+		"body": "redis_zscan( ${1:conn_id}, ${2:key}, ${3:cursor}, ${4:options var}, ${5:output var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zscan(...) "
+	},
+	"redis_zscore": {
+		"prefix": "redis_zscore",
+		"body": "redis_zscore( ${1:conn_id}, ${2:key}, ${3:member} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zscore(...) "
+	},
+	"redis_zunionstore": {
+		"prefix": "redis_zunionstore",
+		"body": "redis_zunionstore( ${1:conn_id}, ${2:destination}, ${3:key}, ${4:options var} )$0",
+		"scope": "mv",
+		"description": "View documentation on redis.io: redis_zunionstore(...) "
+	},
+	"miva_struct_member_callback": {
+		"prefix": "miva_struct_member_callback",
+		"body": "miva_struct_member_callback( ${1:struct var}, ${2:function}, ${3:data var} )$0",
+		"scope": "mv",
+		"description": "This function can be used to dynamically populate structure members as they are accessed.Return Value: Empty"
+	}
 }
