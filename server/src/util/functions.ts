@@ -126,13 +126,14 @@ function formatDoValueCompletion( fn: any, file: any ): CompletionItem {
 		insertText: `${ fn.name }(${ parameters })`,
 		insertTextFormat: InsertTextFormat.Snippet,
 		kind: CompletionItemKind.Function,
-		detail: file.distro_path,
+		detail: file.distroPath,
+		documentation: fn.description,
 		command: {
-			title: `Inject "${ file.distro_path }" into file attribute.`, 
+			title: `Inject "${ file.distroPath }" into file attribute.`, 
 			command: 'mivaIde.chooseFileName',
 			arguments: [
 				{
-					fileNames: [ file.distro_path ]
+					fileNames: [ file.distroPath ]
 				}
 			]
 		}
