@@ -127,7 +127,10 @@ function formatDoValueCompletion( fn: any, file: any ): CompletionItem {
 		insertTextFormat: InsertTextFormat.Snippet,
 		kind: CompletionItemKind.Function,
 		detail: file.distroPath,
-		documentation: fn.description,
+		documentation: {
+			kind: MarkupKind.Markdown,
+			value: fn.description
+		},
 		command: {
 			title: `Inject "${ file.distroPath }" into file attribute.`, 
 			command: 'mivaIde.chooseFileName',

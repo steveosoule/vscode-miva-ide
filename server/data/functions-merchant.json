@@ -2733,7 +2733,7 @@
 			{
 				"name": "AGR_Store_Create",
 				"parameters": [],
-				"description": "!\n\\file\n\\brief\t\tAvailability group database functions"
+				"description": "\n\\file\n#### \tAvailability group database functions"
 			},
 			{
 				"name": "AGR_Store_Delete",
@@ -5189,7 +5189,7 @@
 					"modules var",
 					"module_count"
 				],
-				"description": "!\n\\file\n\\brief\t\tCustomer functions for shopping interface"
+				"description": "\n\\file\n#### \tCustomer functions for shopping interface"
 			},
 			{
 				"name": "Runtime_Validate_ShippingBilling",
@@ -6583,7 +6583,7 @@
 			{
 				"name": "INV_Create_Data_Files",
 				"parameters": [],
-				"description": "!\n\\file\n\\brief\t\tInventory system database functions"
+				"description": "\n\\file\n#### \tInventory system database functions"
 			},
 			{
 				"name": "INV_Store_Create",
@@ -6740,7 +6740,7 @@
 				"parameters": [
 					"product var"
 				],
-				"description": "!\n\\file\n\\brief\t\tInventory system functions for shopping interface"
+				"description": "\n\\file\n#### \tInventory system functions for shopping interface"
 			},
 			{
 				"name": "Inventory_Adjust",
@@ -8321,7 +8321,7 @@
 			{
 				"name": "PGR_Store_Create",
 				"parameters": [],
-				"description": "!\n\\file\n\\brief\t\tPrice group database functions"
+				"description": "\n\\file\n#### \tPrice group database functions"
 			},
 			{
 				"name": "PGR_Create_Data_Files",
@@ -11283,7 +11283,7 @@
 				"parameters": [
 					"provide_filename"
 				],
-				"description": "!\n\\file\n\\brief\t\tProvisioning system"
+				"description": "\n\\file\n#### \tProvisioning system"
 			},
 			{
 				"name": "PRV_Action_ProvisionEntireFile",
@@ -13588,7 +13588,7 @@
 			{
 				"name": "RPD_Store_Create",
 				"parameters": [],
-				"description": "!\n\\file\n\\brief\t\tRelated products database functions"
+				"description": "\n\\file\n#### \tRelated products database functions"
 			},
 			{
 				"name": "RPD_Store_Delete",
@@ -13716,7 +13716,7 @@
 			{
 				"name": "RPT_CreateDataFiles",
 				"parameters": [],
-				"description": "!\n\\file\n\\brief\t\tReport system database functions"
+				"description": "\n\\file\n#### \tReport system database functions"
 			},
 			{
 				"name": "RPT_Store_Create",
@@ -16214,7 +16214,7 @@
 			{
 				"name": "TUI_CreateDataFiles",
 				"parameters": [],
-				"description": "!\n\\file\n\\brief\t\tTemplate system database functions"
+				"description": "\n\\file\n#### \tTemplate system database functions"
 			},
 			{
 				"name": "TUI_Store_Create",
@@ -20644,7 +20644,7 @@
 					"code",
 					"module_code"
 				],
-				"description": "!\n\\file\n\\brief\t\tTemplate Manager"
+				"description": "\n\\file\n#### \tTemplate Manager"
 			},
 			{
 				"name": "TemplateManager_Create_Item_Module",
@@ -20652,7 +20652,7 @@
 					"code",
 					"module var"
 				],
-				"description": "!\n\\brief\t\tCreates an item that references a specific module\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function was added specifically to enable the creation of Store Morph items from inside Module_Install_Store() of a currency, tax, or storeui module, but may\nalso be used elsewhere when a full Module record is available, to avoid explicitly loading the record from the database.\n\nFor a complete description of the issues resolved by calling this function, see http://bugzilla.mivamerchant.com/show_bug.cgi?id=5240\n\n\\param[in]\tcode\tThe code of the newly created Item\n\\param[in]\tmodule\tA complete Module record describing the component module which will implement the item\n\n\\return\t\t1 on success, 0 on error"
+				"description": "\n#### \tCreates an item that references a specific module\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function was added specifically to enable the creation of Store Morph items from inside Module_Install_Store() of a currency, tax, or storeui module, but may\nalso be used elsewhere when a full Module record is available, to avoid explicitly loading the record from the database.\n\nFor a complete description of the issues resolved by calling this function, see http://bugzilla.mivamerchant.com/show_bug.cgi?id=5240\n\n* __@param__ [in] code The code of the newly created Item\n* __@param__ [in] module A complete Module record describing the component module which will implement the item\n\n\\return\t\t1 on success, 0 on error"
 			},
 			{
 				"name": "TemplateManager_Create_Item_LowLevel",
@@ -21947,7 +21947,7 @@
 				"parameters": [
 					"skin_dir"
 				],
-				"description": "!\n\\file\n\\brief\t\tTemplate system utility functions"
+				"description": "\n\\file\n#### \tTemplate system utility functions"
 			},
 			{
 				"name": "SKIN_Cleanup",
@@ -23449,7 +23449,7 @@
 			{
 				"name": "Action_AddUpsoldProductToBasket",
 				"parameters": [],
-				"description": "!\n\\file\n\\brief\t\tUpsale system functions for shopping interface"
+				"description": "\n\\file\n#### \tUpsale system functions for shopping interface"
 			},
 			{
 				"name": "Action_AddMultipleUpsoldProductsToBasket",
@@ -26348,7 +26348,7 @@
 				"parameters": [
 					"list var"
 				],
-				"description": "!\n\\file\n\\brief\t\tDatabase API compatibility layer"
+				"description": "\n\\file\n#### \tDatabase API compatibility layer"
 			},
 			{
 				"name": "DB_Supported_Name",
@@ -26443,21 +26443,21 @@
 				"parameters": [
 					"attribute var"
 				],
-				"description": "!\n\\brief\t\tInserts a record into the sNN_Attributes table\n\nIf \\em attribute references a record in the sNN_AttributeTemplates table, the reference count for the associated AttributeTemplate record is incremented.\n\n\\param[in]\tattribute\tThe Attribute record to be inserted\n\n\\return\t\t1 on success, 0 on error\n\n\\sa\t\t\tAttribute_Insert_LowLevel"
+				"description": "\n#### \tInserts a record into the sNN_Attributes table\n\nIf  attribute references a record in the sNN_AttributeTemplates table, the reference count for the associated AttributeTemplate record is incremented.\n\n* __@param__ [in] attribute The Attribute record to be inserted\n\n\\return\t\t1 on success, 0 on error\n\n\\sa\t\t\tAttribute_Insert_LowLevel"
 			},
 			{
 				"name": "Attribute_Update_Inventory",
 				"parameters": [
 					"attribute var"
 				],
-				"description": "!\n\\brief\t\tUpdates the inventory flag for a single record in the sNN_Attributes table\n\nIf the inventory flag is toggled from true to false, any associated ProductKit and ProductVariant records are deleted.\n\n\\param[in]\tattribute\tThe Attribute record to be updated\n\n\\return\t\t1 on success, 0 on error\n\n\\sa\t\t\tAttribute_Update_Inventory_LowLevel"
+				"description": "\n#### \tUpdates the inventory flag for a single record in the sNN_Attributes table\n\nIf the inventory flag is toggled from true to false, any associated ProductKit and ProductVariant records are deleted.\n\n* __@param__ [in] attribute The Attribute record to be updated\n\n\\return\t\t1 on success, 0 on error\n\n\\sa\t\t\tAttribute_Update_Inventory_LowLevel"
 			},
 			{
 				"name": "Attribute_Delete",
 				"parameters": [
 					"attribute var"
 				],
-				"description": "!\n\\brief\t\tDeletes a single record from the sNN_Attributes table\n\nIf \\em attribute references a record in the sNN_AttributeTemplates table, the reference count for the associated AttributeTemplate record is decremented.\nThis function also deletes any associated Option, ProductKit, and ProductVariant records.\n\n\\param[in]\tattribute\tThe Attribute record to be deleted\n\n\\return\t\t1 on success, 0 on error"
+				"description": "\n#### \tDeletes a single record from the sNN_Attributes table\n\nIf  attribute references a record in the sNN_AttributeTemplates table, the reference count for the associated AttributeTemplate record is decremented.\nThis function also deletes any associated Option, ProductKit, and ProductVariant records.\n\n* __@param__ [in] attribute The Attribute record to be deleted\n\n\\return\t\t1 on success, 0 on error"
 			},
 			{
 				"name": "Option_Delete",
@@ -26465,7 +26465,7 @@
 					"attribute var",
 					"option var"
 				],
-				"description": "!\n\\brief\t\tDeletes a single record from the sNN_Options table\n\nIf \\em option references the default option for the associated Attribute, the default_id of the Attribute is reset to 0.\nThis function also deletes any ProductKit and ProductVariant records that reference the deleted Option.\n\n\\param[in]\tattribute\tThe Attribute record which contains the Option to be deleted\n\\param[in]\toption\t\tThe Option record to be deleted\n\n\\return\t\t1 on success, 0 on error"
+				"description": "\n#### \tDeletes a single record from the sNN_Options table\n\nIf  option references the default option for the associated Attribute, the default_id of the Attribute is reset to 0.\nThis function also deletes any ProductKit and ProductVariant records that reference the deleted Option.\n\n* __@param__ [in] attribute The Attribute record which contains the Option to be deleted\n* __@param__ [in] option The Option record to be deleted\n\n\\return\t\t1 on success, 0 on error"
 			},
 			{
 				"name": "ProductAttributeList_Update_Offsets_PastEnd",
@@ -26481,7 +26481,7 @@
 					"product_id",
 					"attributes var"
 				],
-				"description": "!\n\\brief\t\tUpdates the display order of a group of attributes\n\nSorts a group of attributes for the specified product.\n\n\\param[in]\tproduct_id\tThe ID of the Product which contains the attributes to be sorted\n\\param[in]\tattributes\tAn OffsetArray containing the ID, original offset, and desired offset of the attributes to be sorted\n\n\\return\t\t1 on success, 0 on failure"
+				"description": "\n#### \tUpdates the display order of a group of attributes\n\nSorts a group of attributes for the specified product.\n\n* __@param__ [in] product_id The ID of the Product which contains the attributes to be sorted\n* __@param__ [in] attributes An OffsetArray containing the ID, original offset, and desired offset of the attributes to be sorted\n\n\\return\t\t1 on success, 0 on failure"
 			},
 			{
 				"name": "ProductAttributeOptionList_Update_Offsets_PastEnd",
@@ -26499,7 +26499,7 @@
 					"attr_id",
 					"options var"
 				],
-				"description": "!\n\\brief\t\tUpdates the display order of a group of options\n\nSorts a group of options for the specified product and attribute.\n\n\\param[in]\tproduct_id\tThe ID of the Product which contains the attributes whos options are to be sorted\n\\param[in]\tattr_id\t\tThe ID of the Attribute which contains the options to be sorted\n\\param[in]\toptions\t\tAn OffsetArray containing the ID, original offset, and desired offset of the options to be sorted\n\n\\return\t\t1 on success, 0 on failure"
+				"description": "\n#### \tUpdates the display order of a group of options\n\nSorts a group of options for the specified product and attribute.\n\n* __@param__ [in] product_id The ID of the Product which contains the attributes whos options are to be sorted\n* __@param__ [in] attr_id The ID of the Attribute which contains the options to be sorted\n* __@param__ [in] options An OffsetArray containing the ID, original offset, and desired offset of the options to be sorted\n\n\\return\t\t1 on success, 0 on failure"
 			},
 			{
 				"name": "AttributeIDList_Load_Product_Inventory",
@@ -30168,49 +30168,49 @@
 				"parameters": [
 					"attribute var"
 				],
-				"description": "!\n\\brief\tInserts a record into the sNN_Attributes table\n\nUnlike Attribute_Insert(), this function does not increment the reference count of any associated AttributeTemplate record.\nThis function initializes the \\em id and \\em disp_order fields of \\em attribute.\n\n\\param[in,out]\tattribute\tThe Attribute record to be inserted\n\n\\return\t1 on success, 0 on error\n\n\\sa\t\tAttribute_Insert"
+				"description": "\n#### Inserts a record into the sNN_Attributes table\n\nUnlike Attribute_Insert(), this function does not increment the reference count of any associated AttributeTemplate record.\nThis function initializes the  id and  disp_order fields of  attribute.\n\n* __@param__ [in,out] attribute The Attribute record to be inserted\n\n\\return\t1 on success, 0 on error\n\n\\sa\t\tAttribute_Insert"
 			},
 			{
 				"name": "Attribute_Update",
 				"parameters": [
 					"attribute var"
 				],
-				"description": "!\n\\brief\tUpdates a single record in the sNN_Attributes table\n\n\\param[in]\tattribute\tThe Attribute record to be updated\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Updates a single record in the sNN_Attributes table\n\n* __@param__ [in] attribute The Attribute record to be updated\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "Attribute_Update_Default",
 				"parameters": [
 					"attribute var"
 				],
-				"description": "!\n\\brief\tUpdates the default option for a single record in the sNN_Attributes table\n\n\\param[in]\tattribute\tThe Attribute record to be updated\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Updates the default option for a single record in the sNN_Attributes table\n\n* __@param__ [in] attribute The Attribute record to be updated\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "Attribute_Update_DisplayOrder",
 				"parameters": [
 					"attribute var"
 				],
-				"description": "!\n\\brief\tUpdates the sort order for a single record in the sNN_Attributes table\n\n\\param[in]\tattribute\tThe Attribute record to be updated\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Updates the sort order for a single record in the sNN_Attributes table\n\n* __@param__ [in] attribute The Attribute record to be updated\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "Attribute_Update_Inventory_LowLevel",
 				"parameters": [
 					"attribute var"
 				],
-				"description": "!\n\\brief\tUpdates the inventory flag for a single record in the sNN_Attributes table\n\nUnlike Attribute_Update_Inventory(), this function does not delete any ProductKit or ProductVariant records associated with the Attribute\nwhen the inventory flag is turned off.\n\n\\param[in]\tattribute\tThe Attribute record to be updated\n\n\\return\t1 on success, 0 on error\n\n\\sa\t\tAttribute_Update_Inventory"
+				"description": "\n#### Updates the inventory flag for a single record in the sNN_Attributes table\n\nUnlike Attribute_Update_Inventory(), this function does not delete any ProductKit or ProductVariant records associated with the Attribute\nwhen the inventory flag is turned off.\n\n* __@param__ [in] attribute The Attribute record to be updated\n\n\\return\t1 on success, 0 on error\n\n\\sa\t\tAttribute_Update_Inventory"
 			},
 			{
 				"name": "Attribute_Delete_ID",
 				"parameters": [
 					"id"
 				],
-				"description": "!\n\\brief\tDeletes a single record from the sNN_Attributes table\n\n\\param[in]\tid\tThe unique ID of the Attribute to be deleted\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Deletes a single record from the sNN_Attributes table\n\n* __@param__ [in] id The unique ID of the Attribute to be deleted\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "Attribute_Delete_All_Product",
 				"parameters": [
 					"product_id"
 				],
-				"description": "!\n\\brief\tDeletes all sNN_Attributes records associated with a given Product\n\nThis function does not clean up any associated ProductKit or ProductVariant records, nor does it decrement the reference\ncounts for any associated AttributeTemplate records.\n\n\\param[in]\tproduct_id\tThe ID of the Product for which all Attributes should be deleted\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Deletes all sNN_Attributes records associated with a given Product\n\nThis function does not clean up any associated ProductKit or ProductVariant records, nor does it decrement the reference\ncounts for any associated AttributeTemplate records.\n\n* __@param__ [in] product_id The ID of the Product for which all Attributes should be deleted\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "Attribute_Load_ID",
@@ -30218,7 +30218,7 @@
 					"id",
 					"attribute var"
 				],
-				"description": "!\n\\brief\tLoads a single Attribute record by its unique ID\n\n\\param[in]\tid\t\t\tThe unique ID of the Attribute to be retrieved\n\\param[out]\tattribute\tA variable which receives the loaded Attribute record\n\n\\return\t1 on success, 0 on error or if no record found (see Error_Is_EOF())"
+				"description": "\n#### Loads a single Attribute record by its unique ID\n\n* __@param__ [in] id The unique ID of the Attribute to be retrieved\n* __@param__ [out] attribute A variable which receives the loaded Attribute record\n\n\\return\t1 on success, 0 on error or if no record found (see Error_Is_EOF())"
 			},
 			{
 				"name": "Attribute_Load_Code",
@@ -30227,7 +30227,7 @@
 					"code",
 					"attribute var"
 				],
-				"description": "!\n\\brief\tLoads a single Attribute record for a given Product by its code\n\n\\param[in]\tproduct_id\tThe unique ID of the Product\n\\param[in]\tcode\t\tThe code of the Attribute to be retrieved\n\\param[out]\tattribute\tA variable which receives the loaded Attribute record\n\n\\return\t1 on success, 0 on error or if no record found (see Error_Is_EOF())"
+				"description": "\n#### Loads a single Attribute record for a given Product by its code\n\n* __@param__ [in] product_id The unique ID of the Product\n* __@param__ [in] code The code of the Attribute to be retrieved\n* __@param__ [out] attribute A variable which receives the loaded Attribute record\n\n\\return\t1 on success, 0 on error or if no record found (see Error_Is_EOF())"
 			},
 			{
 				"name": "AttributeList_Load_Product",
@@ -30235,7 +30235,7 @@
 					"product_id",
 					"attributes var"
 				],
-				"description": "!\n\\brief\tLoads a list of all of the Attribute records for a given Product\n\n\\param[in]\tproduct_id\tThe unique ID of the product\n\\param[out]\tattributes\tAn array of Attribute records\n\n\\return\tThe count of attributes on success, 0 on error or if no record found (see Error_Is_EOF())"
+				"description": "\n#### Loads a list of all of the Attribute records for a given Product\n\n* __@param__ [in] product_id The unique ID of the product\n* __@param__ [out] attributes An array of Attribute records\n\n\\return\tThe count of attributes on success, 0 on error or if no record found (see Error_Is_EOF())"
 			},
 			{
 				"name": "AttributeList_Load_Product_Inventory",
@@ -30243,7 +30243,7 @@
 					"product_id",
 					"attributes var"
 				],
-				"description": "!\n\\brief\tLoads a list of all of the Attribute records for a given Product with the inventory flag set\n\n\\param[in]\tproduct_id\tThe unique ID of the product\n\\param[out]\tattributes\tAn array of Attribute records\n\n\\return\tThe count of attributes on success, 0 on error or if no record found (see Error_Is_EOF())"
+				"description": "\n#### Loads a list of all of the Attribute records for a given Product with the inventory flag set\n\n* __@param__ [in] product_id The unique ID of the product\n* __@param__ [out] attributes An array of Attribute records\n\n\\return\tThe count of attributes on success, 0 on error or if no record found (see Error_Is_EOF())"
 			}
 		]
 	},
@@ -31497,7 +31497,7 @@
 				"parameters": [
 					"image var"
 				],
-				"description": "!\n\\brief\tInserts a record into the Images table\n\n\\param[in,out]\timage\tThe Image record to be inserted\n\n\\return\t1 on success, 0 on error\n\n\\sa\t\tImage_Insert"
+				"description": "\n#### Inserts a record into the Images table\n\n* __@param__ [in,out] image The Image record to be inserted\n\n\\return\t1 on success, 0 on error\n\n\\sa\t\tImage_Insert"
 			},
 			{
 				"name": "Image_Insert_LowLevel",
@@ -31645,42 +31645,42 @@
 				"parameters": [
 					"option var"
 				],
-				"description": "!\n\\brief\tInserts an option into the sNN_Options table\n\n\\param[in,out]\toption\tThe Option record to be inserted.  The \\em id and \\em disp_order members are initialized by this function.\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Inserts an option into the sNN_Options table\n\n* __@param__ [in,out] option The Option record to be inserted.  The  id and  disp_order members are initialized by this function.\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "Option_Update",
 				"parameters": [
 					"option var"
 				],
-				"description": "!\n\\brief\tUpdates a single option in the sNN_Options table\n\n\\param[in]\toption\tThe Option record to be updated\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Updates a single option in the sNN_Options table\n\n* __@param__ [in] option The Option record to be updated\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "Option_Update_DisplayOrder",
 				"parameters": [
 					"option var"
 				],
-				"description": "!\n\\brief\tUpdates the sort order for a single option in the sNN_Options table\n\n\\param[in]\toption\tThe Option record to be updated\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Updates the sort order for a single option in the sNN_Options table\n\n* __@param__ [in] option The Option record to be updated\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "Option_Delete_ID",
 				"parameters": [
 					"id"
 				],
-				"description": "!\n\\brief\tDeletes a single record from the sNN_Options table\n\n\\param[in]\tid\tThe unique ID of the Option to be deleted\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Deletes a single record from the sNN_Options table\n\n* __@param__ [in] id The unique ID of the Option to be deleted\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "Option_Delete_All_Attribute",
 				"parameters": [
 					"attr_id"
 				],
-				"description": "!\n\\brief\tDeletes all sNN_Options records associated with a given Attribute\n\nThis function does not clean up any associated ProductKit or ProductVariant records, nor does it decrement the reference\ncounts for any associated AttributeTemplateOption records.\n\n\\param[in]\tattr_id\tThe ID of the Attribute for which all Option records should be deleted\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Deletes all sNN_Options records associated with a given Attribute\n\nThis function does not clean up any associated ProductKit or ProductVariant records, nor does it decrement the reference\ncounts for any associated AttributeTemplateOption records.\n\n* __@param__ [in] attr_id The ID of the Attribute for which all Option records should be deleted\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "Option_Delete_All_Product",
 				"parameters": [
 					"product_id"
 				],
-				"description": "!\n\\brief\tDeletes all sNN_Options records associated with a given Product\n\nThis function does not clean up any associated ProductKit or ProductVariant records, nor does it decrement the reference\ncounts for any associated AttributeTemplateOptions records.\n\n\\param[in]\tproduct_id\tThe ID of the Product for which all Option records should be deleted\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Deletes all sNN_Options records associated with a given Product\n\nThis function does not clean up any associated ProductKit or ProductVariant records, nor does it decrement the reference\ncounts for any associated AttributeTemplateOptions records.\n\n* __@param__ [in] product_id The ID of the Product for which all Option records should be deleted\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "Option_Load_ID",
@@ -31688,7 +31688,7 @@
 					"id",
 					"option var"
 				],
-				"description": "!\n\\brief\tLoads a single Option record by its unique ID\n\n\\param[in]\tid\t\tThe unique ID of the Option to be retrieved\n\\param[out]\toption\tA variable which receives the loaded Option record\n\n\\return\t1 on success, 0 on error or if no record found (see Error_Is_EOF())"
+				"description": "\n#### Loads a single Option record by its unique ID\n\n* __@param__ [in] id The unique ID of the Option to be retrieved\n* __@param__ [out] option A variable which receives the loaded Option record\n\n\\return\t1 on success, 0 on error or if no record found (see Error_Is_EOF())"
 			},
 			{
 				"name": "Option_Load_Code",
@@ -31697,7 +31697,7 @@
 					"code",
 					"option var"
 				],
-				"description": "!\n\\brief\tLoads a single Option record for a given Attribute by its code\n\n\\param[in]\tattr_id\t\tThe unique ID of the Attribute\n\\param[in]\tcode\t\tThe code of the Option to be retrieved\n\\param[out]\toption\t\tA variable which receives the loaded Option record\n\n\\return\t1 on success, 0 on error or if no record found (see Error_Is_EOF())"
+				"description": "\n#### Loads a single Option record for a given Attribute by its code\n\n* __@param__ [in] attr_id The unique ID of the Attribute\n* __@param__ [in] code The code of the Option to be retrieved\n* __@param__ [out] option A variable which receives the loaded Option record\n\n\\return\t1 on success, 0 on error or if no record found (see Error_Is_EOF())"
 			},
 			{
 				"name": "OptionList_Load_Attribute",
@@ -31705,7 +31705,7 @@
 					"attr_id",
 					"options var"
 				],
-				"description": "!\n\\brief\tLoads a list of all of the Options records for a given Attribute\n\n\\param[in]\tattr_id\t\tThe unique ID of the Attribute\n\\param[out]\toptions\t\tAn array of Option records\n\n\\return\tThe count of Option records on success, 0 on error or if no record found (see Error_Is_EOF())"
+				"description": "\n#### Loads a list of all of the Options records for a given Attribute\n\n* __@param__ [in] attr_id The unique ID of the Attribute\n* __@param__ [out] options An array of Option records\n\n\\return\tThe count of Option records on success, 0 on error or if no record found (see Error_Is_EOF())"
 			}
 		]
 	},
@@ -31890,14 +31890,14 @@
 				"parameters": [
 					"orderitem var"
 				],
-				"description": "!\n\\brief\tInserts a record into the sNN_OrderItems table\n\n\\param[in,out]\torderitem\tThe OrderItem record to be inserted\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Inserts a record into the sNN_OrderItems table\n\n* __@param__ [in,out] orderitem The OrderItem record to be inserted\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "OrderItem_Update",
 				"parameters": [
 					"orderitem var"
 				],
-				"description": "!\n\\brief\tUpdates a single record in the sNN_OrderItems table\n\n\\param[in]\torderitem\tThe OrderItem record to be updated\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Updates a single record in the sNN_OrderItems table\n\n* __@param__ [in] orderitem The OrderItem record to be updated\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "OrderItem_Update_Pricing",
@@ -31916,7 +31916,7 @@
 				"parameters": [
 					"orderitem var"
 				],
-				"description": "!\n\\brief\tUpdates a single record in the sNN_OrderItems table\n\n\\param[in]\torderitem\tThe OrderItem record to be updated\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Updates a single record in the sNN_OrderItems table\n\n* __@param__ [in] orderitem The OrderItem record to be updated\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "OrderItemList_Load_ProductID",
@@ -31925,7 +31925,7 @@
 					"product_id",
 					"orderitems var"
 				],
-				"description": "!\n\\brief\tLoads a list of all of the OrderItem records for a given Order by a unique product_id\n\n\\param[in]\torder_id\tThe unique ID of the order\n\\param[in]\tproduct_id\tThe unique ID of the product\n\\param[out]\torderitems\tAn array of OrderItem records\n\n\\return\tThe count of orderitems on success, 0 on error or if no record found (see Error_Is_EOF())"
+				"description": "\n#### Loads a list of all of the OrderItem records for a given Order by a unique product_id\n\n* __@param__ [in] order_id The unique ID of the order\n* __@param__ [in] product_id The unique ID of the product\n* __@param__ [out] orderitems An array of OrderItem records\n\n\\return\tThe count of orderitems on success, 0 on error or if no record found (see Error_Is_EOF())"
 			},
 			{
 				"name": "OrderItem_Load_Line",
@@ -31934,7 +31934,7 @@
 					"line_id",
 					"orderitem var"
 				],
-				"description": "!\n\\brief\tLoads a single OrderItem record for a given Order by its unique line_id\n\n\\param[in]\torder_id\tThe unique ID of the Order\n\\param[in]\tline_id\t\tThe unique ID of the OrderItem to be retrieved\n\\param[out]\torderitem\tA variable which receives the loaded OrderItem record\n\n\\return\t1 on success, 0 on error or if no record found (see Error_Is_EOF())"
+				"description": "\n#### Loads a single OrderItem record for a given Order by its unique line_id\n\n* __@param__ [in] order_id The unique ID of the Order\n* __@param__ [in] line_id The unique ID of the OrderItem to be retrieved\n* __@param__ [out] orderitem A variable which receives the loaded OrderItem record\n\n\\return\t1 on success, 0 on error or if no record found (see Error_Is_EOF())"
 			},
 			{
 				"name": "OrderItemList_Load_Order",
@@ -31942,7 +31942,7 @@
 					"order_id",
 					"orderitems var"
 				],
-				"description": "!\n\\brief\tLoads a list of all of the OrderItem records for a given Order\n\n\\param[in]\torder_id\tThe unique ID of the order\n\\param[out]\torderitems\tAn array of OrderItem records\n\n\\return\tThe count of orderitems on success, 0 on error or if no record found (see Error_Is_EOF())"
+				"description": "\n#### Loads a list of all of the OrderItem records for a given Order\n\n* __@param__ [in] order_id The unique ID of the order\n* __@param__ [out] orderitems An array of OrderItem records\n\n\\return\tThe count of orderitems on success, 0 on error or if no record found (see Error_Is_EOF())"
 			},
 			{
 				"name": "OrderItemList_Load_Order_Subscription",
@@ -31957,7 +31957,7 @@
 					"shpmnt_id",
 					"orderitems var"
 				],
-				"description": "!\n\\brief\tLoads a list of all of the OrderItem records for a given Shipment\n\n\\param[in]\tshpmnt_id\tThe unique ID of the shipment\n\\param[out]\torderitems\tAn array of OrderItem records\n\n\\return\tThe count of orderitems on success, 0 on error or if no record found (see Error_Is_EOF())"
+				"description": "\n#### Loads a list of all of the OrderItem records for a given Shipment\n\n* __@param__ [in] shpmnt_id The unique ID of the shipment\n* __@param__ [out] orderitems An array of OrderItem records\n\n\\return\tThe count of orderitems on success, 0 on error or if no record found (see Error_Is_EOF())"
 			},
 			{
 				"name": "OrderItemList_Load_Return",
@@ -31965,7 +31965,7 @@
 					"rma_id",
 					"orderitems var"
 				],
-				"description": "!\n\\brief\tLoads a list of all of the OrderItem records for a given Return\n\n\\param[in]\trma_id\t\tThe unique ID of the return\n\\param[out]\torderitems\tAn array of OrderItem records\n\n\\return\tThe count of orderitems on success, 0 on error or if no record found (see Error_Is_EOF())"
+				"description": "\n#### Loads a list of all of the OrderItem records for a given Return\n\n* __@param__ [in] rma_id The unique ID of the return\n* __@param__ [out] orderitems An array of OrderItem records\n\n\\return\tThe count of orderitems on success, 0 on error or if no record found (see Error_Is_EOF())"
 			},
 			{
 				"name": "OrderItemList_Load_Status",
@@ -31974,7 +31974,7 @@
 					"status",
 					"orderitems var"
 				],
-				"description": "!\n\\brief\tLoads a list of all of the OrderItem records for a given Order by it's status\n\n\\param[in]\torder_id\tThe unique ID of the order\n\\param[in]\tstatus\t\tThe status code of the orderitem\n\\param[out]\torderitems\tAn array of OrderItem records\n\n\\return\tThe count of orderitems on success, 0 on error or if no record found (see Error_Is_EOF())"
+				"description": "\n#### Loads a list of all of the OrderItem records for a given Order by it's status\n\n* __@param__ [in] order_id The unique ID of the order\n* __@param__ [in] status The status code of the orderitem\n* __@param__ [out] orderitems An array of OrderItem records\n\n\\return\tThe count of orderitems on success, 0 on error or if no record found (see Error_Is_EOF())"
 			},
 			{
 				"name": "OrderItem_Count_Shipment",
@@ -31982,7 +31982,7 @@
 					"shpmnt_id",
 					"count var"
 				],
-				"description": "!\n\\brief\tLoads the OrderItem count for a given Shipment by its unique line_id\n\n\\param[in]\torder_id\tThe unique ID of the Order\n\\param[in]\tline_id\t\tThe unique ID of the OrderItem to be retrieved\n\\param[out]\torderitem\tA variable which receives the loaded OrderItem record\n\n\\return\t1 on success, 0 on error or if no record found (see Error_Is_EOF())"
+				"description": "\n#### Loads the OrderItem count for a given Shipment by its unique line_id\n\n* __@param__ [in] order_id The unique ID of the Order\n* __@param__ [in] line_id The unique ID of the OrderItem to be retrieved\n* __@param__ [out] orderitem A variable which receives the loaded OrderItem record\n\n\\return\t1 on success, 0 on error or if no record found (see Error_Is_EOF())"
 			},
 			{
 				"name": "OrderItem_Count_Return",
@@ -32703,7 +32703,7 @@
 				"parameters": [
 					"product var"
 				],
-				"description": "!\n\\brief\tInserts a record into the sNN_Products table\n\n\\param[in,out]\tproduct\tA Product record.  The \\em id and \\em disp_order members are initialized by this function.\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Inserts a record into the sNN_Products table\n\n* __@param__ [in,out] product A Product record.  The  id and  disp_order members are initialized by this function.\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "Product_Update_LowLevel",
@@ -33588,7 +33588,7 @@
 					"username",
 					"password"
 				],
-				"description": "!\n\\file\n\\brief\t\tDatabase API compatibility layer - MivaSQL"
+				"description": "\n\\file\n#### \tDatabase API compatibility layer - MivaSQL"
 			},
 			{
 				"name": "DB_Close",
@@ -33876,7 +33876,7 @@
 					"username",
 					"password"
 				],
-				"description": "!\n\\file\n\\brief\t\tDatabase API compatibility layer - MySQL"
+				"description": "\n\\file\n#### \tDatabase API compatibility layer - MySQL"
 			},
 			{
 				"name": "DB_Close",
@@ -34164,7 +34164,7 @@
 					"username",
 					"password"
 				],
-				"description": "!\n\\file\n\\brief\t\tDatabase API compatibility layer - PostgreSQL"
+				"description": "\n\\file\n#### \tDatabase API compatibility layer - PostgreSQL"
 			},
 			{
 				"name": "DB_Close",
@@ -34448,17 +34448,17 @@
 			{
 				"name": "OrderMinimumsMet",
 				"parameters": [],
-				"description": "!\n\\brief\tDetermines if the current shopping basket meets the configured minimums for checkout\n\nExamines the contents of the shopping basket in g.Basket to determine if it meets the minimum checkout settings for the store.\nBoth the minimum quantity of items and the minimum total price are verified.\n\n\\return\t1 if the basket meets the configured requirements, 0 if it does not"
+				"description": "\n#### Determines if the current shopping basket meets the configured minimums for checkout\n\nExamines the contents of the shopping basket in g.Basket to determine if it meets the minimum checkout settings for the store.\nBoth the minimum quantity of items and the minimum total price are verified.\n\n\\return\t1 if the basket meets the configured requirements, 0 if it does not"
 			},
 			{
 				"name": "DetermineSessionID",
 				"parameters": [],
-				"description": "!\n\\brief\t\t\tSets up variables identifying the current shopping interface session\n\nThis function parses input parameters and cookies to identify and verify a shopping interface session.\nThe function also calls SetRuntimePaths() to initialize variables dependent on the current site configuration.\nInitializing g.Store_Code prior to calling this function will eliminate overhead.\n\nInput cookies are parsed using ParseCookies() and stored in the variable g.Request_Cookies.\n\n\\return\t\t\tThe value of g.Session_ID\n\n\\sa\t\t\tSetRuntimePaths ParseCookies"
+				"description": "\n#### \t\tSets up variables identifying the current shopping interface session\n\nThis function parses input parameters and cookies to identify and verify a shopping interface session.\nThe function also calls SetRuntimePaths() to initialize variables dependent on the current site configuration.\nInitializing g.Store_Code prior to calling this function will eliminate overhead.\n\nInput cookies are parsed using ParseCookies() and stored in the variable g.Request_Cookies.\n\n\\return\t\t\tThe value of g.Session_ID\n\n\\sa\t\t\tSetRuntimePaths ParseCookies"
 			},
 			{
 				"name": "UpdateSessionID",
 				"parameters": [],
-				"description": "!\n\\brief\t\tUpdates URL variables and cookies to reflect changes in session variables\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function should be called whenever the value of one of the session variables is changed.\n\n\\sa\t\tSetRuntimePaths SetRuntimeCookies"
+				"description": "\n#### \tUpdates URL variables and cookies to reflect changes in session variables\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function should be called whenever the value of one of the session variables is changed.\n\n\\sa\t\tSetRuntimePaths SetRuntimeCookies"
 			},
 			{
 				"name": "AppendRuntimeParameter",
@@ -34471,7 +34471,7 @@
 			{
 				"name": "SetRuntimePaths",
 				"parameters": [],
-				"description": "!\n\\brief\t\tInitializes shopping session specific variables\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function examines the current shopping environment, configuration, and session, then initializes variables\nrequired for proper navigation of the store."
+				"description": "\n#### \tInitializes shopping session specific variables\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function examines the current shopping environment, configuration, and session, then initializes variables\nrequired for proper navigation of the store."
 			},
 			{
 				"name": "SetRuntimeURLs",
@@ -34484,14 +34484,14 @@
 			{
 				"name": "SetRuntimeCookies",
 				"parameters": [],
-				"description": "!\n\\brief\t\tOutputs Set-Cookie headers for appropriate shopping session cookies\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function outputs Set-Cookie headers to update or create shopping session cookies.  \n\nWhen called in response to an HTTP request, the following cookies are updated:\n\\li mm5-[store_code]-basket-id\n\nWhen called in response to an HTTPS request, the following cookies are updated:\n\\li mm5-[store_code]-customer-session\n\\li mm5-[store_code]-affiliate-session\n\\li mm5-[store_code]-checkout-session\n\nIf a session value does not exist for any of the cookies above, that cookie is explicitly cleared by specifying an expiration date one year in the past.\n\nCookies are contained in the cookie list g.Output_Cookies.\n\n\\return\t\t1 if cookies are properly updated, 0 if they were not\n\n\\sa SetCookie ClearCookie OutputCookies"
+				"description": "\n#### \tOutputs Set-Cookie headers for appropriate shopping session cookies\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function outputs Set-Cookie headers to update or create shopping session cookies.  \n\nWhen called in response to an HTTP request, the following cookies are updated:\n* mm5-[store_code]-basket-id\n\nWhen called in response to an HTTPS request, the following cookies are updated:\n* mm5-[store_code]-customer-session\n* mm5-[store_code]-affiliate-session\n* mm5-[store_code]-checkout-session\n\nIf a session value does not exist for any of the cookies above, that cookie is explicitly cleared by specifying an expiration date one year in the past.\n\nCookies are contained in the cookie list g.Output_Cookies.\n\n\\return\t\t1 if cookies are properly updated, 0 if they were not\n\n\\sa SetCookie ClearCookie OutputCookies"
 			},
 			{
 				"name": "OpenBasket",
 				"parameters": [
 					"basket var"
 				],
-				"description": "!\n\\brief\t\tLoads and verifies a Basket record for the current shopping session\n\nThis function attempts to locate a Basket record for the session identified by g.Session_ID.\nIf a Basket record exists, it is checked for expiration and discarded if it has expired.\n\nIf a valid, unexpired Basket record is found, shopping session parameters are verified and the following\nverification variables are set:\n\n\\li\tg.Customer_Session_Verified\n\\li g.Affiliate_Session_Verified\n\\li g.Checkout_Session_Verified\n\n\\param[out]\tbasket\tA variable that will receive an existing, valid Basket record\n\n\\return\t\t1 if the current session exists and has not expired, 0 if the session is new or has expired"
+				"description": "\n#### \tLoads and verifies a Basket record for the current shopping session\n\nThis function attempts to locate a Basket record for the session identified by g.Session_ID.\nIf a Basket record exists, it is checked for expiration and discarded if it has expired.\n\nIf a valid, unexpired Basket record is found, shopping session parameters are verified and the following\nverification variables are set:\n\n*\tg.Customer_Session_Verified\n* g.Affiliate_Session_Verified\n* g.Checkout_Session_Verified\n\n* __@param__ [out] basket A variable that will receive an existing, valid Basket record\n\n\\return\t\t1 if the current session exists and has not expired, 0 if the session is new or has expired"
 			},
 			{
 				"name": "OpenBasket_LowLevel",
@@ -34505,7 +34505,7 @@
 					"name",
 					"default"
 				],
-				"description": "!\n\\brief\tDraws a drop-down select list of domain-level countries\n\nThis function outputs an HTML <select> tag containing all of the countries in the domain country list.\n\n\\param[in]\tname\tThe name attribute of the HTML select tag\n\\param[in]\tdefault\tThe 2-letter alphanumeric code of the country which should be selected by default\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Draws a drop-down select list of domain-level countries\n\nThis function outputs an HTML <select> tag containing all of the countries in the domain country list.\n\n* __@param__ [in] name The name attribute of the HTML select tag\n* __@param__ [in] default The 2-letter alphanumeric code of the country which should be selected by default\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "StoreCountry_Select",
@@ -34513,7 +34513,7 @@
 					"name",
 					"default"
 				],
-				"description": "!\n\\brief\tDraws a drop-down select list of store-level countries\n\nThis function outputs an HTML <select> tag containing all of the countries in the current store's country list.\n\n\\param[in]\tname\tThe name attribute of the HTML select tag\n\\param[in]\tdefault\tThe 2-letter alphanumeric code of the country which should be selected by default\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Draws a drop-down select list of store-level countries\n\nThis function outputs an HTML <select> tag containing all of the countries in the current store's country list.\n\n* __@param__ [in] name The name attribute of the HTML select tag\n* __@param__ [in] default The 2-letter alphanumeric code of the country which should be selected by default\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "State_Select",
@@ -34521,7 +34521,7 @@
 					"name",
 					"default"
 				],
-				"description": "!\n\\brief\tDraws a drop-down select list of states\n\nThis function outputs an HTML <select> tag containing all of the states in the current store's state list.\n\n\\param[in]\tname\tThe name attribute of the HTML select tag\n\\param[in]\tdefault\tThe alphanumeric code of the state which should be selected by default\n\n\\return\t1 on success, 0 on error"
+				"description": "\n#### Draws a drop-down select list of states\n\nThis function outputs an HTML <select> tag containing all of the states in the current store's state list.\n\n* __@param__ [in] name The name attribute of the HTML select tag\n* __@param__ [in] default The alphanumeric code of the state which should be selected by default\n\n\\return\t1 on success, 0 on error"
 			},
 			{
 				"name": "State_Select_US_Init",
@@ -34543,7 +34543,7 @@
 					"code",
 					"message"
 				],
-				"description": "!\n\\brief\tSets global error values used by default error handling\n\nThis function copies its parameters to the global variables Error_Code and Error_Message, then returns 0.\n\n\\param[in]\tcode\tAn error code which uniquely identifies the location in which the error was caught\n\\param[in]\tmessage\tA description of the error which occurred\n\n\\return\t0"
+				"description": "\n#### Sets global error values used by default error handling\n\nThis function copies its parameters to the global variables Error_Code and Error_Message, then returns 0.\n\n* __@param__ [in] code An error code which uniquely identifies the location in which the error was caught\n* __@param__ [in] message A description of the error which occurred\n\n\\return\t0"
 			},
 			{
 				"name": "Error_Clear",
@@ -34570,14 +34570,14 @@
 				"parameters": [
 					"address"
 				],
-				"description": "!\n\\brief\tAdds containing angle brackets to email address(es)\n\nThis function adds containing angle brackets to one or more email addresses in parameter address.  Some SMTP servers require email addresses to be contained in angle brackets.\n\n\\param[in]\taddress\tA comma separated list of one or more email addresses\n\n\\return\tThe email addresses in address, with angle brackets added"
+				"description": "\n#### Adds containing angle brackets to email address(es)\n\nThis function adds containing angle brackets to one or more email addresses in parameter address.  Some SMTP servers require email addresses to be contained in angle brackets.\n\n* __@param__ [in] address A comma separated list of one or more email addresses\n\n\\return\tThe email addresses in address, with angle brackets added"
 			},
 			{
 				"name": "Email_Validate",
 				"parameters": [
 					"address"
 				],
-				"description": "!\n\\brief\tValidates an email address\n\n\\param[in]\taddress\tThe email address to be validated\n\n\\return\t1 if the email address appears to be valid, 0 if it does not"
+				"description": "\n#### Validates an email address\n\n* __@param__ [in] address The email address to be validated\n\n\\return\t1 if the email address appears to be valid, 0 if it does not"
 			},
 			{
 				"name": "Phone_Validate",
@@ -34585,7 +34585,7 @@
 					"phone",
 					"country"
 				],
-				"description": "!\n\\brief\tValidates a phone number\n\nFor the US and Germany, the phone number must contain only digits and common delimiter characters.\nFor all countries, the phone number must be non-empty.\n\n\\param[in]\tphone\tThe phone number to be validated\n\\param[in]\tcountry\tThe 2-character alphanumeric country code in which the phone number is expected to reside\n\n\\return\t1 if the phone number appears to be valid, 0 if it does not"
+				"description": "\n#### Validates a phone number\n\nFor the US and Germany, the phone number must contain only digits and common delimiter characters.\nFor all countries, the phone number must be non-empty.\n\n* __@param__ [in] phone The phone number to be validated\n* __@param__ [in] country The 2-character alphanumeric country code in which the phone number is expected to reside\n\n\\return\t1 if the phone number appears to be valid, 0 if it does not"
 			},
 			{
 				"name": "Zip_Validate",
@@ -34593,7 +34593,7 @@
 					"zip",
 					"country"
 				],
-				"description": "!\n\\brief\t\tValidates a zip or postal code\n\n\\li For the US, zip must be a valid 5 digit or Zip+4 zip code\n\\li For Germany, zip must be exactly 5 numeric digits\n\\li For all other countries, zip must have a length greater than 0\n\n\\param[in]\tzip\t\tThe zip/postal code to be validated\n\\param[in]\tcountry\tThe 2-character alphanumeric country code in which the zip code is expected to reside\n\n\\return\t1 if the zip code appears to be valid, 0 if it does not"
+				"description": "\n#### \tValidates a zip or postal code\n\n* For the US, zip must be a valid 5 digit or Zip+4 zip code\n* For Germany, zip must be exactly 5 numeric digits\n* For all other countries, zip must have a length greater than 0\n\n* __@param__ [in] zip The zip/postal code to be validated\n* __@param__ [in] country The 2-character alphanumeric country code in which the zip code is expected to reside\n\n\\return\t1 if the zip code appears to be valid, 0 if it does not"
 			},
 			{
 				"name": "StandardFields_Validate_NonOptional_Address",
@@ -34602,7 +34602,7 @@
 					"address var",
 					"prefix"
 				],
-				"description": "!\n\\brief\t\tPerforms validation of a non-optional shipping or billing address\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function validates a non-required address according to the passed in \\em fields variable, which is usually loaded from the StandardFields database for the current store.\n\n\\em address contains the following members:\n\\li fname\n\\li lname\n\\li email\n\\li phone\n\\li fax\n\\li comp\n\\li addr1\n\\li addr2\n\\li city\n\\li state\n\\li zip\n\\li cntry\n\nIf one or more of the fields is invalid, a variable with the following name, prepended by \\em prefix is set to 1:\n\\li [prefix]FirstName_Invalid\n\\li [prefix]LastName_Invalid\n\\li [prefix]Email_Invalid\n\\li [prefix]Phone_Invalid\n\\li [prefix]Fax_Invalid\n\\li [prefix]Company_Invalid\n\\li [prefix]Address1_Invalid\n\\li [prefix]Address2_Invalid\n\\li [prefix]City_Invalid\n\\li [prefix]State_Invalid\n\\li [prefix]Zip_Invalid\n\\li [prefix]Country_Invalid\n\n\\param[in]\tfields\tThe StandardFields record for the current store\n\\param[in]\taddress\tThe address to be validated\n\\param[in]\tprefix\tAn optional prefix for setting of _Invalid variables\n\n\\return\t1 if the address meets the requirements in fields, 0 if it does not\n\n\\sa StandardFields_Validate StandardFields_Load"
+				"description": "\n#### \tPerforms validation of a non-optional shipping or billing address\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function validates a non-required address according to the passed in  fields variable, which is usually loaded from the StandardFields database for the current store.\n\n address contains the following members:\n* fname\n* lname\n* email\n* phone\n* fax\n* comp\n* addr1\n* addr2\n* city\n* state\n* zip\n* cntry\n\nIf one or more of the fields is invalid, a variable with the following name, prepended by  prefix is set to 1:\n* [prefix]FirstName_Invalid\n* [prefix]LastName_Invalid\n* [prefix]Email_Invalid\n* [prefix]Phone_Invalid\n* [prefix]Fax_Invalid\n* [prefix]Company_Invalid\n* [prefix]Address1_Invalid\n* [prefix]Address2_Invalid\n* [prefix]City_Invalid\n* [prefix]State_Invalid\n* [prefix]Zip_Invalid\n* [prefix]Country_Invalid\n\n* __@param__ [in] fields The StandardFields record for the current store\n* __@param__ [in] address The address to be validated\n* __@param__ [in] prefix An optional prefix for setting of _Invalid variables\n\n\\return\t1 if the address meets the requirements in fields, 0 if it does not\n\n\\sa StandardFields_Validate StandardFields_Load"
 			},
 			{
 				"name": "StandardFields_Validate",
@@ -34615,7 +34615,7 @@
 					"secondary_address var",
 					"secondary_prefix"
 				],
-				"description": "!\n\\brief\t\tPerforms validation of both primary and secondary addresses\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function validates a set of primary and secondary addresses according to the passed in \\em fields variable, which is usually loaded from the StandardFields database for the current store.\n\n\\em primary_address and \\em secondary_address contain the following members:\n\\li fname\n\\li lname\n\\li email\n\\li phone\n\\li fax\n\\li comp\n\\li addr1\n\\li addr2\n\\li city\n\\li state\n\\li zip\n\\li cntry\n\nIf one or more of the fields is invalid, a variable with the following name, prepended by \\em prefix is set to 1:\n\\li [prefix]FirstName_Invalid\n\\li [prefix]LastName_Invalid\n\\li [prefix]Email_Invalid\n\\li [prefix]Phone_Invalid\n\\li [prefix]Fax_Invalid\n\\li [prefix]Company_Invalid\n\\li [prefix]Address1_Invalid\n\\li [prefix]Address2_Invalid\n\\li [prefix]City_Invalid\n\\li [prefix]State_Invalid\n\\li [prefix]Zip_Invalid\n\\li [prefix]Country_Invalid\n\n\\param[in]\tfields\t\t\t\tThe StandardFields record for the current store\n\\param[in]\tprimary_setting\t\t\\li 'D' if the primary address is required \\li 'O' if the primary address is optional\n\\param[in]\tsecondary_setting\t\\li 'D' if the secondary address is required \\li 'O' if the secondary address is optional \\li 'H' if the secondary address is hidden\n\\param[in]\tprimary_address\t\tThe primary address to be validated\n\\param[in]\tprimary_prefix\t\tThe prefix for the _Invalid variables for the primary address\n\\param[in]\tsecondary_address\tThe secondary address to be validated\n\\param[in]\tsecondary_prefix\tThe prefix for the _Invalid variables for the secondary address\n\n\\return\t1 if the set of addresses meets the requirements in fields, 0 if it does not\n\n\\sa StandardFields_Validate_NonOptional_Address StandardFields_Load"
+				"description": "\n#### \tPerforms validation of both primary and secondary addresses\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function validates a set of primary and secondary addresses according to the passed in  fields variable, which is usually loaded from the StandardFields database for the current store.\n\n primary_address and  secondary_address contain the following members:\n* fname\n* lname\n* email\n* phone\n* fax\n* comp\n* addr1\n* addr2\n* city\n* state\n* zip\n* cntry\n\nIf one or more of the fields is invalid, a variable with the following name, prepended by  prefix is set to 1:\n* [prefix]FirstName_Invalid\n* [prefix]LastName_Invalid\n* [prefix]Email_Invalid\n* [prefix]Phone_Invalid\n* [prefix]Fax_Invalid\n* [prefix]Company_Invalid\n* [prefix]Address1_Invalid\n* [prefix]Address2_Invalid\n* [prefix]City_Invalid\n* [prefix]State_Invalid\n* [prefix]Zip_Invalid\n* [prefix]Country_Invalid\n\n* __@param__ [in] fields The StandardFields record for the current store\n* __@param__ [in] primary_setting * 'D' if the primary address is required * 'O' if the primary address is optional\n* __@param__ [in] secondary_setting * 'D' if the secondary address is required * 'O' if the secondary address is optional * 'H' if the secondary address is hidden\n* __@param__ [in] primary_address The primary address to be validated\n* __@param__ [in] primary_prefix The prefix for the _Invalid variables for the primary address\n* __@param__ [in] secondary_address The secondary address to be validated\n* __@param__ [in] secondary_prefix The prefix for the _Invalid variables for the secondary address\n\n\\return\t1 if the set of addresses meets the requirements in fields, 0 if it does not\n\n\\sa StandardFields_Validate_NonOptional_Address StandardFields_Load"
 			},
 			{
 				"name": "Adjusted_Price",
@@ -34624,7 +34624,7 @@
 					"price",
 					"cost"
 				],
-				"description": "!\n\\brief\tAdjusts a products price according to Price Groups\n\nThis function takes into account the price groups of a currently logged in shopping account as well as the price group overlap setting of the current store.\n\n\\param[in]\tproduct\t\tA product record, as loaded by one of the Runtime_Product... functions\n\\param[in]\tprice\t\tThe input price of the product\n\\param[in]\tcost\t\tThe input cost of the product\n\n\\return\tThe sale price according to all price groups\n\n\\sa Adjusted_Price_LowLevel"
+				"description": "\n#### Adjusts a products price according to Price Groups\n\nThis function takes into account the price groups of a currently logged in shopping account as well as the price group overlap setting of the current store.\n\n* __@param__ [in] product A product record, as loaded by one of the Runtime_Product... functions\n* __@param__ [in] price The input price of the product\n* __@param__ [in] cost The input cost of the product\n\n\\return\tThe sale price according to all price groups\n\n\\sa Adjusted_Price_LowLevel"
 			},
 			{
 				"name": "Adjusted_Price_LowLevel",
@@ -34634,7 +34634,7 @@
 					"price",
 					"cost"
 				],
-				"description": "!\n\\brief\tAdjusts a products price according to Price Groups for a specific Customer\n\nThis function takes into account the price groups of the specified Customer as well as the price group overlap setting of the current store.\n\n\\param[in]\tcustomer\tCustomer record\n\\param[in]\tproduct\t\tProduct record, as loaded by one of the Runtime_Product... functions\n\\param[in]\tprice\t\tThe input price of the product\n\\param[in]\tcost\t\tThe input cost of the product\n\n\\return\tThe sale price according to all price groups\n\n\\sa Adjusted_Price"
+				"description": "\n#### Adjusts a products price according to Price Groups for a specific Customer\n\nThis function takes into account the price groups of the specified Customer as well as the price group overlap setting of the current store.\n\n* __@param__ [in] customer Customer record\n* __@param__ [in] product Product record, as loaded by one of the Runtime_Product... functions\n* __@param__ [in] price The input price of the product\n* __@param__ [in] cost The input cost of the product\n\n\\return\tThe sale price according to all price groups\n\n\\sa Adjusted_Price"
 			},
 			{
 				"name": "Adjusted_Price_PriceGroups",
@@ -34653,7 +34653,7 @@
 					"default",
 					"text"
 				],
-				"description": "!\n\\brief\tDraws an HTML option tag\n\nIf \\em value is equal to \\em default, the \\em selected attribute is included in the generated option tag.\n\n\\param[in]\tvalue\tThe value attribute of the generated option tag\n\\param[in]\tdefault\tThe currently selected value for the containing <select> tag\n\\param[in]\ttext\tThe contents of the generated <option> tag"
+				"description": "\n#### Draws an HTML option tag\n\nIf  value is equal to  default, the  selected attribute is included in the generated option tag.\n\n* __@param__ [in] value The value attribute of the generated option tag\n* __@param__ [in] default The currently selected value for the containing <select> tag\n* __@param__ [in] text The contents of the generated <option> tag"
 			},
 			{
 				"name": "DrawOption_Encode",
@@ -34666,7 +34666,7 @@
 			{
 				"name": "DrawOption_SelectOne",
 				"parameters": [],
-				"description": "!\n\\brief\tDraws an HTML <option> tag containing the text \"Select One\""
+				"description": "\n#### Draws an HTML <option> tag containing the text \"Select One\""
 			},
 			{
 				"name": "DrawCredentialInput",
@@ -34688,7 +34688,7 @@
 					"default",
 					"text"
 				],
-				"description": "!\n\\brief\tDraws an HTML radio button\n\nIf \\em value is equal to \\em default, the \\em checked attribute is included in the generated input tag.\n\n\\param[in]\tname\tThe name attribute of the generated input field\n\\param[in]\tvalue\tThe value attribute of the generated input field\n\\param[in]\tdefault\tThe currently selected value\n\\param[in]\ttext\tOptional text to be output immediately following the generated input tag"
+				"description": "\n#### Draws an HTML radio button\n\nIf  value is equal to  default, the  checked attribute is included in the generated input tag.\n\n* __@param__ [in] name The name attribute of the generated input field\n* __@param__ [in] value The value attribute of the generated input field\n* __@param__ [in] default The currently selected value\n* __@param__ [in] text Optional text to be output immediately following the generated input tag"
 			},
 			{
 				"name": "DrawRadio_With_Label",
@@ -34707,7 +34707,7 @@
 					"value",
 					"text"
 				],
-				"description": "!\n\\brief\tDraws an HTML checkbox\n\nIf \\em checked is true, the \\em checked attribute is included in the generated input tag.\n\n\\note This function does not encode the text passed in. If you're using a global variable to construct your Checkbox text, you should encode it when calling DrawCheckbox. \n\n\\param[in]\tchecked\tA boolean value indicating the current state of the checkbox\n\\param[in]\tname\tThe name attribute of the generated input field\n\\param[in]\tvalue\tThe value attribute of the generated input field\n\\param[in]\ttext\tOptional text to be output immediately following the generated input tag"
+				"description": "\n#### Draws an HTML checkbox\n\nIf  checked is true, the  checked attribute is included in the generated input tag.\n\n\\note This function does not encode the text passed in. If you're using a global variable to construct your Checkbox text, you should encode it when calling DrawCheckbox. \n\n* __@param__ [in] checked A boolean value indicating the current state of the checkbox\n* __@param__ [in] name The name attribute of the generated input field\n* __@param__ [in] value The value attribute of the generated input field\n* __@param__ [in] text Optional text to be output immediately following the generated input tag"
 			},
 			{
 				"name": "DrawCheckbox_With_Label",
@@ -34726,7 +34726,7 @@
 					"value",
 					"text"
 				],
-				"description": "!\n\\brief\tDraws an HTML checkbox which calls the JavaScript function SetModified() when clicked\n\nIf \\em checked is true, the \\em checked attribute is included in the generated input tag.\n\n\\param[in]\tchecked\tA boolean value indicating the current state of the checkbox\n\\param[in]\tname\tThe name attribute of the generated input field\n\\param[in]\tvalue\tThe value attribute of the generated input field\n\\param[in]\ttext\tOptional text to be output immediately following the generated input tag\n\n\\sa SetModified"
+				"description": "\n#### Draws an HTML checkbox which calls the JavaScript function SetModified() when clicked\n\nIf  checked is true, the  checked attribute is included in the generated input tag.\n\n* __@param__ [in] checked A boolean value indicating the current state of the checkbox\n* __@param__ [in] name The name attribute of the generated input field\n* __@param__ [in] value The value attribute of the generated input field\n* __@param__ [in] text Optional text to be output immediately following the generated input tag\n\n\\sa SetModified"
 			},
 			{
 				"name": "DrawTemplateTextArea",
@@ -34736,7 +34736,7 @@
 					"rows",
 					"cols"
 				],
-				"description": "!\n\\brief\tDraws an HTML textarea with 100% width and an attached color selector\n\nThe output textarea also contains connected JavaScript which provides tab functionality in common browsers.  If the current\nbrowser does not support 100% width, the width of the textarea will fall back to the value specified in \\em cols.\n\n\\param[in]\tname\tThe name attribute of the generated textarea\n\\param[in]\tvalue\tThe contents of the genereated textarea\n\\param[in]\trows\tThe rows attribute of the generated textarea\n\\param[in]\tcols\tThe cols attribute of the generated textarea\n\n\\sa SetModified"
+				"description": "\n#### Draws an HTML textarea with 100% width and an attached color selector\n\nThe output textarea also contains connected JavaScript which provides tab functionality in common browsers.  If the current\nbrowser does not support 100% width, the width of the textarea will fall back to the value specified in  cols.\n\n* __@param__ [in] name The name attribute of the generated textarea\n* __@param__ [in] value The contents of the genereated textarea\n* __@param__ [in] rows The rows attribute of the generated textarea\n* __@param__ [in] cols The cols attribute of the generated textarea\n\n\\sa SetModified"
 			},
 			{
 				"name": "DrawTemplateTextArea_SetModified",
@@ -34831,7 +34831,7 @@
 					"cntry",
 					"seperater"
 				],
-				"description": "!\n\\brief\tArranges an address in a format suitable for display\n\nThe address is formatted into a multi-line format, using \\em seperator (sic) as the line delimiter.\n\n\\param[in]\tcompany\t\tCompany\n\\param[in]\tname\t\tName\n\\param[in]\tstreet\t\tStreet address\n\\param[in]\tcity\t\tCity\n\\param[in]\tstate\t\tState\n\\param[in]\tzip\t\t\tZip/Postal Code\n\\param[in]\tcntry\t\tCountry (typically the ISO 2-character alphanumeric code)\n\\param[in]\tseperater\tThe line separator to be used\n\n\\return\tThe formatted address"
+				"description": "\n#### Arranges an address in a format suitable for display\n\nThe address is formatted into a multi-line format, using  seperator (sic) as the line delimiter.\n\n* __@param__ [in] company Company\n* __@param__ [in] name Name\n* __@param__ [in] street Street address\n* __@param__ [in] city City\n* __@param__ [in] state State\n* __@param__ [in] zip Zip/Postal Code\n* __@param__ [in] cntry Country (typically the ISO 2-character alphanumeric code)\n* __@param__ [in] seperater The line separator to be used\n\n\\return\tThe formatted address"
 			},
 			{
 				"name": "Timestamp_RFC3339_To_Time",
@@ -34839,14 +34839,14 @@
 					"timestamp",
 					"time_t var"
 				],
-				"description": "!\n\\brief\t\tConverts a RFC 3339 timestamp string to time_t\n\\version\t>= 9.8.0\n\\ingroup\t\n\n\\param[in]\ttimestamp\tA UTC timestamp string formatted RFC 3339 specifications. e.g. YYYY-MM-DDTHH:II:SSZ\n\\param[out]\ttime_t\n\n\\return\t1 on success"
+				"description": "\n#### \tConverts a RFC 3339 timestamp string to time_t\n\\version\t>= 9.8.0\n\\ingroup\t\n\n* __@param__ [in] timestamp A UTC timestamp string formatted RFC 3339 specifications. e.g. YYYY-MM-DDTHH:II:SSZ\n* __@param__ [out] time_t \\return\t1 on success"
 			},
 			{
 				"name": "Format_RFC1123_DateTime",
 				"parameters": [
 					"time_t"
 				],
-				"description": "!\n\\brief\t\tFormats a time_t into an RFC 1123 compatible date/time\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nRFC 1123 defines the date/time format used for many internet protocols.  The output date/time from this function is suitable for the use in a Set-Cookie tag.\n\n\\param[in]\ttime_t\tA time_t representing the date/time to be formatted\n\n\\return\tThe formatted date/time"
+				"description": "\n#### \tFormats a time_t into an RFC 1123 compatible date/time\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nRFC 1123 defines the date/time format used for many internet protocols.  The output date/time from this function is suitable for the use in a Set-Cookie tag.\n\n* __@param__ [in] time_t A time_t representing the date/time to be formatted\n\n\\return\tThe formatted date/time"
 			},
 			{
 				"name": "Format_Date",
@@ -34854,7 +34854,7 @@
 					"time_t",
 					"language"
 				],
-				"description": "!\n\\brief\tFormats the date portion of a time_t according to a specified language\n\nThe following languages are supported:\n\n\\li en-US mm/dd/yyyy\n\\li de-DE dd/mm/yyyy\n\n\\param[in]\ttime_t\t\tA time_t representing the date to be formatted\n\\param[in]\tlanguage\tA language code representing the desired output format\n\n\\return\tThe formatted date if language is a supported value, or an empty string"
+				"description": "\n#### Formats the date portion of a time_t according to a specified language\n\nThe following languages are supported:\n\n* en-US mm/dd/yyyy\n* de-DE dd/mm/yyyy\n\n* __@param__ [in] time_t A time_t representing the date to be formatted\n* __@param__ [in] language A language code representing the desired output format\n\n\\return\tThe formatted date if language is a supported value, or an empty string"
 			},
 			{
 				"name": "Format_Time",
@@ -34862,7 +34862,7 @@
 					"time_t",
 					"language"
 				],
-				"description": "!\n\\brief\tFormats the time portion of a time_t according to a specified language\n\nThe following languages are supported:\n\n\\li en-US HH:MM:SS PST\n\\li de-DE HH:MM:SS\n\n\\param[in]\ttime_t\t\tA time_t representing the time to be formatted\n\\param[in]\tlanguage\tA language code representing the desired output format\n\n\\return\tThe formatted time if language is a supported value, or an empty string\n\n\\sa Format_Time_Short"
+				"description": "\n#### Formats the time portion of a time_t according to a specified language\n\nThe following languages are supported:\n\n* en-US HH:MM:SS PST\n* de-DE HH:MM:SS\n\n* __@param__ [in] time_t A time_t representing the time to be formatted\n* __@param__ [in] language A language code representing the desired output format\n\n\\return\tThe formatted time if language is a supported value, or an empty string\n\n\\sa Format_Time_Short"
 			},
 			{
 				"name": "Format_Time_Short",
@@ -34870,7 +34870,7 @@
 					"time_t",
 					"language"
 				],
-				"description": "!\n\\brief\tFormats the time portion of a time_t according to a specified language, excluding time zone\n\nThe following languages are supported:\n\n\\li en-US HH:MM:SS\n\\li de-DE HH:MM:SS\n\n\\param[in]\ttime_t\t\tA time_t representing the time to be formatted\n\\param[in]\tlanguage\tA language code representing the desired output format\n\n\\return\tThe formatted time if language is a supported value, or an empty string\n\n\\sa Format_Time"
+				"description": "\n#### Formats the time portion of a time_t according to a specified language, excluding time zone\n\nThe following languages are supported:\n\n* en-US HH:MM:SS\n* de-DE HH:MM:SS\n\n* __@param__ [in] time_t A time_t representing the time to be formatted\n* __@param__ [in] language A language code representing the desired output format\n\n\\return\tThe formatted time if language is a supported value, or an empty string\n\n\\sa Format_Time"
 			},
 			{
 				"name": "FormatDateTime_ClientLocale",
@@ -34884,28 +34884,28 @@
 				"parameters": [
 					"data"
 				],
-				"description": "!\n\\brief\tConverts textual representations of special characters into their HTML equivalents\n\n\\param[in]\tdata\tA text string to be converted\n\n\\return\tThe input data with any textual representations converted to HTML"
+				"description": "\n#### Converts textual representations of special characters into their HTML equivalents\n\n* __@param__ [in] data A text string to be converted\n\n\\return\tThe input data with any textual representations converted to HTML"
 			},
 			{
 				"name": "Message_Error",
 				"parameters": [
 					"message"
 				],
-				"description": "!\n\\brief\tAppends an error message to the global array Error_Messages\n\nThese messages are displayed by the cmp-mv-messages component."
+				"description": "\n#### Appends an error message to the global array Error_Messages\n\nThese messages are displayed by the cmp-mv-messages component."
 			},
 			{
 				"name": "Message_Information",
 				"parameters": [
 					"message"
 				],
-				"description": "!\n\\brief\tAppends an informational message to the global array Information_Messages\n\nThese messages are displayed by the cmp-mv-messages component."
+				"description": "\n#### Appends an informational message to the global array Information_Messages\n\nThese messages are displayed by the cmp-mv-messages component."
 			},
 			{
 				"name": "Data_Entry_Error",
 				"parameters": [
 					"message"
 				],
-				"description": "!\n\\brief\tSets flag indicating a shopping interface field validation error\n\nThis function sets the global variable Data_Entry_Error to 1 and appends \\em message to the global array Data_Entry_Error_Message.  These fields are displayed\nby various component modules.\n\n\\param[in]\tmessage\tA message to be displayed when the data entry error is reported to the user\n\n\\return 1"
+				"description": "\n#### Sets flag indicating a shopping interface field validation error\n\nThis function sets the global variable Data_Entry_Error to 1 and appends  message to the global array Data_Entry_Error_Message.  These fields are displayed\nby various component modules.\n\n* __@param__ [in] message A message to be displayed when the data entry error is reported to the user\n\n\\return 1"
 			},
 			{
 				"name": "SendEmail",
@@ -34917,7 +34917,7 @@
 					"headers",
 					"message"
 				],
-				"description": "!\n\\brief\tSends an email message\n\nThe email message is sent according to the domain settings, either by using <MvSMTP> or an external commerce library.\n\n\\param[in]\tto\t\tThe destination email address\n\\param[in]\tfrom\tThe source email address\n\\param[in]\tcc\t\t(optional) A comma separated list of CC email addresses\n\\param[in]\tsubject\tThe email subject\n\\param[in]\theaders\t(optional) Additional SMTP headers\n\\param[in]\tmessage\tThe body of the email message\n\n\\return 1 on success, 0 on error"
+				"description": "\n#### Sends an email message\n\nThe email message is sent according to the domain settings, either by using <MvSMTP> or an external commerce library.\n\n* __@param__ [in] to The destination email address\n* __@param__ [in] from The source email address\n* __@param__ [in] cc (optional) A comma separated list of CC email addresses\n* __@param__ [in] subject The email subject\n* __@param__ [in] headers (optional) Additional SMTP headers\n* __@param__ [in] message The body of the email message\n\n\\return 1 on success, 0 on error"
 			},
 			{
 				"name": "v9_SendEmail",
@@ -34930,7 +34930,7 @@
 				"parameters": [
 					"full_name"
 				],
-				"description": "!\n\\brief\tBreaks a name into first, middle, and last name components\n\n\\param[in]\tfull_name\tThe name to be tokenized\n\n\\return A structure containing the following members \\li first \\li middle \\li last"
+				"description": "\n#### Breaks a name into first, middle, and last name components\n\n* __@param__ [in] full_name The name to be tokenized\n\n\\return A structure containing the following members * first * middle * last"
 			},
 			{
 				"name": "Encryption_Available",
@@ -34946,7 +34946,7 @@
 					"basketoptions var",
 					"basketoption_count var"
 				],
-				"description": "!\n\\brief\tValidates a set of product attributes\n\nIn order to be valid, all required attributes must have values present, and all values must match an option in the database.\n\n\\em attributes is an array of structures with the following members:\n\\li \\c template_code\t(optional) An attribute template code\n\\li \\c code\t\t\t\tAttribute code\n\\li \\c value\t\t\tOption or input field value\n\n\\deprecated\tModern callers should call Validate_Attributes_DetermineVariant() instead, which additionally returns a variant ID.\n\n\\param[in]\tproduct\t\t\t\tThe product for which attributes are being validated\n\\param[in]\tprompt\t\t\t\tA boolean value indicating whether validation should automatically fail if the product has attributes\n\\param[in]\tattributes\t\t\tAn array of currently selected attribute values\n\\param[in]\tattribute_count\t\tThe count of items in \\em attributes\n\\param[out]\tbasketoptions\t\tBasketOption records suitable for direct insertion into the database\n\\param[out]\tbasketoption_count\tThe count of items in \\em basketoptions\n\n\\return\t1 if the attributes are valid, 0 otherwise.\n\n\\sa Validate_Attributes_DetermineVariant"
+				"description": "\n#### Validates a set of product attributes\n\nIn order to be valid, all required attributes must have values present, and all values must match an option in the database.\n\n attributes is an array of structures with the following members:\n*  template_code\t(optional) An attribute template code\n*  code\t\t\t\tAttribute code\n*  value\t\t\tOption or input field value\n\n\\deprecated\tModern callers should call Validate_Attributes_DetermineVariant() instead, which additionally returns a variant ID.\n\n* __@param__ [in] product The product for which attributes are being validated\n* __@param__ [in] prompt A boolean value indicating whether validation should automatically fail if the product has attributes\n* __@param__ [in] attributes An array of currently selected attribute values\n* __@param__ [in] attribute_count The count of items in  attributes\n* __@param__ [out] basketoptions BasketOption records suitable for direct insertion into the database\n* __@param__ [out] basketoption_count The count of items in  basketoptions\n\n\\return\t1 if the attributes are valid, 0 otherwise.\n\n\\sa Validate_Attributes_DetermineVariant"
 			},
 			{
 				"name": "Build_Attribute_Hash",
@@ -34967,7 +34967,7 @@
 					"basketoption_count var",
 					"variant_id var"
 				],
-				"description": "!\n\\brief\t\tValidates a set of product attributes, returning a variant representing these attributes (if configured)\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nIn order to be valid, all required attributes must have values present, and all values must match an option in the database.\n\n\\em attributes is an array of structures with the following members:\n\\li \\c template_code\t(optional) An attribute template code\n\\li \\c code\t\t\t\tAttribute code\n\\li \\c value\t\t\tOption or input field value\n\n\\param[in]\tproduct\t\t\t\tThe product for which attributes are being validated\n\\param[in]\tprompt\t\t\t\tA boolean value indicating whether validation should automatically fail if the product has attributes\n\\param[in]\tattributes\t\t\tAn array of currently selected attributes, with each element containing the following members:\n\t\t\t\t\t\t\t\t\\li \\c code\t\t\t\tAttribute code\n\t\t\t\t\t\t\t\t\\li \\c template_code\tAttributeTemplateAttribute code (if \\c code refers to a \"used\" Attribute Template)\n\t\t\t\t\t\t\t\t\\li \\c value\t\t\tOption code for multiple select attributes, any value for boolean attributes, or user-specified data for text or textarea attributes.\n\\param[in]\tattribute_count\t\tThe count of items in \\em attributes\n\\param[out]\tbasketoptions\t\tBasketOption records suitable for direct insertion into the database\n\\param[out]\tbasketoption_count\tThe count of items in \\em basketoptions\n\\param[out]\tvariant_id\t\t\tThe ID of a product variant matching this configured set of attributes, or 0\n\n\\return\t1 if the attributes are valid, 0 otherwise."
+				"description": "\n#### \tValidates a set of product attributes, returning a variant representing these attributes (if configured)\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nIn order to be valid, all required attributes must have values present, and all values must match an option in the database.\n\n attributes is an array of structures with the following members:\n*  template_code\t(optional) An attribute template code\n*  code\t\t\t\tAttribute code\n*  value\t\t\tOption or input field value\n\n* __@param__ [in] product The product for which attributes are being validated\n* __@param__ [in] prompt A boolean value indicating whether validation should automatically fail if the product has attributes\n* __@param__ [in] attributes An array of currently selected attributes, with each element containing the following members:\n\t\t\t\t\t\t\t\t*  code\t\t\t\tAttribute code\n\t\t\t\t\t\t\t\t*  template_code\tAttributeTemplateAttribute code (if  code refers to a \"used\" Attribute Template)\n\t\t\t\t\t\t\t\t*  value\t\t\tOption code for multiple select attributes, any value for boolean attributes, or user-specified data for text or textarea attributes.\n* __@param__ [in] attribute_count The count of items in  attributes\n* __@param__ [out] basketoptions BasketOption records suitable for direct insertion into the database\n* __@param__ [out] basketoption_count The count of items in  basketoptions\n* __@param__ [out] variant_id The ID of a product variant matching this configured set of attributes, or 0\n\n\\return\t1 if the attributes are valid, 0 otherwise."
 			},
 			{
 				"name": "Unique_Code",
@@ -34975,7 +34975,7 @@
 					"name",
 					"unique_code"
 				],
-				"description": "!\n\\brief\tAttempts to generate a unique item code from a longer identifier\n\nIf \\em unique_code is empty, an initial code is generated by extracting the first letter of each word in \\em name.\nIf \\em unique_code has a value, a series of random digits is appended.\n\n\\param[in]\tname\t\t\tAn associated name or longer identifier that is a source for additional unique data\n\\param[in]\tunique_code\t\tA previous value if it was proven to be non-unique\n\n\\return\tAn item code"
+				"description": "\n#### Attempts to generate a unique item code from a longer identifier\n\nIf  unique_code is empty, an initial code is generated by extracting the first letter of each word in  name.\nIf  unique_code has a value, a series of random digits is appended.\n\n* __@param__ [in] name An associated name or longer identifier that is a source for additional unique data\n* __@param__ [in] unique_code A previous value if it was proven to be non-unique\n\n\\return\tAn item code"
 			},
 			{
 				"name": "Draw_ProgressBar_Begin",
@@ -35062,7 +35062,7 @@
 					"file_dir",
 					"file_location"
 				],
-				"description": "!\n\\brief\tSends an email message with an attached binary file\n\n\\param[in]\temail_from\t\tThe source address\n\\param[in]\temail_to\t\tThe destination address\n\\param[in]\temail_cc\t\t(optional) A comma separated list of CC addresses\n\\param[in]\tsubject\t\t\tThe subject\n\\param[in]\tfile_name\t\tThe name of the file to be attached, minus any containing directory\n\\param[in]\tfile_dir\t\tThe directory containing the file to be attached, relative to the Miva data or script directory\n\\param[in]\tfile_location\t\\li 'script' if the file is in the Miva script directory \\li 'data' if the file is in the Miva data directory\n\n\\return\t1 on success, 0 on failure"
+				"description": "\n#### Sends an email message with an attached binary file\n\n* __@param__ [in] email_from The source address\n* __@param__ [in] email_to The destination address\n* __@param__ [in] email_cc (optional) A comma separated list of CC addresses\n* __@param__ [in] subject The subject\n* __@param__ [in] file_name The name of the file to be attached, minus any containing directory\n* __@param__ [in] file_dir The directory containing the file to be attached, relative to the Miva data or script directory\n* __@param__ [in] file_location * 'script' if the file is in the Miva script directory * 'data' if the file is in the Miva data directory\n\n\\return\t1 on success, 0 on failure"
 			},
 			{
 				"name": "BuildMIMEAttachmentEmailHeaders",
@@ -35162,7 +35162,7 @@
 					"array var",
 					"count"
 				],
-				"description": "!\n\\brief\tSorts a PR5-style item sort input array\n\nThis function sorts an OffsetArray used to implement the PR6-style numeric product, category, etc... sort.\n\n\\param[in]\tarray\tThe OffsetArray to be sorted\n\\param[in]\tcount\tThe number of elements in \\em array"
+				"description": "\n#### Sorts a PR5-style item sort input array\n\nThis function sorts an OffsetArray used to implement the PR6-style numeric product, category, etc... sort.\n\n* __@param__ [in] array The OffsetArray to be sorted\n* __@param__ [in] count The number of elements in  array"
 			},
 			{
 				"name": "SortOffsetArray_Sort_Ascending_Callback",
@@ -35194,7 +35194,7 @@
 					"subelement",
 					"direction"
 				],
-				"description": "!\n\\brief\tSorts an array\n\nThe array is sorted using the Quick Sort algorithm.  \\em subelement must contain a leading colon (:) if sorting an array of structures by a single member,\nor may be empty if sorting an array of simple values.  Elements are compared using the MivaScript EQ operator.\n\n\\param[in,out]\tarray\t\tThe array to be sorted\n\\param[in]\t\tsubelement\tThe element within the array to be sorted\n\\param[in]\t\tdirection\t\\li 1 to sort ascending \\li -1 to sort descending"
+				"description": "\n#### Sorts an array\n\nThe array is sorted using the Quick Sort algorithm.   subelement must contain a leading colon (:) if sorting an array of structures by a single member,\nor may be empty if sorting an array of simple values.  Elements are compared using the MivaScript EQ operator.\n\n* __@param__ [in,out] array The array to be sorted\n* __@param__ [in] subelement The element within the array to be sorted\n* __@param__ [in] direction * 1 to sort ascending * -1 to sort descending"
 			},
 			{
 				"name": "QuickSortArray_Sort",
@@ -35205,7 +35205,7 @@
 					"comparisons var",
 					"comparison_count"
 				],
-				"description": "!\n\\brief\tSorts an array using multiple comparisons to break ties\n\nThe array is sorted using the Quick Sort algorithm.\n\nEach element in \\em comparisons contains the following members:\n\\li \\c subelement The member to sort by, including the leading colon (:)\n\\li \\c direction The direction in which to sort\n\nElements are compared using the MivaScript EQ operator according to each element in \\em comparisons.  If a comparison results in a tie, the next comparison is used.\n\n\\param[in,out]\tarray\t\t\t\tThe array to be sorted\n\\param\t\t\tleft\t\t\t\tThe index of the lowest element of the array to be sorted\n\\param\t\t\tright\t\t\t\tThe index of the highest element of the array to be sorted\n\\param\t\t\tcomparisons\t\t\tAn array defining the comparisons to be used and the order in which they should be applied\n\\param\t\t\tcomparison_count\tThe number of elements in \\em comparisons"
+				"description": "\n#### Sorts an array using multiple comparisons to break ties\n\nThe array is sorted using the Quick Sort algorithm.\n\nEach element in  comparisons contains the following members:\n*  subelement The member to sort by, including the leading colon (:)\n*  direction The direction in which to sort\n\nElements are compared using the MivaScript EQ operator according to each element in  comparisons.  If a comparison results in a tie, the next comparison is used.\n\n* __@param__ [in,out] array The array to be sorted\n* __@param__  left The index of the lowest element of the array to be sorted\n* __@param__  right The index of the highest element of the array to be sorted\n* __@param__  comparisons An array defining the comparisons to be used and the order in which they should be applied\n* __@param__  comparison_count The number of elements in  comparisons"
 			},
 			{
 				"name": "QuickSortArray_Partition",
@@ -35241,7 +35241,7 @@
 					"string",
 					"length"
 				],
-				"description": "!\n\\brief\t\tEncodes a string in hexidecimal notation\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n\\param[in]\tstring\tThe string to be encoded\n\\param[in]\tlength\tThe length of \\em string\n\n\\return\tThe hexidecimal notation of \\em string"
+				"description": "\n#### \tEncodes a string in hexidecimal notation\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n* __@param__ [in] string The string to be encoded\n* __@param__ [in] length The length of  string\n\n\\return\tThe hexidecimal notation of  string"
 			},
 			{
 				"name": "Hex_Decode",
@@ -35249,7 +35249,7 @@
 					"string",
 					"length"
 				],
-				"description": "!\n\\brief\t\tDecodes a hexidecimal string\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n\\param[in]\tstring\tThe string to be decoded \n\\param[in]\tlength\tThe length of \\em string\n\n\\return The decoded string"
+				"description": "\n#### \tDecodes a hexidecimal string\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n* __@param__ [in] string The string to be decoded \n* __@param__ [in] length The length of  string\n\n\\return The decoded string"
 			},
 			{
 				"name": "HexByte_To_Decimal",
@@ -35262,21 +35262,21 @@
 				"parameters": [
 					"name"
 				],
-				"description": "!\n\\brief\t\tStrips non digit, non letter characters from a string\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n\\param\tname\tThe string to be stripped\n\n\\return\tThe stripped string"
+				"description": "\n#### \tStrips non digit, non letter characters from a string\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n* __@param__  name The string to be stripped\n\n\\return\tThe stripped string"
 			},
 			{
 				"name": "SanitizeRFC2616Token",
 				"parameters": [
 					"token"
 				],
-				"description": "!\n\\brief\t\tStrips any characters that are not valid in an RFC 2616 (HTTP) token from a string\n\n\\param\ttoken\tThe string to be stripped\n\n\\return\tThe stripped string"
+				"description": "\n#### \tStrips any characters that are not valid in an RFC 2616 (HTTP) token from a string\n\n* __@param__  token The string to be stripped\n\n\\return\tThe stripped string"
 			},
 			{
 				"name": "FirstSparseArrayElement",
 				"parameters": [
 					"array var"
 				],
-				"description": "!\n\\brief\t\tReturns the lowest index of a sparse array\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n\\param[in]\tarray\tThe array to examine\n\n\\return If using Miva Empresa 5.07 or newer, the index of the first element in the array, otherwise 1"
+				"description": "\n#### \tReturns the lowest index of a sparse array\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n* __@param__ [in] array The array to examine\n\n\\return If using Miva Empresa 5.07 or newer, the index of the first element in the array, otherwise 1"
 			},
 			{
 				"name": "NextSparseArrayElement",
@@ -35284,7 +35284,7 @@
 					"array var",
 					"pos"
 				],
-				"description": "!\n\\brief\t\tReturns the index of the next element in a sparse array\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n\\param[in]\tarray\tThe array to examine\n\\param[in]\tpos\t\tThe current position in the array\n\n\\return If using Miva Empresa 5.07 or newer, the index of the next present element in the array, otherwise pos + 1"
+				"description": "\n#### \tReturns the index of the next element in a sparse array\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n* __@param__ [in] array The array to examine\n* __@param__ [in] pos The current position in the array\n\n\\return If using Miva Empresa 5.07 or newer, the index of the next present element in the array, otherwise pos + 1"
 			},
 			{
 				"name": "PreviousSparseArrayElement",
@@ -35292,7 +35292,7 @@
 					"array var",
 					"pos"
 				],
-				"description": "!\n\\brief\t\tReturns the index of the previous element in a sparse array\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n\\param[in]\tarray\tThe array to examine\n\\param[in]\tpos\t\tThe current position in the array\n\n\\return If using Miva Empresa 5.07 or newer, the index of the previous present element in the array, otherwise pos - 1"
+				"description": "\n#### \tReturns the index of the previous element in a sparse array\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n* __@param__ [in] array The array to examine\n* __@param__ [in] pos The current position in the array\n\n\\return If using Miva Empresa 5.07 or newer, the index of the previous present element in the array, otherwise pos - 1"
 			},
 			{
 				"name": "StructureMembers",
@@ -35300,14 +35300,14 @@
 					"struct var",
 					"members var"
 				],
-				"description": "!\n\\brief\t\tBuilds an array containing the names of all members of a structure\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nIf using Miva Empresa 5.07, the builtin function miva_struct_members() is used.  In previous versions of Empresa, fallback code utilizing miva_array_serialize() is used instead,\nwith a slight performance penalty.\n\n\\param[in]\tstruct\tThe structure to examine\n\\param[out]\tmembers\tA variable which will receive an array of member names\n\n\\return\tThe count of members within \\em struct"
+				"description": "\n#### \tBuilds an array containing the names of all members of a structure\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nIf using Miva Empresa 5.07, the builtin function miva_struct_members() is used.  In previous versions of Empresa, fallback code utilizing miva_array_serialize() is used instead,\nwith a slight performance penalty.\n\n* __@param__ [in] struct The structure to examine\n* __@param__ [out] members A variable which will receive an array of member names\n\n\\return\tThe count of members within  struct"
 			},
 			{
 				"name": "ParseCookies",
 				"parameters": [
 					"cookies var"
 				],
-				"description": "!\n\\brief\t\tParses cookies sent by the browser and stores them in a structure\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nA member is created in \\em cookies with the name of the cookie equal to the member name, and the value of the member equal to the cookie's value.  This allows\ncookies to be referenced directly by name.\n\n\\param[out]\tcookies\tA variable which will receive the cookies"
+				"description": "\n#### \tParses cookies sent by the browser and stores them in a structure\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nA member is created in  cookies with the name of the cookie equal to the member name, and the value of the member equal to the cookie's value.  This allows\ncookies to be referenced directly by name.\n\n* __@param__ [out] cookies A variable which will receive the cookies"
 			},
 			{
 				"name": "SetCookie",
@@ -35320,7 +35320,7 @@
 					"path",
 					"secure"
 				],
-				"description": "!\n\\brief\t\tAdds or updates a cookie in a cookie list\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function adds or updates a cookie in a cookie list, which may then be output in its entirety using OutputCookies().  In pr7-bugfix-2 and later,\nall cookies are created with the HttpOnly attribute.\n\n\\param[in,out]\tcookies\tThe cookie list to be updated\n\\param[in]\t\tname\tThe name of the cookie to add or update\n\\param[in]\t\tvalue\tThe value of the cookie\n\\param[in]\t\tdomain\tThe \"domain\" attribute of the cookie\n\\param[in]\t\texpires\tA time_t or RFC 1123 format date/time representing the expiration date of the cookie\n\\param[in]\t\tpath\tThe \"path\" attribute of the cookie\n\\param[in]\t\tsecure\tA boolean value controlling the \"secure\" attribute of the cookie\n\n\\sa ParseCookies ClearCookie OutputCookies"
+				"description": "\n#### \tAdds or updates a cookie in a cookie list\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function adds or updates a cookie in a cookie list, which may then be output in its entirety using OutputCookies().  In pr7-bugfix-2 and later,\nall cookies are created with the HttpOnly attribute.\n\n* __@param__ [in,out] cookies The cookie list to be updated\n* __@param__ [in] name The name of the cookie to add or update\n* __@param__ [in] value The value of the cookie\n* __@param__ [in] domain The \"domain\" attribute of the cookie\n* __@param__ [in] expires A time_t or RFC 1123 format date/time representing the expiration date of the cookie\n* __@param__ [in] path The \"path\" attribute of the cookie\n* __@param__ [in] secure A boolean value controlling the \"secure\" attribute of the cookie\n\n\\sa ParseCookies ClearCookie OutputCookies"
 			},
 			{
 				"name": "v10_SetCookie",
@@ -35344,26 +35344,26 @@
 					"path",
 					"secure"
 				],
-				"description": "!\n\\brief\t\tMarks a cookie in a cookie list for expungement\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function modifies a cookie list so that the specified cookie is explicitly cleared upon the next call to OutputCookies().  Clearing of the cookie\nis accomplished by setting its expiration date to a time one year in the past.\n\n\\param[in,out]\tcookies\tThe cookie list to be updated\n\\param[in]\t\tname\tThe name of the cookie to clear\n\\param[in]\t\tdomain\tThe \"domain\" attribute of the cookie\n\\param[in]\t\tpath\tThe \"path\" attribute of the cookie\n\\param[in]\t\tsecure\tA boolean value controlling the \"secure\" attribute of the cookie\n\n\\sa ParseCookies SetCookie OutputCookies"
+				"description": "\n#### \tMarks a cookie in a cookie list for expungement\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function modifies a cookie list so that the specified cookie is explicitly cleared upon the next call to OutputCookies().  Clearing of the cookie\nis accomplished by setting its expiration date to a time one year in the past.\n\n* __@param__ [in,out] cookies The cookie list to be updated\n* __@param__ [in] name The name of the cookie to clear\n* __@param__ [in] domain The \"domain\" attribute of the cookie\n* __@param__ [in] path The \"path\" attribute of the cookie\n* __@param__ [in] secure A boolean value controlling the \"secure\" attribute of the cookie\n\n\\sa ParseCookies SetCookie OutputCookies"
 			},
 			{
 				"name": "OutputCookies",
 				"parameters": [
 					"cookies var"
 				],
-				"description": "!\n\\brief\t\tOutputs a cookie list to the browser\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n\\param[in]\tcookies\tThe cookie list to be output\n\n\\return\t1 on success, 0 on failure"
+				"description": "\n#### \tOutputs a cookie list to the browser\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n* __@param__ [in] cookies The cookie list to be output\n\n\\return\t1 on success, 0 on failure"
 			},
 			{
 				"name": "SelfReferentialURL",
 				"parameters": [],
-				"description": "!\n\\brief\t\tConstructs a self-referential URL using s.documenturl and the HTTP Host header\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function examines s.documenturl to ensure that it matches the HTTP Host header sent by the client.  Depending\non the server configuration, this may or may not be the case.  If s.documenturl does not appear to be directly\nself-referential, this function constructs a URL based on the HTTP Host header and remaining contents of s.documenturl.\n\nThe resulting URL will most likely work for the specific client that made the original request, but may not work for\nother clients depending on their configuration."
+				"description": "\n#### \tConstructs a self-referential URL using s.documenturl and the HTTP Host header\n\\version\t>= 5.60\n\\ingroup\tPR7\n\nThis function examines s.documenturl to ensure that it matches the HTTP Host header sent by the client.  Depending\non the server configuration, this may or may not be the case.  If s.documenturl does not appear to be directly\nself-referential, this function constructs a URL based on the HTTP Host header and remaining contents of s.documenturl.\n\nThe resulting URL will most likely work for the specific client that made the original request, but may not work for\nother clients depending on their configuration."
 			},
 			{
 				"name": "SelfReferentialURL_Failsafe",
 				"parameters": [
 					"failsafe_url"
 				],
-				"description": "!\n\\brief\t\tConstructs a self-referential URL using s.documenturl and the HTTP Host header, using a fallback URL in certain cases\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n\\param[in]\tfailsafe_url The URL to use if s.documenturl appears to be malformed\n\nThis function behaves identically to SelfReferentialURL(), except if the number of forward slashes in s.documenturl and the parameter failsafe_url\ndiffer, s.documenturl is assumed to be malformed and failsafe_url is returned instead."
+				"description": "\n#### \tConstructs a self-referential URL using s.documenturl and the HTTP Host header, using a fallback URL in certain cases\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n* __@param__ [in] failsafe_url The URL to use if s.documenturl appears to be malformed\n\nThis function behaves identically to SelfReferentialURL(), except if the number of forward slashes in s.documenturl and the parameter failsafe_url\ndiffer, s.documenturl is assumed to be malformed and failsafe_url is returned instead."
 			},
 			{
 				"name": "BaseName",
@@ -35401,7 +35401,7 @@
 					"needle",
 					"haystack"
 				],
-				"description": "!\n\\brief\t\tCounts the number of occurrences of one string in another\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n\\param[in]\tneedle\t\tThe string to search for\n\\param[in]\thaystack\tThe string to search in\n\n\\return\t\tThe number of occurrences"
+				"description": "\n#### \tCounts the number of occurrences of one string in another\n\\version\t>= 5.60\n\\ingroup\tPR7\n\n* __@param__ [in] needle The string to search for\n* __@param__ [in] haystack The string to search in\n\n\\return\t\tThe number of occurrences"
 			},
 			{
 				"name": "ShippingMethodList_Load_Enabled",

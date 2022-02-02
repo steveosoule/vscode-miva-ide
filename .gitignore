@@ -4,3 +4,4 @@ out
 *.code-workspace
 */*.tsbuildinfo
 *.vsix
+.DS_STORE
