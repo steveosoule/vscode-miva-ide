@@ -1,0 +1,173 @@
+{
+	"MvASSIGN": {
+		"prefix": [
+			"MvASSIGN",
+			"<MvASSIGN"
+		],
+		"body": "<MvASSIGN NAME = \"${1:l.variable}\" VALUE = \"${2:{ ${3:l.value} }}\">",
+		"description": "Tag - Assign",
+		"scope": "mv"
+	},
+	"MvCALL": {
+		"prefix": [
+			"MvCALL",
+			"<MvCALL"
+		],
+		"body": "${1:<MIVA MvCALL_ERROR = \"nonfatal, nodisplay\">\n}<MvCALL METHOD = \"${2|'GET','POST','HEAD','XML','RAW','OPTIONS','PUT','DELETE','TRACE','CONNECT'|}\"\n\t\tACTION = \"${3:https://www.example.com/index.html}\"${4:\n\t\tFIELDS = \"${6:l.sort, l.limit, l.offset}\"}>\n\t\t${7:<MvASSIGN NAME = \"${8:l.response}\" VALUE = \"{ ${8:l.response} $ s.callvalue \\}\">}\n</MvCALL>\n${9:<MIVA MvCALL_ERROR = \"fatal, display\">}",
+		"description": "Tag - Call",
+		"scope": "mv"
+	},
+	"MvCALLCONTINUE": {
+		"prefix": [
+			"MvCALLCONTINUE",
+			"<MvCALLCONTINUE"
+		],
+		"body": "<MvCALLCONTINUE />",
+		"description": "Tag - CallContinue",
+		"scope": "mv"
+	},
+	"MvCALLSTOP": {
+		"prefix": [
+			"MvCALLSTOP",
+			"<MvCALLSTOP"
+		],
+		"body": "<MvCALLSTOP />",
+		"description": "Tag - CallStop",
+		"scope": "mv"
+	},
+	"MvCAPTURE": {
+		"prefix": [
+			"MvCAPTURE",
+			"<MvCAPTURE"
+		],
+		"body": "<MvCAPTURE VARIABLE = \"${1}\">\n\t${0}\n</MvCAPTURE>",
+		"description": "Tag - Capture",
+		"scope": "mv"
+	},
+	"MvCOMMENT": {
+		"prefix": [
+			"MvCOMMENT",
+			"<MvCOMMENT"
+		],
+		"body": "<MvCOMMENT>\n|\n| ${1}\n|\n</MvCOMMENT>",
+		"description": "Tag - Comment",
+		"scope": "mv"
+	},
+	"MvDO": {
+		"prefix": [
+			"MvDO",
+			"<MvDO"
+		],
+		"body": "<MvDO FILE = \"{ $4 }\" NAME = \"${2:l.success}\" VALUE = \"{ $1 }\">",
+		"description": "Tag - Do",
+		"scope": "mv"
+	},
+	"MvELSE": {
+		"prefix": [
+			"MvELSE",
+			"<MvELSE"
+		],
+		"body": "<MvIF EXPR = \"{ ${1} }\">\n\t${2}\n<MvELSE>\n\t${0}\n</MvIF>",
+		"description": "Tag - Else",
+		"scope": "mv"
+	},
+	"MvELSEIF": {
+		"prefix": [
+			"MvELSEIF",
+			"<MvELSEIF"
+		],
+		"body": "<MvIF EXPR = \"{ ${1} }\">\n\t${2}\n<MvELSEIF EXPR = \"{ ${3} }\">\n\t${0}\n</MvIF>",
+		"description": "Tag - ElseIf",
+		"scope": "mv"
+	},
+	"MvEVAL": {
+		"prefix": [
+			"MvEVAL",
+			"<MvEVAL"
+		],
+		"body": "<MvEVAL EXPR = \"{ ${1:l.value} }\">",
+		"description": "Tag - Eval",
+		"scope": "mv"
+	},
+	"MvEXIT": {
+		"prefix": [
+			"MvEXIT",
+			"<MvEXIT"
+		],
+		"body": "<MvEXIT />",
+		"description": "Tag - Exit",
+		"scope": "mv"
+	},
+	"MvFOREACH": {
+		"prefix": [
+			"MvFOREACH",
+			"<MvFOREACH"
+		],
+		"body": "<MvFOREACH ITERATOR = \"${1}\" ARRAY = \"${2}\">\n\t${0}\n</MvFOREACH>",
+		"description": "Tag - Foreach",
+		"scope": "mv"
+	},
+	"MvFOREACHCONTINUE": {
+		"prefix": [
+			"MvFOREACHCONTINUE",
+			"<MvFOREACHCONTINUE"
+		],
+		"body": "<MvFOREACHCONTINUE />",
+		"description": "Tag - ForeachContinue",
+		"scope": "mv"
+	},
+	"MvFOREACHSTOP": {
+		"prefix": [
+			"MvFOREACHSTOP",
+			"<MvFOREACHSTOP"
+		],
+		"body": "<MvFOREACHSTOP />",
+		"description": "Tag - ForeachStop",
+		"scope": "mv"
+	},
+	"MvIF": {
+		"prefix": [
+			"MvIF",
+			"<MvIF"
+		],
+		"body": "<MvIF EXPR = \"{ ${1} }\">\n\t${0}\n</MvIF>",
+		"description": "Tag - If",
+		"scope": "mv"
+	},
+	"MvMIVA": {
+		"prefix": [
+			"MIVA",
+			"<MIVA"
+		],
+		"body": "<MIVA STANDARDOUTPUTLEVEL = \"${1:${2:text}${3:, html}${4:, compresswhitespace}}\">",
+		"description": "Tag - Miva",
+		"scope": "mv"
+	},
+	"MvWHILE": {
+		"prefix": [
+			"MvWHILE",
+			"<MvWHILE"
+		],
+		"body": "<MvWHILE EXPR = \"{ ${1} }\">\n\t${0}\n</MvWHILE>",
+		"description": "Tag - While",
+		"scope": "mv"
+	},
+	"MvWHILECONTINUE": {
+		"prefix": [
+			"MvWHILECONTINUE",
+			"<MvWHILECONTINUE"
+		],
+		"body": "<MvWHILECONTINUE />",
+		"description": "Tag - WhileContinue",
+		"scope": "mv"
+	},
+	"MvWHILESTOP": {
+		"prefix": [
+			"MvWHILESTOP",
+			"<MvWHILESTOP"
+		],
+		"body": "<MvWHILESTOP />",
+		"description": "Tag - WhileStop",
+		"scope": "mv"
+    }
+}

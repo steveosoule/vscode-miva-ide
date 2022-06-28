@@ -4,7 +4,7 @@
 			"mvt:assign",
 			"<mvt:assign"
 		],
-		"body": "<mvt:assign name=\"${1:g.variable}\" value=\"${2:l.value}\" />",
+		"body": "<mvt:assign name=\"${1:l.variable}\" value=\"${2:l.value}\" />",
 		"description": "Tag - Assign",
 		"scope": "mvt"
 	},
@@ -85,7 +85,7 @@
 			"mvt:eval",
 			"<mvt:eval"
 		],
-		"body": "<mvt:eval expr=\"${1:g.value}\" />",
+		"body": "<mvt:eval expr=\"${1:l.value}\" />",
 		"description": "Tag - Eval",
 		"scope": "mvt"
 	},
